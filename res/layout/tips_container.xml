@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.nusmart.security.uilib.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/newuser_help_bg" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="20dip"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/scroll_dot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dip"
+            android:background="@drawable/scroll_ad_dot_black" />
+
+        <ImageView
+            android:id="@+id/scroll_dot2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dip"
+            android:background="@drawable/scroll_ad_dot_white" />
+
+        <ImageView
+            android:id="@+id/scroll_dot3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dip"
+            android:background="@drawable/scroll_ad_dot_white" />
+
+        <ImageView
+            android:id="@+id/scroll_dot4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dip"
+            android:background="@drawable/scroll_ad_dot_white" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/next_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="10dip"
+        android:layout_marginRight="10dip"
+        android:src="@drawable/icon_next" />
+
+</FrameLayout>
