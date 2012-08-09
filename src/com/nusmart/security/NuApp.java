@@ -8,7 +8,10 @@ import android.app.Application;
 
 public class NuApp extends Application {
 
-	public static final String TAG = "NuSecurity";
+	protected static final String TAG = "NuSecurity";
+	protected static final String NUSECURITY_CONFIG = "nusecurity_config";
+	protected static final String PREF_SHOW_TIPS = "pref_show_tips";
+	protected static final String PREF_SHOW_SPLASH = "pref_show_splash";
 	private static NuApp sMe;
 	private List<Activity> mActivityList = new ArrayList<Activity>(15);
 	private Object mActivityLock = new Object();

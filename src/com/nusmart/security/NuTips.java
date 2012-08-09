@@ -1,5 +1,8 @@
 package com.nusmart.security;
 
+import static com.nusmart.security.NuApp.NUSECURITY_CONFIG;
+import static com.nusmart.security.NuApp.PREF_SHOW_TIPS;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,14 +21,17 @@ import com.nusmart.security.uilib.ViewPager.OnPageChangeListener;
 
 public class NuTips extends NuActivity {
 
-	private static final String NUSECURITY_CONFIG = "nusecurity_config";
-	private static final String PREF_SHOW_TIPS = "pref_show_tips";
 	private static final String AGREEMENT_URL = "http://yangxinle.com";
 	private ViewPager mPager;
 	private List<View> mPages = new ArrayList<View>(4);
 	private List<ImageView> mDots = new ArrayList<ImageView>(4);
 	private ImageView mNextButton;
 
+	private void goToMainActivity() {
+		startActivity(new Intent(this, NuMain.class));
+		finish();
+	}
+	
 	private void checkAgreementDetails() {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		intent.setData(Uri.parse(AGREEMENT_URL));
@@ -70,8 +76,7 @@ public class NuTips extends NuActivity {
 		mPages.add(tips4);
 		ImageView hyperLinkImg = (ImageView) tips4
 				.findViewById(R.id.hyper_link_img);
-		Button agreeButton = (Button) tips4
-				.findViewById(R.id.agree_button);
+		Button agreeButton = (Button) tips4.findViewById(R.id.agree_button);
 		View.OnClickListener clickListener = new View.OnClickListener() {
 
 			@Override
@@ -81,6 +86,9 @@ public class NuTips extends NuActivity {
 					checkAgreementDetails();
 					break;
 				case R.id.agree_button:
+					getSharedPreferences(NUSECURITY_CONFIG,
+							Context.MODE_PRIVATE).edit()
+							.putBoolean(PREF_SHOW_TIPS, false).apply();
 					goToMainActivity();
 					break;
 
@@ -155,26 +163,12 @@ public class NuTips extends NuActivity {
 
 	}
 
-	private boolean shouldShowTips() {
-		return getSharedPreferences(NUSECURITY_CONFIG, Context.MODE_PRIVATE)
-				.getBoolean(PREF_SHOW_TIPS, true);
-	}
-
-	private void goToMainActivity() {
-		startActivity(new Intent(this, NuMain.class));
-		finish();
-	}
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if (shouldShowTips()) {
-			setContentView(R.layout.tips_container);
-			initViewPager();
-			initDotsAndNextButton();
-		} else {
-			goToMainActivity();
-		}
+		setContentView(R.layout.tips_container);
+		initViewPager();
+		initDotsAndNextButton();
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <attr name="isShowLine_base" format="boolean" />
     <attr name="isShowLine_list" format="boolean" />
