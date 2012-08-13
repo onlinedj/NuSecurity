@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:background="@android:color/background_light"
     android:gravity="center"
-    android:paddingTop="15dip"
-    android:paddingBottom="15dip"
+    android:paddingTop="20dip"
+    android:paddingBottom="20dip"
     android:orientation="vertical" >
 
     <ImageView
@@ -21,6 +21,6 @@
         android:gravity="center"
         android:singleLine="true"
         android:textColor="@color/list_item_title_text_color"
-        android:textSize="11.0sp" />
+        android:textSize="13.0sp" />
 
 </LinearLayout>

@@ -90,7 +90,7 @@
         android:visibility="gone" />
 
     <com.nusmart.security.uilib.SlidingDrawer
-        android:id="@+id/nine_box_layout"
+        android:id="@+id/sliding_drawer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
@@ -163,13 +163,13 @@
         <FrameLayout
             android:id="@id/panelContent"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/list_bg" >
 
             <LinearLayout
                 android:id="@+id/item_linearlayout"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
                 <GridView
@@ -214,7 +214,7 @@
             <LinearLayout
                 android:id="@+id/item_animLayout"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal" />
         </FrameLayout>
     </com.nusmart.security.uilib.SlidingDrawer>

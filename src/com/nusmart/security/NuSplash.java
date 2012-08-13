@@ -3,7 +3,6 @@ package com.nusmart.security;
 import static com.nusmart.security.NuApp.NUSECURITY_CONFIG;
 import static com.nusmart.security.NuApp.PREF_SHOW_SPLASH;
 import static com.nusmart.security.NuApp.PREF_SHOW_TIPS;
-import static com.nusmart.security.NuApp.TAG;
 import android.content.ComponentName;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -14,7 +13,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.util.Log;
 
 public class NuSplash extends NuActivity {
 
@@ -83,7 +81,6 @@ public class NuSplash extends NuActivity {
 				this, R.drawable.icon);
 		shortcut.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, iconRes);
 		ComponentName name = new ComponentName(this, NuSplash.class);
-		Log.d(TAG, "component:"+name.toString());
 		Intent respondIntent = new Intent(Intent.ACTION_MAIN).setComponent(name);
 		shortcut.putExtra(Intent.EXTRA_SHORTCUT_INTENT, respondIntent);
 		sendBroadcast(shortcut);
