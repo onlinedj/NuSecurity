@@ -403,9 +403,13 @@ public class SlidingDrawer extends ViewGroup {
 
 		final Rect frame = mFrame;
 		final View handle = mHandle;
+		final View content = mContent;
+		final Rect frameContent = new Rect();
+		content.getHitRect(frameContent);
 
 		handle.getHitRect(frame);
-		if (!mTracking && !frame.contains((int) x, (int) y)) {
+		if (!mTracking && (!frame.contains((int) x, (int) y) && !frameContent.contains((int) x, (int) y))) {
+			NuApp.logd("ignore this touch! mTracking="+mTracking);
 			return false;
 		}
 
