@@ -32,9 +32,11 @@ public class NuMain extends NuActivity {
 	private MyGridAdapter mGridAdapter;
 	private PopupWindow mPopupMenu;
 	private ListView mPopupList;
+	private ListView mTabs;
 	private List<GridInfo> mDefaultGrids1 = new ArrayList<GridInfo>(4);
 	private List<GridInfo> mDefaultGrids2 = new ArrayList<GridInfo>(4);
 	private List<MenuInfo> mMainMenuList = new ArrayList<NuMain.MenuInfo>(5);
+	private List<ListItemInfo> mTabList = new ArrayList<NuMain.ListItemInfo>(4);
 
 	private View.OnClickListener mViewListener = new View.OnClickListener() {
 
@@ -54,6 +56,24 @@ public class NuMain extends NuActivity {
 			}
 		}
 	};
+
+	private void initTabs() {
+		ListItemInfo info1 = new ListItemInfo(1, R.drawable.home_network,
+				R.string.wap_monitor, R.string.today_network_size);
+		mTabList.add(info1);
+		ListItemInfo info2 = new ListItemInfo(2, R.drawable.home_filter,
+				R.string.filter_manager, R.string.hint_blocking_msg4);
+		mTabList.add(info2);
+		ListItemInfo info3 = new ListItemInfo(3, R.drawable.home_accelerate,
+				R.string.phone_faster, R.string.memory_free_only);
+		mTabList.add(info3);
+		ListItemInfo info4 = new ListItemInfo(4, R.drawable.home_battery,
+				R.string.battery_manager, R.string.battery_save_close_low);
+		mTabList.add(info4);
+		mTabs = (ListView) findViewById(R.id.item_tab_list);
+		mTabs.setAdapter(new MyTabListAdapter(mTabList, getLayoutInflater(),
+				R.layout.item_list_tab));
+	}
 
 	private void showMenu() {
 		mPopupMenu.showAsDropDown(findViewById(R.id.option_icon_img));
@@ -179,25 +199,7 @@ public class NuMain extends NuActivity {
 		GridInfo info8 = new GridInfo(8, R.drawable.main_icon_mysoftware_move,
 				R.string.software_move);
 		mDefaultGrids2.add(info8);
-	}
 
-	private boolean useCustomGrid() {
-		return getSharedPreferences(NUSECURITY_CONFIG, MODE_PRIVATE)
-				.getBoolean(PREF_USE_CUSTOM_GRID, false);
-	}
-
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.layout_main);
-		findViewById(R.id.item_back).setVisibility(View.INVISIBLE);
-		findViewById(R.id.item_option).setVisibility(View.VISIBLE);
-		ImageView optionImg = (ImageView) findViewById(R.id.option_icon_img);
-		optionImg.setImageResource(R.drawable.poplistview_button_icon);
-		optionImg.setOnClickListener(mViewListener);
-		if (!hasUsedOption()) {
-			findViewById(R.id.option_new).setVisibility(View.VISIBLE);
-		}
 		mSlideDrawer = (SlidingDrawer) findViewById(R.id.sliding_drawer);
 		mBackground = (ImageView) findViewById(R.id.black_layout);
 		mSlideDrawer
@@ -222,7 +224,6 @@ public class NuMain extends NuActivity {
 				});
 		mGridBar = (GridView) findViewById(R.id.grid_bar);
 		mGrid = (GridView) findViewById(R.id.grid);
-		initGrids();
 		mGridBarAdapter = new MyGridAdapter(mDefaultGrids1,
 				getLayoutInflater(), R.layout.item_grid);
 		mGridAdapter = new MyGridAdapter(mDefaultGrids2, getLayoutInflater(),
@@ -234,6 +235,29 @@ public class NuMain extends NuActivity {
 		}
 		mGridBar.setAdapter(mGridBarAdapter);
 		mGrid.setAdapter(mGridAdapter);
+	}
+
+	private boolean useCustomGrid() {
+		return getSharedPreferences(NUSECURITY_CONFIG, MODE_PRIVATE)
+				.getBoolean(PREF_USE_CUSTOM_GRID, false);
+	}
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.layout_main);
+		findViewById(R.id.item_back).setVisibility(View.INVISIBLE);
+		findViewById(R.id.item_option).setVisibility(View.VISIBLE);
+		ImageView optionImg = (ImageView) findViewById(R.id.option_icon_img);
+		optionImg.setImageResource(R.drawable.poplistview_button_icon);
+		optionImg.setOnClickListener(mViewListener);
+		if (!hasUsedOption()) {
+			findViewById(R.id.option_new).setVisibility(View.VISIBLE);
+		}
+
+		initTabs();
+
+		initGrids();
 
 		initMenu();
 	}
@@ -326,13 +350,61 @@ public class NuMain extends NuActivity {
 			TextView text = (TextView) convertView
 					.findViewById(R.id.poplist_menu_text);
 			text.setText(info.textId);
-			if (info.showNew && !hasUsedOption()) {
+			if (info.showNew) {// TODO how to hide the new?
 				convertView.findViewById(R.id.poplist_menu_new).setVisibility(
 						View.VISIBLE);
 			} else {
 				convertView.findViewById(R.id.poplist_menu_new).setVisibility(
 						View.GONE);
 			}
+			return convertView;
+		}
+
+	}
+
+	class MyTabListAdapter extends BaseAdapter {
+
+		private List<ListItemInfo> mTabs;
+		private LayoutInflater mInflater;
+		private int mItemLayout;
+
+		public MyTabListAdapter(List<ListItemInfo> tabs,
+				LayoutInflater inflater, int layoutId) {
+			mTabs = tabs;
+			mInflater = inflater;
+			mItemLayout = layoutId;
+		}
+
+		@Override
+		public int getCount() {
+			return mTabs.size();
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return mTabs.get(position);
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return mTabs.get(position).id;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			if (convertView == null) {
+				convertView = mInflater.inflate(mItemLayout, null);
+			}
+			ListItemInfo info = mTabs.get(position);
+			ImageView img = (ImageView) convertView
+					.findViewById(R.id.list_item_icon);
+			img.setImageResource(info.drawableId);
+			TextView textLarge = (TextView) convertView
+					.findViewById(R.id.list_item_title);
+			textLarge.setText(info.textLargeId);
+			TextView textSmall = (TextView) convertView
+					.findViewById(R.id.list_item_content);
+			textSmall.setText(info.textSmallId);
 			return convertView;
 		}
 
@@ -361,6 +433,21 @@ public class NuMain extends NuActivity {
 			this.drawableId = drawableId;
 			this.textId = textId;
 			this.showNew = showNew;
+		}
+	}
+
+	class ListItemInfo {
+		int id;
+		int drawableId;
+		int textLargeId;
+		int textSmallId;
+
+		public ListItemInfo(int id, int drawableId, int textLargeId,
+				int textSmallId) {
+			this.id = id;
+			this.drawableId = drawableId;
+			this.textLargeId = textLargeId;
+			this.textSmallId = textSmallId;
 		}
 	}
 }
