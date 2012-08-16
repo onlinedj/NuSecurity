@@ -13,9 +13,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -33,6 +36,8 @@ public class NuMain extends NuActivity {
 	private PopupWindow mPopupMenu;
 	private ListView mPopupList;
 	private ListView mTabs;
+	private LinearLayout mPanelHeaderOpen;
+	private LinearLayout mPanelHeaderClose;
 	private List<GridInfo> mDefaultGrids1 = new ArrayList<GridInfo>(4);
 	private List<GridInfo> mDefaultGrids2 = new ArrayList<GridInfo>(4);
 	private List<MenuInfo> mMainMenuList = new ArrayList<NuMain.MenuInfo>(5);
@@ -56,6 +61,16 @@ public class NuMain extends NuActivity {
 			}
 		}
 	};
+
+	private void togglePanelHeader(boolean isOpen) {
+		if (isOpen) {
+			mPanelHeaderClose.setVisibility(View.INVISIBLE);
+			mPanelHeaderOpen.setVisibility(View.VISIBLE);
+		} else {
+			mPanelHeaderClose.setVisibility(View.VISIBLE);
+			mPanelHeaderOpen.setVisibility(View.INVISIBLE);
+		}
+	}
 
 	private void initTabs() {
 		ListItemInfo info1 = new ListItemInfo(1, R.drawable.home_network,
@@ -220,6 +235,15 @@ public class NuMain extends NuActivity {
 					@Override
 					public void onDrawerClosed() {
 						mBackground.setVisibility(View.INVISIBLE);
+						togglePanelHeader(false);
+					}
+				});
+		mSlideDrawer
+				.setOnDrawerOpenListener(new SlidingDrawer.OnDrawerOpenListener() {
+
+					@Override
+					public void onDrawerOpened() {
+						togglePanelHeader(true);
 					}
 				});
 		mGridBar = (GridView) findViewById(R.id.grid_bar);
@@ -235,6 +259,15 @@ public class NuMain extends NuActivity {
 		}
 		mGridBar.setAdapter(mGridBarAdapter);
 		mGrid.setAdapter(mGridAdapter);
+		Animation alphaPanelDown = AnimationUtils.loadAnimation(this,
+				R.anim.alpha_pannel_bottom_in);
+		Animation alphaPanelTop = AnimationUtils.loadAnimation(this,
+				R.anim.alpha_pannel_top_in);
+		mPanelHeaderClose = (LinearLayout) findViewById(R.id.close_header_layout);
+		mPanelHeaderOpen = (LinearLayout) findViewById(R.id.open_header_layout);
+		findViewById(R.id.panel_down_header).setAnimation(alphaPanelDown);
+		findViewById(R.id.panel_up_header).setAnimation(alphaPanelTop);
+
 	}
 
 	private boolean useCustomGrid() {
