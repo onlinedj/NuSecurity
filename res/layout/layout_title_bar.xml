@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_title_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/header_bg"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:paddingLeft="5.0dip"
+    android:paddingRight="5.0dip" >
+
+    <TextView
+        android:id="@+id/item_back"
+        style="@style/title_bar_back_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/header_button_bg_back_selector"
+        android:gravity="center"
+        android:maxWidth="72.0dip"
+        android:minWidth="72.0dip"
+        android:singleLine="true"
+        android:text="@string/back"
+        android:textSize="13.0sp" />
+
+    <TextView
+        android:id="@+id/item_title"
+        style="@style/title_bar_text_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/app_name" />
+
+    <LinearLayout
+        android:id="@+id/layout_tab_framwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/item_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/header_button_bg_others_selector"
+        android:minWidth="57.0dip"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:id="@+id/option_icon_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/header_icon_setting" />
+
+        <ImageView
+            android:id="@+id/option_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:scaleType="center"
+            android:src="@drawable/main_icon_new"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+</LinearLayout>

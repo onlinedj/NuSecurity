@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/title_bar_text_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_title_bar"/>
+
+    <FrameLayout
+        android:id="@+id/layout_main_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/main_bg_color" >
+
+        <include layout="@layout/layout_main_no_title" />
+
+        <include layout="@layout/layout_info_bar" />
+    </FrameLayout>
+
+</LinearLayout>

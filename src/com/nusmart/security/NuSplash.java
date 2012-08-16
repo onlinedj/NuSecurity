@@ -43,7 +43,7 @@ public class NuSplash extends NuActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (shouldShowSplash()) {
-			setContentView(R.layout.splash);
+			setContentView(R.layout.layout_splash);
 			createShortcut();
 			getSharedPreferences(NUSECURITY_CONFIG, Context.MODE_PRIVATE)
 					.edit().putBoolean(PREF_SHOW_SPLASH, false).apply();

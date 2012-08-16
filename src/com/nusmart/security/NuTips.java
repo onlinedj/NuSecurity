@@ -63,16 +63,16 @@ public class NuTips extends NuActivity {
 	private void initViewPager() {
 		LayoutInflater inflater = getLayoutInflater();
 		mPager = (ViewPager) findViewById(R.id.pager);
-		View tips1 = inflater.inflate(R.layout.tips_one, null);
+		View tips1 = inflater.inflate(R.layout.layout_tips_one, null);
 		mPages.add(tips1);
 
-		View tips2 = inflater.inflate(R.layout.tips_two, null);
+		View tips2 = inflater.inflate(R.layout.layout_tips_two, null);
 		mPages.add(tips2);
 
-		View tips3 = inflater.inflate(R.layout.tips_three, null);
+		View tips3 = inflater.inflate(R.layout.layout_tips_three, null);
 		mPages.add(tips3);
 
-		View tips4 = inflater.inflate(R.layout.tips_four, null);
+		View tips4 = inflater.inflate(R.layout.layout_tips_four, null);
 		mPages.add(tips4);
 		ImageView hyperLinkImg = (ImageView) tips4
 				.findViewById(R.id.hyper_link_img);
@@ -166,7 +166,7 @@ public class NuTips extends NuActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.tips_container);
+		setContentView(R.layout.layout_tips_container);
 		initViewPager();
 		initDotsAndNextButton();
 	}

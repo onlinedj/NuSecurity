@@ -1,18 +1,23 @@
 package com.nusmart.security;
 
 import static com.nusmart.security.NuApp.NUSECURITY_CONFIG;
+import static com.nusmart.security.NuApp.PREF_HAS_USED_OPTION_MENU;
 import static com.nusmart.security.NuApp.PREF_USE_CUSTOM_GRID;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.nusmart.security.uilib.SlidingDrawer;
@@ -23,14 +28,121 @@ public class NuMain extends NuActivity {
 	private ImageView mBackground;
 	private GridView mGridBar;
 	private GridView mGrid;
-	private MyAdapter mGridBarAdapter;
-	private MyAdapter mGridAdapter;
+	private MyGridAdapter mGridBarAdapter;
+	private MyGridAdapter mGridAdapter;
+	private PopupWindow mPopupMenu;
+	private ListView mPopupList;
 	private List<GridInfo> mDefaultGrids1 = new ArrayList<GridInfo>(4);
 	private List<GridInfo> mDefaultGrids2 = new ArrayList<GridInfo>(4);
+	private List<MenuInfo> mMainMenuList = new ArrayList<NuMain.MenuInfo>(5);
+
+	private View.OnClickListener mViewListener = new View.OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			switch (v.getId()) {
+			case R.id.option_icon_img:
+				if (mPopupMenu.isShowing()) {
+					hideMenu();
+				} else {
+					showMenu();
+				}
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
+
+	private void showMenu() {
+		mPopupMenu.showAsDropDown(findViewById(R.id.option_icon_img));
+		if (!hasUsedOption()) {
+			findViewById(R.id.option_new).setVisibility(View.GONE);
+			getSharedPreferences(NUSECURITY_CONFIG, MODE_PRIVATE).edit()
+					.putBoolean(PREF_HAS_USED_OPTION_MENU, true).apply();
+		}
+		NuApp.logd("popupList:" + mPopupList.getMeasuredWidth());
+	}
+
+	private void hideMenu() {
+		mPopupMenu.dismiss();
+	}
+
+	private void initMenu() {
+		MenuInfo mi1 = new MenuInfo(1, R.drawable.setting_poplist_icon,
+				R.string.system_setting, false);
+		mMainMenuList.add(mi1);
+		MenuInfo mi2 = new MenuInfo(2, R.drawable.feedback_poplist_icon,
+				R.string.FAN_KUI, false);
+		mMainMenuList.add(mi2);
+		MenuInfo mi3 = new MenuInfo(3, R.drawable.update_poplist_icon,
+				R.string.JIAN_CHA_GENG_XIN, false);
+		mMainMenuList.add(mi3);
+		MenuInfo mi4 = new MenuInfo(4, R.drawable.about_poplist_icon,
+				R.string.GUAN_YU_XIN_XI, false);
+		mMainMenuList.add(mi4);
+		MenuInfo mi5 = new MenuInfo(5, R.drawable.activities_poplist_icon,
+				R.string.operating_activies, true);
+		mMainMenuList.add(mi5);
+		mPopupList = (ListView) getLayoutInflater().inflate(
+				R.layout.layout_poplistview, null);
+		mPopupList.setAdapter(new MyMenuAdapter(mMainMenuList,
+				getLayoutInflater(), R.layout.item_poplistview));
+		mPopupMenu = new PopupWindow(mPopupList, 260, LayoutParams.WRAP_CONTENT);// TODO
+																					// change
+		mPopupMenu.setBackgroundDrawable(getResources().getDrawable(
+				R.drawable.poplistview_bg));
+		mPopupMenu.setFocusable(true);
+		mPopupMenu.setOutsideTouchable(true);
+		mPopupList.setOnKeyListener(new View.OnKeyListener() {
+
+			@Override
+			public boolean onKey(View v, int keyCode, KeyEvent event) {
+				switch (keyCode) {
+				case KeyEvent.KEYCODE_MENU:
+					if (event.getAction() == KeyEvent.ACTION_DOWN) {
+						if (mPopupMenu.isShowing()) {
+							hideMenu();
+						} else {
+							showMenu();
+						}
+						return true;
+					}
+
+				default:
+					return false;
+				}
+			}
+		});
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		switch (keyCode) {
+		case KeyEvent.KEYCODE_MENU:
+			if (mPopupMenu.isShowing()) {
+				hideMenu();
+			} else {
+				showMenu();
+			}
+			return true;
+
+		default:
+			return super.onKeyDown(keyCode, event);
+		}
+	}
+
+	private boolean hasUsedOption() {
+		return getSharedPreferences(NUSECURITY_CONFIG, MODE_PRIVATE)
+				.getBoolean(PREF_HAS_USED_OPTION_MENU, false);
+	}
 
 	@Override
 	public void onBackPressed() {
-		if (mSlideDrawer.isOpened()) {
+		if (mPopupMenu.isShowing()) {
+			mPopupMenu.dismiss();
+		} else if (mSlideDrawer.isOpened()) {
 			mSlideDrawer.animateClose();
 		} else {
 			super.onBackPressed();
@@ -45,27 +157,27 @@ public class NuMain extends NuActivity {
 		GridInfo info1 = new GridInfo(1, R.drawable.main_icon_antivirus,
 				R.string.virus_scan);
 		mDefaultGrids1.add(info1);
-		GridInfo info2 = new GridInfo(2, R.drawable.main_icon_antivirus,
-				R.string.virus_scan);
+		GridInfo info2 = new GridInfo(2, R.drawable.main_icon_private,
+				R.string.private_protect);
 		mDefaultGrids1.add(info2);
-		GridInfo info3 = new GridInfo(3, R.drawable.main_icon_antivirus,
-				R.string.virus_scan);
+		GridInfo info3 = new GridInfo(3, R.drawable.main_icon_mysoftware,
+				R.string.my_software);
 		mDefaultGrids1.add(info3);
-		GridInfo info4 = new GridInfo(4, R.drawable.main_icon_antivirus,
-				R.string.virus_scan);
+		GridInfo info4 = new GridInfo(4, R.drawable.main_icon_software,
+				R.string.market);
 		mDefaultGrids1.add(info4);
 
-		GridInfo info5 = new GridInfo(5, R.drawable.main_icon_antivirus,
-				R.string.virus_scan);
+		GridInfo info5 = new GridInfo(5, R.drawable.main_icon_synchronous,
+				R.string.connect_backup);
 		mDefaultGrids2.add(info5);
-		GridInfo info6 = new GridInfo(6, R.drawable.main_icon_antivirus,
-				R.string.virus_scan);
+		GridInfo info6 = new GridInfo(6, R.drawable.main_icon_security,
+				R.string.pickproof);
 		mDefaultGrids2.add(info6);
-		GridInfo info7 = new GridInfo(7, R.drawable.main_icon_antivirus,
-				R.string.virus_scan);
+		GridInfo info7 = new GridInfo(7, R.drawable.main_icon_commonnum,
+				R.string.common_funtion);
 		mDefaultGrids2.add(info7);
-		GridInfo info8 = new GridInfo(8, R.drawable.main_icon_antivirus,
-				R.string.virus_scan);
+		GridInfo info8 = new GridInfo(8, R.drawable.main_icon_mysoftware_move,
+				R.string.software_move);
 		mDefaultGrids2.add(info8);
 	}
 
@@ -77,33 +189,43 @@ public class NuMain extends NuActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main_activity);
+		setContentView(R.layout.layout_main);
+		findViewById(R.id.item_back).setVisibility(View.INVISIBLE);
+		findViewById(R.id.item_option).setVisibility(View.VISIBLE);
+		ImageView optionImg = (ImageView) findViewById(R.id.option_icon_img);
+		optionImg.setImageResource(R.drawable.poplistview_button_icon);
+		optionImg.setOnClickListener(mViewListener);
+		if (!hasUsedOption()) {
+			findViewById(R.id.option_new).setVisibility(View.VISIBLE);
+		}
 		mSlideDrawer = (SlidingDrawer) findViewById(R.id.sliding_drawer);
 		mBackground = (ImageView) findViewById(R.id.black_layout);
-		mSlideDrawer.setOnDrawerScrollListener(new SlidingDrawer.OnDrawerScrollListener() {
-			
-			@Override
-			public void onScrollStarted() {
-				mBackground.setVisibility(View.VISIBLE);
-			}
-			
-			@Override
-			public void onScrollEnded() {
-			}
-		});
-		mSlideDrawer.setOnDrawerCloseListener(new SlidingDrawer.OnDrawerCloseListener() {
-			
-			@Override
-			public void onDrawerClosed() {
-				mBackground.setVisibility(View.INVISIBLE);
-			}
-		});
+		mSlideDrawer
+				.setOnDrawerScrollListener(new SlidingDrawer.OnDrawerScrollListener() {
+
+					@Override
+					public void onScrollStarted() {
+						mBackground.setVisibility(View.VISIBLE);
+					}
+
+					@Override
+					public void onScrollEnded() {
+					}
+				});
+		mSlideDrawer
+				.setOnDrawerCloseListener(new SlidingDrawer.OnDrawerCloseListener() {
+
+					@Override
+					public void onDrawerClosed() {
+						mBackground.setVisibility(View.INVISIBLE);
+					}
+				});
 		mGridBar = (GridView) findViewById(R.id.grid_bar);
 		mGrid = (GridView) findViewById(R.id.grid);
 		initGrids();
-		mGridBarAdapter = new MyAdapter(mDefaultGrids1, getLayoutInflater(),
-				R.layout.item_grid);
-		mGridAdapter = new MyAdapter(mDefaultGrids2, getLayoutInflater(),
+		mGridBarAdapter = new MyGridAdapter(mDefaultGrids1,
+				getLayoutInflater(), R.layout.item_grid);
+		mGridAdapter = new MyGridAdapter(mDefaultGrids2, getLayoutInflater(),
 				R.layout.item_grid);
 		if (useCustomGrid()) {
 			loadCustomGrids();
@@ -112,9 +234,11 @@ public class NuMain extends NuActivity {
 		}
 		mGridBar.setAdapter(mGridBarAdapter);
 		mGrid.setAdapter(mGridAdapter);
+
+		initMenu();
 	}
 
-	class MyAdapter extends BaseAdapter {
+	class MyGridAdapter extends BaseAdapter {
 
 		private List<GridInfo> mGrids;
 		private LayoutInflater mInflater;
@@ -124,7 +248,7 @@ public class NuMain extends NuActivity {
 			mGrids = grids;
 		}
 
-		public MyAdapter(List<GridInfo> grids, LayoutInflater inflater,
+		public MyGridAdapter(List<GridInfo> grids, LayoutInflater inflater,
 				int layouId) {
 			mGrids = grids;
 			mInflater = inflater;
@@ -162,6 +286,58 @@ public class NuMain extends NuActivity {
 
 	}
 
+	class MyMenuAdapter extends BaseAdapter {
+
+		private List<MenuInfo> mMenus;
+		private LayoutInflater mInflater;
+		private int mItemLayout;
+
+		public MyMenuAdapter(List<MenuInfo> menus, LayoutInflater inflater,
+				int layoutId) {
+			mMenus = menus;
+			mInflater = inflater;
+			mItemLayout = layoutId;
+		}
+
+		@Override
+		public int getCount() {
+			return mMenus.size();
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return mMenus.get(position);
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return mMenus.get(position).id;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			if (convertView == null) {
+				convertView = mInflater.inflate(mItemLayout, null);
+			}
+			MenuInfo info = mMenus.get(position);
+			ImageView img = (ImageView) convertView
+					.findViewById(R.id.poplist_menu_img);
+			img.setImageResource(info.drawableId);
+			TextView text = (TextView) convertView
+					.findViewById(R.id.poplist_menu_text);
+			text.setText(info.textId);
+			if (info.showNew && !hasUsedOption()) {
+				convertView.findViewById(R.id.poplist_menu_new).setVisibility(
+						View.VISIBLE);
+			} else {
+				convertView.findViewById(R.id.poplist_menu_new).setVisibility(
+						View.GONE);
+			}
+			return convertView;
+		}
+
+	}
+
 	class GridInfo {
 		int id;
 		int drawableId;
@@ -174,4 +350,17 @@ public class NuMain extends NuActivity {
 		}
 	}
 
+	class MenuInfo {
+		int id;
+		int drawableId;
+		int textId;
+		boolean showNew;
+
+		public MenuInfo(int id, int drawableId, int textId, boolean showNew) {
+			this.id = id;
+			this.drawableId = drawableId;
+			this.textId = textId;
+			this.showNew = showNew;
+		}
+	}
 }
