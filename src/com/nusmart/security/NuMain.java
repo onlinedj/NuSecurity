@@ -3,13 +3,17 @@ package com.nusmart.security;
 import static com.nusmart.security.NuApp.NUSECURITY_CONFIG;
 import static com.nusmart.security.NuApp.PREF_HAS_USED_OPTION_MENU;
 import static com.nusmart.security.NuApp.PREF_USE_CUSTOM_GRID;
+import static com.nusmart.security.NuApp.PREF_HAS_SHOW_DRAWER_TIP;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
@@ -22,11 +26,14 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.nusmart.security.uilib.SlidingDrawer;
+import com.nusmart.security.uilib.utils.TipsManager;
 
 public class NuMain extends NuActivity {
 
+	private Handler mHandler;
 	private SlidingDrawer mSlideDrawer;
 	private ImageView mBackground;
 	private GridView mGridBar;
@@ -61,6 +68,11 @@ public class NuMain extends NuActivity {
 			}
 		}
 	};
+
+	private boolean hasShowDrawerTip() {
+		return getSharedPreferences(NUSECURITY_CONFIG, MODE_PRIVATE)
+				.getBoolean(PREF_HAS_SHOW_DRAWER_TIP, false);
+	}
 
 	private void togglePanelHeader(boolean isOpen) {
 		if (isOpen) {
@@ -217,6 +229,27 @@ public class NuMain extends NuActivity {
 
 		mSlideDrawer = (SlidingDrawer) findViewById(R.id.sliding_drawer);
 		mBackground = (ImageView) findViewById(R.id.black_layout);
+		mGridBar = (GridView) findViewById(R.id.grid_bar);
+		mGrid = (GridView) findViewById(R.id.grid);
+		mGridBarAdapter = new MyGridAdapter(mDefaultGrids1,
+				getLayoutInflater(), R.layout.item_grid);
+		mGridAdapter = new MyGridAdapter(mDefaultGrids2, getLayoutInflater(),
+				R.layout.item_grid);
+		if (useCustomGrid()) {
+			loadCustomGrids();
+			mGridBarAdapter.setGrids(mDefaultGrids1);
+			mGridAdapter.setGrids(mDefaultGrids2);
+		}
+		mGridBar.setAdapter(mGridBarAdapter);
+		mGrid.setAdapter(mGridAdapter);
+		Animation alphaPanelDown = AnimationUtils.loadAnimation(this,
+				R.anim.alpha_pannel_bottom_in);
+		Animation alphaPanelTop = AnimationUtils.loadAnimation(this,
+				R.anim.alpha_pannel_top_in);
+		mPanelHeaderClose = (LinearLayout) findViewById(R.id.close_header_layout);
+		mPanelHeaderOpen = (LinearLayout) findViewById(R.id.open_header_layout);
+		findViewById(R.id.panel_down_header).setAnimation(alphaPanelDown);
+		findViewById(R.id.panel_up_header).setAnimation(alphaPanelTop);
 		mSlideDrawer
 				.setOnDrawerScrollListener(new SlidingDrawer.OnDrawerScrollListener() {
 
@@ -244,30 +277,32 @@ public class NuMain extends NuActivity {
 					@Override
 					public void onDrawerOpened() {
 						togglePanelHeader(true);
+						if (!hasShowDrawerTip()) {
+							View vImg = mGridBar.getChildAt(0).findViewById(
+									R.id.item_image);
+							TipsManager.instance(NuMain.this).showAsDropDown(
+									mSlideDrawer.getHandle(),
+									getLayoutInflater().inflate(
+											R.layout.layout_bubble_tip, null),
+									LayoutParams.WRAP_CONTENT,
+									LayoutParams.WRAP_CONTENT,
+									vImg.getLeft() - 10, vImg.getTop(),
+									new PopupWindow.OnDismissListener() {
+
+										@Override
+										public void onDismiss() {
+											getSharedPreferences(
+													NUSECURITY_CONFIG,
+													MODE_PRIVATE)
+													.edit()
+													.putBoolean(
+															PREF_HAS_SHOW_DRAWER_TIP,
+															true).apply();
+										}
+									});
+						}
 					}
 				});
-		mGridBar = (GridView) findViewById(R.id.grid_bar);
-		mGrid = (GridView) findViewById(R.id.grid);
-		mGridBarAdapter = new MyGridAdapter(mDefaultGrids1,
-				getLayoutInflater(), R.layout.item_grid);
-		mGridAdapter = new MyGridAdapter(mDefaultGrids2, getLayoutInflater(),
-				R.layout.item_grid);
-		if (useCustomGrid()) {
-			loadCustomGrids();
-			mGridBarAdapter.setGrids(mDefaultGrids1);
-			mGridAdapter.setGrids(mDefaultGrids2);
-		}
-		mGridBar.setAdapter(mGridBarAdapter);
-		mGrid.setAdapter(mGridAdapter);
-		Animation alphaPanelDown = AnimationUtils.loadAnimation(this,
-				R.anim.alpha_pannel_bottom_in);
-		Animation alphaPanelTop = AnimationUtils.loadAnimation(this,
-				R.anim.alpha_pannel_top_in);
-		mPanelHeaderClose = (LinearLayout) findViewById(R.id.close_header_layout);
-		mPanelHeaderOpen = (LinearLayout) findViewById(R.id.open_header_layout);
-		findViewById(R.id.panel_down_header).setAnimation(alphaPanelDown);
-		findViewById(R.id.panel_up_header).setAnimation(alphaPanelTop);
-
 	}
 
 	private boolean useCustomGrid() {
@@ -279,6 +314,7 @@ public class NuMain extends NuActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_main);
+		mHandler = new Handler(getMainLooper());
 		findViewById(R.id.item_back).setVisibility(View.INVISIBLE);
 		findViewById(R.id.item_option).setVisibility(View.VISIBLE);
 		ImageView optionImg = (ImageView) findViewById(R.id.option_icon_img);
@@ -338,6 +374,16 @@ public class NuMain extends NuActivity {
 			img.setImageResource(info.drawableId);
 			TextView text = (TextView) convertView.findViewById(R.id.item_text);
 			text.setText(info.textId);
+			// convertView.setOnTouchListener(new View.OnTouchListener() {
+			//
+			// @Override
+			// public boolean onTouch(View v, MotionEvent event) {
+			// NuApp.logd("get the touch event");
+			// Toast.makeText(NuMain.this, "fuck all",
+			// Toast.LENGTH_LONG).show();
+			// return true;
+			// }
+			// });
 			return convertView;
 		}
 

@@ -16,6 +16,7 @@ public class NuApp extends Application {
 	protected static final String PREF_SHOW_SPLASH = "pref_show_splash";
 	protected static final String PREF_USE_CUSTOM_GRID = "pref_use_custom_grid";
 	protected static final String PREF_HAS_USED_OPTION_MENU = "pref_has_used_OPTION_MENU";
+	protected static final String PREF_HAS_SHOW_DRAWER_TIP = "pref_has_show_drawer_tip";
 	private static NuApp sMe;
 	private List<Activity> mActivityList = new ArrayList<Activity>(15);
 	private Object mActivityLock = new Object();

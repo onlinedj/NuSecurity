@@ -500,7 +500,13 @@ public class SlidingDrawer extends ViewGroup {
 											+ getRight() - getLeft()
 											- mHandleWidth - mTapThreshold)) {
 
-						if (mAllowSingleTap) {
+						final View content = mContent;
+						final Rect frameContent = new Rect();
+						content.getHitRect(frameContent);
+						if(frameContent.contains((int)event.getX(), (int)event.getY())) {
+							return false;
+						}
+						else if (mAllowSingleTap) {
 							playSoundEffect(SoundEffectConstants.CLICK);
 
 							if (mExpanded) {
