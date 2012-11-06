@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">牛管家</string>
-    <string name="main_title">牛管家</string>
+    <string name="app_name">手机管家</string>
+    <string name="main_title">手机管家</string>
     <string name="permission_des_location">显示来去电归属地</string>
     <string name="widget_task_manager">任务管理 1x4</string>
     <string name="widget_task_manager_mini">任务管理 1x2</string>
@@ -13,6 +13,7 @@
     <string name="add">添加</string>
     <string name="edit">编辑</string>
     <string name="delete">删除</string>
+    <string name="cancel_ignore">取消忽略</string>
     <string name="install">安装</string>
     <string name="next_times">下次再说</string>
     <string name="detail">详情</string>
@@ -23,6 +24,12 @@
     <string name="opened">已开启</string>
     <string name="closed">未开启</string>
     <string name="logout">注销</string>
+    <string name="down_refresh">下拉刷新</string>
+    <string name="last_refresh">上次刷新</string>
+    <string name="new_version">更新版本：</string>
+    <string name="current_version">当前版本：</string>
+    <string name="not_install">未安装</string>
+    <string name="ignore_list">忽略列表</string>
     <string name="service_open_for_pad">已启动病毒监控服务</string>
     <string name="service_close_for_pad">未启动病毒监控服务</string>
     <string name="service_open">已启动智能拦截和病毒监控服务</string>
@@ -30,6 +37,10 @@
     <string name="open_sms_service">已开启扣费短信监控</string>
     <string name="shown">显示</string>
     <string name="not_shown">不显示</string>
+    <string name="open_refresh">松开刷新</string>
+    <string name="now_refreshing">正在刷新</string>
+    <string name="last_near_refresh">最近更新:</string>
+    <string name="no_storge">手机剩余空间不足20%，建议一键分析多余软件，及时清理释放手机空间。</string>
     <string name="show_tips">提示</string>
     <string name="no_tips">不提示</string>
     <string name="all_delete">全部删除</string>
@@ -46,8 +57,8 @@
     <string name="ring">响铃</string>
     <string name="missing_call">未接来电</string>
     <string name="message_blocked_logs">短信</string>
-    <string name="private_spance_calllog">私密电话</string>
-    <string name="private_spance_smslog">私密短信</string>
+    <string name="private_spance_calllog">隐私电话</string>
+    <string name="private_spance_smslog">隐私短信</string>
     <string name="shortcut">快捷操作</string>
     <string name="clean_statistics">清空统计</string>
     <string name="backcall">呼叫</string>
@@ -67,6 +78,8 @@
     <string name="no">否</string>
     <string name="quit">退出</string>
     <string name="report">举报</string>
+    <string name="has_report">已举报</string>
+    <string name="add_as_contact">加联系人</string>
     <string name="filter_modes">拦截模式</string>
     <string name="add_interceptkeyword">添加关键字</string>
     <string name="continue_str">继续</string>
@@ -75,6 +88,7 @@
     <string name="modify">更改</string>
     <string name="BAI_FEN_HAO">%</string>
     <string name="skip">跳过</string>
+    <string name="software_detail_no_contect">网络不给力，稍后再来看看吧！</string>
     <string name="change_immediate">立即修改</string>
     <string name="skip_to_sys_network_failed">不支持直接开关，请进入系统设置操作</string>
     <string name="eavesdrop">防窃听</string>
@@ -86,7 +100,8 @@
     <string name="remote">网络</string>
     <string name="add_blacklist">添加黑名单</string>
     <string name="add_whitelist">添加白名单</string>
-    <string name="add_securelist">添加私密联系人</string>
+    <string name="add_securelist">添加隐私联系人</string>
+    <string name="attention_no_more">不再提醒</string>
     <string name="keyword_manager">关键字</string>
     <string name="virus_scanner">病毒查杀</string>
     <string name="setting_filter">拦截设置</string>
@@ -97,21 +112,29 @@
     <string name="exit_service">退出管家</string>
     <string name="exit">退出</string>
     <string name="start_tencentsecure_next_boot">下次开机重启手机管家</string>
-    <string name="secure_setting">私密设置</string>
+    <string name="secure_setting">隐私设置</string>
     <string name="help">使用帮助</string>
     <string name="about">关于信息</string>
     <string name="title_block_mod">拦截设置</string>
     <string name="location_feedback">归属地查询</string>
     <string name="is_no_result_location">暂无结果</string>
-    <string name="report_no_block_sms">举报未被拦截的垃圾短信</string>
-    <string name="secure_contact">私密联系人</string>
+    <string name="report_no_block_sms">举报垃圾信息</string>
+    <string name="report_no_block_call">举报骚扰电话</string>
+    <string name="block_sms_ad">广告</string>
+    <string name="block_sms_blacklist">黑名单</string>
+    <string name="block_sms_sex">色情</string>
+    <string name="report_no_block_qout2">(%1$s)</string>
+    <string name="report_no_block_qout">【%1$s】</string>
+    <string name="report_no_block_sms_content">你已举报垃圾信息%1$d条,骚扰电话%2$d个</string>
+    <string name="exciting_recommended">精彩推荐</string>
+    <string name="secure_contact">隐私联系人</string>
     <string name="common_funtion">实用工具</string>
     <string name="common_phone">常用号码查询</string>
     <string name="sms_check">扣费扫描</string>
     <string name="add_phone_number">添加号码</string>
     <string name="ip_call_nonumber">不使用IP拨号的号码</string>
     <string name="ip_call_funtino">IP拨号</string>
-    <string name="private_call_mode">私密来电处理</string>
+    <string name="private_call_mode">隐私来电处理</string>
     <string name="percentage_of_memory_used">内存占用率：</string>
     <string name="process_num">进程：</string>
     <string name="memory_num">内存：</string>
@@ -128,7 +151,7 @@
     <string name="search_more_hot_word">点击搜索更多热词</string>
     <string name="please_input_search_key">请输入要搜索的内容</string>
     <string name="screen_shot_tips">方便快捷的截屏工具</string>
-    <string name="ipcall_tips">开启IP拨号可为您节省话费</string>
+    <string name="ipcall_tips">开启IP拨号可为你节省话费</string>
     <string name="ipnumber_tips">当前加拨的IP拨号号码为%1$s</string>
     <string name="locatino_check_tips">快速查询电话号码归属地</string>
     <string name="i_will_send_error">我要报错</string>
@@ -138,7 +161,7 @@
 归属地：%2$s
 以上信息有误"</string>
     <string name="common_phone_tips">肯德基宅急送、机票预定、快递号码等</string>
-    <string name="root_help_tips">腾讯手机管家将全方位保护您的手机安全，如果您授予手机管家ROOT权限，您将可以使用更多高级功能：</string>
+    <string name="root_help_tips">腾讯手机管家将全方位保护你的手机安全，如果你授予手机管家ROOT权限，你将可以使用更多高级功能：</string>
     <string name="root_help_tips_text">"1、提高开机速度
 2、卸载多余系统软件
 3、查杀ROM底层恶意软件
@@ -147,24 +170,36 @@
 6、使用手机截屏"</string>
     <string name="say_software_tips_front">本软件的下载、安装、使用完全免费，使用过程中产生的2G/3G等数据流量费用，由运营商收取。更多的协议说明，请参考</string>
     <string name="say_software_tips_front1">已阅读并且同意</string>
-    <string name="say_software_tips_back">，如果您确定使用我们的软件，即表明您同意接受此服务条款。</string>
+    <string name="say_software_tips_back">，如果你确定使用我们的软件，即表明你同意接受此服务条款。</string>
     <string name="software_link">《腾讯手机管家软件许可及服务协议》</string>
-    <string name="hint_version_description">"1、手机加速全面升级，清理内存更彻底
-2、省电管理全新改版，CPU省电更强大
-3、新增电池维护，老电池也能用更久。
-4、通知栏也有电量小图标，电量一目了然
-5、新增充电屏保，实时掌握电池动态。"</string>
+    <string name="hint_version_description">"1、优化加速逻辑，手机加速更流畅；
+2、增加安装包下载后完整性检测；
+3、电池管家再升级，省电管理更贴心；
+4、修复部分机型无法接收短信的问题。"</string>
     <string name="hint_version_description_for_pad">"1、全新QQPad管家1.0(aPad)，适配android2.2以上平板(不包括android3.0以上系统)
 2、延承手机管家优秀品质，针对android平板全面定制
 3、拥有病毒查杀、系统优化、上网管理、软件管理等多项核心功能
 4、一键体检，轻松了解、优化Pad系统。
 5、绿色软件下载平台，一站式搞定下载、更新、使用的安全问题"</string>
+    <string name="fuzzy_contact_edit_tips1">温馨提示：将拦截此号码开头的号码段，譬如输入123，将拦截123开头的所有号码</string>
+    <string name="fuzzy_contact_edit_tips2">温馨提示：将放行此号码开头的号码段，譬如输入123，将放行123开头的所有号码</string>
     <string name="please_input">请输入关键词</string>
     <string name="software_move">软件搬家</string>
     <string name="mobile_to_sd">安装在手机的软件</string>
     <string name="sd_to_mobile">安装在SD卡的软件</string>
     <string name="not_able_move">不支持移动</string>
+    <string name="not_able_move_software">不支持移动软件</string>
     <string name="search_result">搜索结果</string>
+    <string name="recommend_history">往期推荐</string>
+    <string name="search_result_by_haina">海纳应用搜索提供支持</string>
+    <string name="together_support">共同提供</string>
+    <string name="use_immediatly">立即启用</string>
+    <string name="sync_downloading">正在下载，可在通知栏查看进度</string>
+    <string name="sync_donwload_tips">点击下载完整版通讯备份，支持短信、通话记录和软件的备份。</string>
+    <string name="sync_install_tips">点击安装完整版通讯备份，支持短信、通话记录和软件的备份。</string>
+    <string name="sync_assit_apk_name">QQ同步助手</string>
+    <string name="sync_assit_pkg_name">com.tencent.qqpim</string>
+    <string name="sync_assit_pkg_parent_path">/sdcard/QQSecureDownload</string>
     <string name="sync_account_settings">帐号设置</string>
     <string name="sync_check_log">查看日志</string>
     <string name="sync_current_account">当前帐号</string>
@@ -174,7 +209,16 @@
     <string name="sync_log">同步记录</string>
     <string name="business_card">通讯录</string>
     <string name="qq_business_card">QQ通讯录</string>
+    <string name="tencent_power_manager">腾讯电池管家</string>
+    <string name="download_power_manager">下载电池管家</string>
+    <string name="download_power_manager_tips">开始下载电池管家，可在通知栏查看进度</string>
     <string name="qqwebsite_account_settings">QQ网盘登录</string>
+    <string name="sync_assistant_download_guide">建议启用完整版通讯备份，支持</string>
+    <string name="sync_assistant_message">短信</string>
+    <string name="sync_assistant_phone_history">通话记录</string>
+    <string name="sync_assistant_software">软件</string>
+    <string name="sync_assistant_and">和</string>
+    <string name="sync_assistant_backup">的备份。</string>
     <string name="sync_backup_business_card">备份通讯录</string>
     <string name="sync_backup_business_card_summry">上传手机通讯录到云端</string>
     <string name="sync_restore_business_card">恢复通讯录</string>
@@ -183,7 +227,7 @@
     <string name="sync_business_card_footer_info">与QQ同步助手使用相同云端存储</string>
     <string name="sync_business_check_remote_data">电脑访问ic.qq.com管理云端通讯录</string>
     <string name="sync_business_check_remote_wap_manage">为确保信息安全，WAP管理入口已关闭</string>
-    <string name="sync_business_remote_data_manage_infobar">您可通过以下三种途径管理云端资料</string>
+    <string name="sync_business_remote_data_manage_infobar">你可通过以下三种途径管理云端资料</string>
     <string name="sync_business_card_local">本地: %1$s</string>
     <string name="sync_business_card_remote">云端: %1$s</string>
     <string name="sync_business_log_info">共 %1$s 条同步日志</string>
@@ -195,6 +239,8 @@
     <string name="sync_restore_change">仅恢复变化的联系人</string>
     <string name="sync_restore_all">恢复全部联系人</string>
     <string name="sync_dialog_tips">温馨提示</string>
+    <string name="sync_dialog_tips_colon">温馨提示:</string>
+    <string name="can_not_move_toast">不可移动软件无法浏览</string>
     <string name="sync_dialog_login">正在登录服务器...</string>
     <string name="sync_dialog_upload_prepare">正在准备备份...</string>
     <string name="sync_dialog_upload">备份进行中，请保持网络通畅...</string>
@@ -214,12 +260,10 @@
     <string name="sync_report_delete">已删除 %1$s 条</string>
     <string name="sync_report_modify">已修改 %1$s 条</string>
     <string name="sync_report_no_change">无数据变化</string>
-    <string name="sync_result_backup_no_change">本地名片无变化，无需备份</string>
-    <string name="sync_result_restore_no_change">云端名片无变化，无需恢复</string>
-    <string name="sync_result_backup_change_success">成功备份变化的联系人%1$s个</string>
-    <string name="sync_result_backup_all_success">成功备份全部联系人%1$s个</string>
-    <string name="sync_result_restore_change_success">成功恢复变化的联系人%1$s个</string>
-    <string name="sync_result_restore_all_success">成功恢复全部联系人%1$s个</string>
+    <string name="sync_result_backup_success1">你的本地通讯录已全部备份到云端</string>
+    <string name="sync_result_backup_success2">你的本地通讯录已全部备份到云端，云端新增%1$s</string>
+    <string name="sync_result_restore_success1">你的云端通讯录已全部恢复到本机</string>
+    <string name="sync_result_restore_success2">你的云端通讯录已全部恢复到本机，本机新增%1$s</string>
     <string name="sync_result_contactlist_add">名单增加：%1$s</string>
     <string name="sync_result_contactlist_delete">名单删除：%1$s</string>
     <string name="sync_result_contactlist_modify">名单修改：%1$s</string>
@@ -228,11 +272,10 @@
     <string name="sync_backup_contactlist_empty_list_to_backup">暂无名单可供备份</string>
     <string name="sync_backup_contactlist_empty_blacklist">暂无黑名单</string>
     <string name="sync_backup_contactlist_empty_whitelist">暂无白名单</string>
-    <string name="sync_backup_contactlist_empty_securelist">暂无私密联系人</string>
-    <string name="sync_backup_contactlist_tips1">"将名单内的号码备份到网络后，您可以随时通过手机管家将名单恢复到手机上，是否继续备份？
-备注：您是首次备份名单，可能会需要等待较长时间。"</string>
+    <string name="sync_backup_contactlist_empty_securelist">暂无隐私联系人</string>
+    <string name="sync_backup_contactlist_tips1">确认将黑白名单备份到网络？备份后可随时通过手机管家恢复，首次使用需要稍长一点时间。</string>
     <string name="hint_save_as_draft">已保存为草稿</string>
-    <string name="sync_backup_contactlist_tips2">如您的名单中有删除号码的操作，完成备份后网络上的名单对应号码也会被删除。</string>
+    <string name="sync_backup_contactlist_tips2">如你的名单中有删除号码的操作，完成备份后网络上的名单对应号码也会被删除。</string>
     <string name="sync_account_can_not_be_null">登录帐号不能为空</string>
     <string name="sync_password_can_not_be_null">登录密码不能为空</string>
     <string name="sync_wrong_account">QQ帐号有误，再试下吧</string>
@@ -260,7 +303,7 @@
     <string name="sync_result_cancel">同步操作已取消</string>
     <string name="sync_prepare_register_mobile_account">正在准备注册手机帐号...</string>
     <string name="sync_unknow_error">登录失败，错误码：%1$s</string>
-    <string name="sync_login_tips">您可以使用QQ帐号或手机帐号两种方式登录</string>
+    <string name="sync_login_tips">你可以使用QQ帐号或手机帐号两种方式登录</string>
     <string name="sync_confirm_backup_all">“备份全部联系人”是将手机本地联系人全部上传到网络，网络与本地相同联系人会被覆盖。</string>
     <string name="sync_confirm_backup_change">“备份联系人变化部分”是将手机上次备份后增加、修改、删除的部分备份到网络中。</string>
     <string name="sync_confirm_restore_all">“恢复全部联系人”是将网络联系人全部恢复到本地，本地与网络相同联系人会被覆盖。</string>
@@ -282,21 +325,21 @@
     <string name="str_sync_help_3">3.操作说明</string>
     <string name="str_sync_help_4">4.资费说明</string>
     <string name="str_sync_help_5">5.备份资料管理</string>
-    <string name="str_sync_help_1_answer">手机管家的手机备份功能与专业的安全同步工具——QQ同步助手使用相同的同步机制及云端存储，您手机资料的保险箱，我们会采取合理的措施保护用户信息，不向任何未经用户许可的第三方透露您的资料信息，具体隐私说明可参见《腾讯手机管家软件许可及服务协议》。</string>
-    <string name="str_sync_help_2_answer">手机管家的手机备份功能采用国际化标准的加密存储与传输方式，您备份的资料会永久免费地保存在腾讯公司加密的服务器中，您可以在需要的时候，便捷地恢复到各类型手机中。</string>
+    <string name="str_sync_help_1_answer">手机管家的手机备份功能与专业的安全同步工具——QQ同步助手使用相同的同步机制及云端存储，你手机资料的保险箱，我们会采取合理的措施保护用户信息，不向任何未经用户许可的第三方透露你的资料信息，具体隐私说明可参见《腾讯手机管家软件许可及服务协议》。</string>
+    <string name="str_sync_help_2_answer">手机管家的手机备份功能采用国际化标准的加密存储与传输方式，你备份的资料会永久免费地保存在腾讯公司加密的服务器中，你可以在需要的时候，便捷地恢复到各类型手机中。</string>
     <string name="str_sync_help_3_answer">"备份联系人：上传手机联系人至网络端备份，网络端原有数据将被覆盖。
 恢复联系人：下载网络端联系人至手机端，手机端原有数据将被覆盖。"</string>
     <string name="str_sync_help_4_answer">"本功能免费下载、免费使用，腾讯公司不收取任何费用。
 在下载与同步过程中产生的网络流量费由相应的移动网络运营商收取。
-推荐您开通数据包月套餐，或在Wi-Fi下使用本软件，能降低或减免流量资费，详情请咨询当地运营商。"</string>
-    <string name="str_sync_help_5_answer">"您可以通过多种渠道查看和管理备份到网络的通讯录资料：
+推荐你开通数据包月套餐，或在Wi-Fi下使用本软件，能降低或减免流量资费，详情请咨询当地运营商。"</string>
+    <string name="str_sync_help_5_answer">"你可以通过多种渠道查看和管理备份到网络的通讯录资料：
 Wap管理：进入手机管家同步界面【查看网络联络人】—&amp;gt;wap管理
 WEB管理：登录网站http://pim.qq.com/pim
 QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如设有2次密码需输入）"</string>
     <string name="sync_local_contact_change_tips">手机联系人变化：增加%1$s, 修改%2$s, 删除%3$s, 请及时备份</string>
     <string name="str_mobileregister_title">注册手机帐户</string>
     <string name="str_mobileregister_title_verify">注册安全校验</string>
-    <string name="str_qqpimpwd_pwdtip">请输入您的通讯录密码：</string>
+    <string name="str_qqpimpwd_pwdtip">请输入你的通讯录密码：</string>
     <string name="str_qqpimpwd_forget">忘记通讯录密码？</string>
     <string name="str_qqpimpwd_null">通讯录密码不能为空</string>
     <string name="str_qqpimpwd_ing">通讯录密码验证中...</string>
@@ -314,7 +357,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="str_login_cancel">登录已取消</string>
     <string name="str_login_success">登录成功</string>
     <string name="str_login_with_mobile_account">使用手机帐号同步</string>
-    <string name="str_login_with_qq_account_tip">您还可以使用QQ号同步:</string>
+    <string name="str_login_with_qq_account_tip">你还可以使用QQ号同步:</string>
     <string name="str_safety_checking">正在进行安全检查</string>
     <string name="please_input_sms_content">请输入短信内容</string>
     <string name="holdoff_modes">拦截来电回复音</string>
@@ -360,13 +403,14 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="add_to_whitelist">加入白名单</string>
     <string name="add_to_blacklist">加入黑名单</string>
     <string name="edit_contact">编辑联系人</string>
-    <string name="edit_super_contact">编辑私密联系人</string>
+    <string name="edit_super_contact">编辑隐私联系人</string>
     <string name="chose_filter_modes">选择拦截模式</string>
     <string name="set_password">设置密码</string>
     <string name="menu_start">打开</string>
     <string name="menu_import_callLog">导入通话记录</string>
     <string name="menu_import_sms">导入短信记录</string>
     <string name="security_validate">安全认证</string>
+    <string name="official_validate">官方正版</string>
     <string name="call_notify">来电提醒</string>
     <string name="hold_notify">来电挂断提醒</string>
     <string name="rep_sms_context">挂断回复短信内容</string>
@@ -378,18 +422,20 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="tab_traffic_filter">联网防火墙</string>
     <string name="change_multy_tips_forbid">禁止%1$s联网，会同时禁止以下应用联网</string>
     <string name="change_multy_tips_allow">允许%1$s联网，会同时允许以下应用联网</string>
-    <string name="traffic_filter_inforbar_no_root">您未获取ROOT权限，无法修改联网权限</string>
-    <string name="software_traffic_ranking_infobar">%1$d 款软件本月2G/3G使用情况</string>
-    <string name="traffic_filter_inforbar_has_root">%1$d 款软件有联网权限</string>
+    <string name="traffic_filter_inforbar_no_feature">你的手机不支持，无法使用联网防火墙</string>
+    <string name="traffic_filter_inforbar_init_failed">联网防火墙初始化失败</string>
+    <string name="traffic_filter_inforbar_no_root">你未获取ROOT权限，无法修改联网权限</string>
+    <string name="software_traffic_ranking_infobar">本月共 %1$d 款软件使用2G/3G联网</string>
+    <string name="traffic_filter_inforbar_has_root">已禁止 %1$d 个软件2G/3G联网</string>
     <string name="alert_confirm_clean_software_traffic">确定清空软件流量统计数据吗？</string>
     <string name="software_traffic_special_item">下载软件产生的流量</string>
-    <string name="low_sdk_tip">此版本只适合2.0以上系统，您可下载适合您手机系统的版本。</string>
-    <string name="low_sdk_tip_3">注意：由于您手机系统不适合覆盖安装，请卸载后再安装合适版本。</string>
+    <string name="low_sdk_tip">此版本只适合2.0以上系统，你可下载适合你手机系统的版本。</string>
+    <string name="low_sdk_tip_3">注意：由于你手机系统不适合覆盖安装，请卸载后再安装合适版本。</string>
     <string name="hint">提示</string>
     <string name="hint_no_numbers">暂无号码</string>
-    <string name="hint_no_secure_sms">暂无私密短信</string>
+    <string name="hint_no_secure_sms">暂无隐私短信</string>
     <string name="hint_no_intercept_sms">暂无拦截信息</string>
-    <string name="hint_no_secure_call">暂无私密电话</string>
+    <string name="hint_no_secure_call">暂无隐私电话</string>
     <string name="hint_no_intercept_call">暂无拦截电话</string>
     <string name="hint_no_intercept_keyword">暂无关键字</string>
     <string name="hint_no_smscheck">未发现扣费短信</string>
@@ -398,6 +444,9 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="hint_retry_refresh">重新加载，请在菜单中选择“刷新”</string>
     <string name="hint_add_success">添加成功</string>
     <string name="hint_add_update">更新成功</string>
+    <string name="update_immediately">立即更新</string>
+    <string name="software_detail">详情</string>
+    <string name="ignore">忽略</string>
     <string name="hint_must_fill">必填</string>
     <string name="hint_delete_success">删除成功</string>
     <string name="hint_delete_fail">删除失败</string>
@@ -418,36 +467,37 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="hint_batch_install_not_select">请先勾选需要批量安装的安装包</string>
     <string name="hint_batch_delete_not_select">请先勾选需要批量删除的安装包</string>
     <string name="hint_onering_listener">监控响一声来电</string>
-    <string name="hint_tell_to_open_service">手机管家助您远离骚扰来电短信和恶意病毒木马，马上启动安全服务？</string>
+    <string name="hint_tell_to_open_service">手机管家助你远离骚扰来电短信和恶意病毒木马，马上启动安全服务？</string>
     <string name="hint_check_update">"是否检查手机管家更新版本？
 联网检查产生的流量费用全部由运营商收取，腾讯不收取任何费用"</string>
     <string name="hint_timeout">操作超时,请重新登录</string>
-    <string name="hint_first_use_private_space">私密空间可对私密联系人的来往信息与通信记录加密，保护您的隐私。</string>
-    <string name="hint_secure_contact_infobar">共 %1$s 个私密联系人</string>
+    <string name="hint_first_use_private_space">隐私信箱可对隐私联系人的通讯记录加密，保护你的隐私。</string>
+    <string name="hint_secure_contact_infobar">共 %1$s 个隐私联系人</string>
     <string name="hint_white_contact_infobar">共 %1$s 个白名单</string>
     <string name="hint_black_contact_infobar">共 %1$s 个黑名单</string>
-    <string name="hint_secure_msg_infobar">共 %1$s 条私密短信，其中 %2$s 条未读</string>
-    <string name="hint_secure_msg_restore_infobar">正在恢复私密短信和私密联系人</string>
-    <string name="hint_secure_call_infobar">共 %1$s 个私密电话</string>
+    <string name="hint_secure_msg_infobar">共 %1$s 条隐私短信，其中 %2$s 条未读</string>
+    <string name="hint_secure_msg_restore_infobar">正在恢复隐私短信和隐私联系人</string>
+    <string name="hint_secure_call_infobar">共 %1$s 个隐私电话</string>
     <string name="hint_mysoftware_memory_large">已安装%1$d款软件</string>
     <string name="hint_mysoftware_memory_small">已安装%1$d款软件，空间小于%2$s</string>
     <string name="hint_market_message">绿色下才平台，安全、便捷</string>
     <string name="browser_times">%1$d次浏览</string>
     <string name="hint_setting_message">请点击查看各种设置</string>
     <string name="hint_virus_danger_message">注意！手机可能处于危险状态</string>
-    <string name="hint_virus_safe_message">您的手机正处在安全保护中</string>
+    <string name="hint_virus_safe_message">你的手机正处在安全保护中</string>
+    <string name="hint_first_blocking_tips">表示管家拦到垃圾信息或电话</string>
     <string name="hint_blocking_msg1">新拦截电话 %1$s</string>
     <string name="hint_blocking_msg2">新拦截信息 %1$s</string>
     <string name="hint_blocking_msg3">新拦截电话 %1$s,信息 %2$s</string>
     <string name="hint_blocking_msg4">本月拦截信息 %1$s, 电话 %2$s</string>
-    <string name="hint_add_to_whitelist">确认添加到白名单？</string>
+    <string name="hint_add_to_whitelist">是否将此号码添加到白名单？添加到白名单之后，此号码的信息和电话将不再被拦截。</string>
     <string name="hint_add_to_blacklist">确认添加到黑名单？</string>
     <string name="hint_delete_all_contacts">确定删除这些名单？</string>
     <string name="hint_delete_secure_sms_thread">确定删除该号码所有聊天记录？</string>
-    <string name="hint_delete_all_secure_sms">确定删除所有私密联系人的聊天记录？</string>
-    <string name="hint_restore_secure_info_confirm">管家检测到您上次卸载前私密空间有私密短信和联系人，是否恢复私密短信和联系人？</string>
+    <string name="hint_delete_all_secure_sms">确定删除所有隐私联系人的聊天记录？</string>
+    <string name="hint_restore_secure_info_confirm">是否恢复上次卸载前隐私信箱里面的信息和联系人？</string>
     <string name="hint_now_reading">读取中..</string>
-    <string name="hint_downloading_app">后台下载中，可通过menu进入下载管理查看详细</string>
+    <string name="hint_downloading_app">开始下载，在menu中进入下载管理</string>
     <string name="hint_no_sdcard">请插入SD卡</string>
     <string name="permission_close_tip">注意！关闭后将无法实时监控手机隐私权限使用情况，确认要关闭？</string>
     <string name="dialog_cancle_scane">取消查杀</string>
@@ -462,32 +512,32 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="forget_the_charge_sms_tips">*温馨提醒:忽略后此内容将不再被扫描</string>
     <string name="qqwebsite_cancellation">注销</string>
     <string name="restore_a_large_sum_of_info">需要恢复的信息比较多，请耐心等待</string>
-    <string name="restore_secure_info_from_sd_result">已成功恢复私密联系人%1$s，私密短信%2$s条</string>
-    <string name="alert_confirm_restore">确定恢复信息到系统信息吗？</string>
+    <string name="restore_secure_info_from_sd_result">已成功恢复隐私联系人%1$s，隐私短信%2$s条</string>
+    <string name="alert_confirm_restore">是否恢复此短信到系统收件箱？</string>
     <string name="alert_confirm_delete_select">确认要删除选中项吗？</string>
     <string name="alert_confirm_delete_select2">"确认要删除记录'%1$s'吗？"</string>
-    <string name="alert_confirm_delete_log">您确定删除本条记录吗？</string>
+    <string name="alert_confirm_delete_log">你确定删除本条记录吗？</string>
     <string name="alert_confirm_delete_all_logs_1">确认删除全部</string>
-    <string name="when_stoping_service_for_pad">停止病毒监控服务，将会使您的Pad处在高危状态，无法抵御病毒的侵害。</string>
+    <string name="when_stoping_service_for_pad">停止病毒监控服务，将会使你的Pad处在高危状态，无法抵御病毒的侵害。</string>
     <string name="when_stoping_service">停止安全服务，将会取消智能拦截和病毒监控服务，请确认。</string>
     <string name="exit_tencent_secure_warning">退出管家后，骚扰拦截、流量监控及病毒监控等服务将失效，确定退出？</string>
     <string name="recommand_opening_secure_service">建议打开安全服务开关</string>
-    <string name="message_content">短信回复内容</string>
-    <string name="message_auto_reply">拦截后自动回复短信</string>
+    <string name="message_content">信息回复内容</string>
+    <string name="message_auto_reply">拦截后自动回复信息</string>
     <string name="summary_of_filter_mode_standar">拦截黑名单、智能拦截陌生号码信息</string>
-    <string name="summary_of_filter_mode_onlyblack">只拦截黑名单，接收其他号码的短信和电话</string>
-    <string name="summary_of_filter_mode_onlywhite">只接受白名单，拦截其他号码的短信和电话</string>
+    <string name="summary_of_filter_mode_onlyblack">只拦截黑名单，接收其他号码的信息和电话</string>
+    <string name="summary_of_filter_mode_onlywhite">只接受白名单，拦截其他号码的信息和电话</string>
     <string name="summary_of_custom_setting">自由设置各项拦截规则</string>
     <string name="network_check_open">流量监控已开启</string>
-    <string name="network_tips">亲，如果您本月的流量在月结算日无法自动清零，请点击“修正”。</string>
+    <string name="network_tips">亲，如果你本月的流量在月结算日无法自动清零，请点击“修正”。</string>
     <string name="network_tips_done">校正成功</string>
     <string name="network_check_close">流量监控已关闭</string>
     <string name="please_input_message_content">请输入短信回复内容</string>
-    <string name="secure_space_change_name_and_icon_guide">建议修改“私密空间”入口的名称和图标，伪装您的“私密空间”，让隐私更安全。</string>
-    <string name="secure_space_change_name_and_icon_tips">建议修改“私密空间”入口的名称和图标，修改后将在“私密空间”入口显示。</string>
-    <string name="secure_space_add_shortcut_tips">添加私密空间桌面快捷方式，方便您快速进入</string>
-    <string name="secure_space_add_shortcut_tips1">可在桌面添加私密空间快捷方式，快来试试吧：</string>
-    <string name="secure_space_set_password_tips">私密空间可对私密联系人的通讯记录加密，保护您的隐私。请先设置密码：</string>
+    <string name="secure_space_change_name_and_icon_guide">建议修改“隐私信箱”入口的名称和图标，伪装你的“隐私信箱”，让隐私更安全。</string>
+    <string name="secure_space_change_name_and_icon_tips">修改后将在“隐私信箱”入口显示。</string>
+    <string name="secure_space_add_shortcut_tips">添加后，可从桌面快速进入隐私信箱</string>
+    <string name="secure_space_add_shortcut_tips1">可在桌面添加隐私信箱快捷方式，快来试试吧：</string>
+    <string name="secure_space_set_password_tips">隐私信箱可对隐私联系人的通讯记录加密，保护你的隐私。请先设置密码：</string>
     <string name="secure_space_passwd_valide">密码失效时间</string>
     <string name="secure_space_passwd_valide_title">设置时间(单位：秒)</string>
     <string name="my_software">我的软件</string>
@@ -504,9 +554,9 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="check_title_info_danger_time">再不体检,管家也hold不住了</string>
     <string name="optimizationing_tips">正在优化中...</string>
     <string name="optimizationing_pro_tips">优化中...</string>
-    <string name="thanks_for_evaluating">感谢您的评分</string>
+    <string name="thanks_for_evaluating">感谢你的评分</string>
     <string name="loading">正在加载...</string>
-    <string name="reset_password_tips">重新设置进入私密空间的密码</string>
+    <string name="reset_password_tips">重新设置进入隐私信箱的密码</string>
     <string name="bubble_perss_setting">点击设置开启流量警报</string>
     <string name="title_up_before_nocheck">立即体检,全面了解手机状况</string>
     <string name="soon_optimization_button">立即优化</string>
@@ -521,7 +571,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="optimizationing_lib">正在更新病毒库...</string>
     <string name="optimizationing_auto_run">正在优化开机自启动...</string>
     <string name="optimizationing_back_app">正在结束后台任务,释放内存...</string>
-    <string name="optimizationing_bad_app">正在卸载病毒...</string>
+    <string name="optimizationing_bad_app">正在清除恶意软件...</string>
     <string name="optimization_done_title_tips">优化完成</string>
     <string name="optimization_net_error_title">网络错误,部分优化失败</string>
     <string name="optimization_root_error_title">手机无ROOT权限</string>
@@ -529,7 +579,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="optimization_net_error_info">建议连接后继续优化</string>
     <string name="optimization_net_error_tips">网络未连接,部分优化失败,建议连接后再继续优化</string>
     <string name="optimization_done_version_tips">发现管家有新版本,点击菜单检查更新</string>
-    <string name="optimization_done_good_tips">您的手机状况良好</string>
+    <string name="optimization_done_good_tips">定期体检，手机更健康</string>
     <string name="no_open_network">未开启</string>
     <string name="do_open_network">点击开启</string>
     <string name="open_service_first">请先开启流量监控</string>
@@ -541,27 +591,30 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="traffic_nerver_open_behind">可实时监控流量</string>
     <string name="hint_wifi_used_month">已用Wi-Fi流量</string>
     <string name="forget_succse">忽略成功</string>
+    <string name="nerver_virus_scan_note">未进行过扫描，建议立即扫描</string>
+    <string name="recent_virus_scan_note">定期查毒，手机更健康</string>
+    <string name="long_time_no_virus_scan_note">%d天没有扫描，建议立即扫描</string>
     <string name="help_HD">"主界面:
 
- 简介：QQPad管家(aPad)，适配android2.2以上平板(不包括android3.0以上系统)。 延承QQPad管家优秀品质，针对android平板全面定制。拥有病毒查杀、系统优化、上网管理、软件管理等多项核心功能。 一键体检轻松帮您了解、优化Pad系统。拥有绿色软件下载平台，一站式搞定下载、更新、使用的安全问题。这是一款完全免费的Pad终端客户端，使用过程中腾讯公司不收取任何费用。
+ 简介：QQPad管家(aPad)，适配android2.2以上平板(不包括android3.0以上系统)。 延承QQPad管家优秀品质，针对android平板全面定制。拥有病毒查杀、系统优化、上网管理、软件管理等多项核心功能。 一键体检轻松帮你了解、优化Pad系统。拥有绿色软件下载平台，一站式搞定下载、更新、使用的安全问题。这是一款完全免费的Pad终端客户端，使用过程中腾讯公司不收取任何费用。
 
  主功能介绍：
 
  ◇病毒查杀：一键查杀所有病毒，让Pad里的病毒无所遁形。强力推出云查杀功能，更及时精准查杀Pad病毒.
 
- ◇系统优化：包括任务管理、开机加速、缓存清理和白名单软件。任务管理可以对Pad当前正在运行的进程进行管理， 并查看Pad内存占用情况，您可以选择关闭一些不必要的运行程序；开机加速（需要root权限）可以设置允许或者禁止开机自启动程序是否随Pad一同开机启动。 缓存清理可以对Pad上网产生的缓存文件进行清理，白名单程序可以自由添加Pad可以信任运行的程序；通过系统优化，可以加速您Pad的运行速度。
+ ◇系统优化：包括任务管理、开机加速、缓存清理和白名单软件。任务管理可以对Pad当前正在运行的进程进行管理， 并查看Pad内存占用情况，你可以选择关闭一些不必要的运行程序；开机加速（需要root权限）可以设置允许或者禁止开机自启动程序是否随Pad一同开机启动。 缓存清理可以对Pad上网产生的缓存文件进行清理，白名单程序可以自由添加Pad可以信任运行的程序；通过系统优化，可以加速你Pad的运行速度。
 
- ◇流量监控：对您的Pad上网流量进行实时统计。统计Wi-Fi使用时长和使用流量。在流量设置中可以开启或关闭流量监控，以及设置月结算日。网络设置中可以控制Wi-Fi开启或关闭。
+ ◇流量监控：对你的Pad上网流量进行实时统计。统计Wi-Fi使用时长和使用流量。在流量设置中可以开启或关闭流量监控，以及设置月结算日。网络设置中可以控制Wi-Fi开启或关闭。
 
  ◇我的软件：“我的软件”可以查看常用软件以及已安装软件和软件安装包。 “下载管理”功能，用户可以实时了解当前软件的下载进度，并能一键安装和快速卸载，下载安装一目了然。 回收站可保留已删除系统软件的备份(需ROOT权限)，以避免用户卸载系统软件后出现Pad运行不正常，可以在此恢复相应的系统软件。
 
  ◇软件·游戏：通过每日精选可以查看到推荐软件，装机必备和软件分类可以下载通过Pad管家验证的各类绿色软件，同时还提供装机必备软件批量安装的功能。
 
- ◇权限监控：QQPad管家发现越来越多高危险、跟踪软件已经开始植入到Pad底层， 软件权限监控可以保护您的隐私安全，防止你的信息、联系人、位置信息等信息被恶意软件访问（需ROOT权限）。
+ ◇权限监控：QQPad管家发现越来越多高危险、跟踪软件已经开始植入到Pad底层， 软件权限监控可以保护你的隐私安全，防止你的信息、联系人、位置信息等信息被恶意软件访问（需ROOT权限）。
 
  主菜单介绍:
 
- ◇系统设置：是否开启病毒监控服务、开启通知栏图标、云查杀功能，以及系统更新各项内容。 反馈： 在使用过程中，将您对软件的建议或意见以及归属地问题通过menu菜单的“反馈”告诉我们，感谢您帮助我们进步！
+ ◇系统设置：是否开启病毒监控服务、开启通知栏图标、云查杀功能，以及系统更新各项内容。 反馈： 在使用过程中，将你对软件的建议或意见以及归属地问题通过menu菜单的“反馈”告诉我们，感谢你帮助我们进步！
 
  ◇检查更新：软件会定时更新，也可以通过menu菜单，手动更新软件至最高版本，以获得更好的服务。
 
@@ -571,75 +624,75 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
 
 "</string>
     <string name="help_main">"        1．如何快速全面了解手机状况？
-         您可点击首页一键体检“快速检查手机状况。体检能快速扫描恶意软件、垃圾文件、关键设置项等，全方位掌握手机状况，扫描完成后“一键优化“轻松解决手机问题。
+         你可点击首页一键体检“快速检查手机状况。体检能快速扫描恶意软件、垃圾文件、关键设置项等，全方位掌握手机状况，扫描完成后“一键优化“轻松解决手机问题。
 
 \u0009\u00092．为什么体检优化后分数也拿不到满分？
-\u0009\u0009由于手机系统环境存在差异，部分手机系统自带的软件占用的内存是无法释放的。建议您通过手机管家的软件卸载功能，卸载多余软件，优化系统环境，提高分数。
+\u0009\u0009由于手机系统环境存在差异，部分手机系统自带的软件占用的内存是无法释放的。建议你通过手机管家的软件卸载功能，卸载多余软件，优化系统环境，提高分数。
 
 \u0009\u00093． 我的软件“一键分析”有什么作用？
-\u0009\u0009一键分析可以为您检查手机不常见内置软件、含插件软件和不常用的软件，并提供解决方案，帮助您卸载多余的软件，释放手机空间。
+\u0009\u0009一键分析可以为你检查手机不常见内置软件、含插件软件和不常用的软件，并提供解决方案，帮助你卸载多余的软件，释放手机空间。
 
 \u0009\u00094．如何卸载系统软件？
-\u0009\u0009在“我的软件“模块，您可以点击软件卸载，卸载系统软件（需ROOT权限），卸载后的系统软件可以在菜单的回收站找回；另外，在我们软件，您还可以一键更新所需更新的软件；安装包管理为您分析发现相同的安装包，可以一键卸载多余安装包；软件搬家支持将手机上的已安装软件移动到SD卡上，节约手机存储空间。
+\u0009\u0009在“我的软件“模块，你可以点击软件卸载，卸载系统软件（需ROOT权限），卸载后的系统软件可以在菜单的回收站找回；另外，在我们软件，你还可以一键更新所需更新的软件；安装包管理为你分析发现相同的安装包，可以一键卸载多余安装包；软件搬家支持将手机上的已安装软件移动到SD卡上，节约手机存储空间。
 
 \u0009\u00095． 如何提高手机的运行速度？
-\u0009\u0009进入手机加速，点击“一键加速“，一键为您清理手机缓存、结束多余进程、优化开机启动项，为您加快手机运行速度。手机加速功能还提供手动操作，其中进程管理可以管理当前正在运行的进程；开机加速可以通过管理软件开机自启动来加快手机开机速度(需ROOT权限)；缓存清理可以对手机上网产生的缓存文件进行清理。
+\u0009\u0009进入手机加速，点击“一键加速“，一键为你清理手机缓存、结束多余进程、优化开机启动项，为你加快手机运行速度。手机加速功能还提供手动操作，其中进程管理可以管理当前正在运行的进程；开机加速可以通过管理软件开机自启动来加快手机开机速度(需ROOT权限)；缓存清理可以对手机上网产生的缓存文件进行清理。
 
 \u0009\u00096. 权限监控有什么作用？（需ROOT权限）
-\u0009\u0009Android系统会把手机分成各种权限给到软件使用。有一些敏感的权限，例如读取联系人信息、发送短信、联网等等，这些都会造成用户资料泄漏，恶意扣费等。权限监控可以帮助您智能管理这些软件的隐私权限，保护您的隐私安全，防止您的信息、联系人、位置等信息被恶意软件访问。
+\u0009\u0009Android系统会把手机分成各种权限给到软件使用。有一些敏感的权限，例如读取联系人信息、发送短信、联网等等，这些都会造成用户资料泄漏，恶意扣费等。权限监控可以帮助你智能管理这些软件的隐私权限，保护你的隐私安全，防止你的信息、联系人、位置等信息被恶意软件访问。
 
 \u0009\u00097. QQ网盘有什么作用？
-\u0009\u0009QQ网盘是一个可以实现云端存贮的移动硬盘。在手机端和电脑端的资料随时随地上传下载。您可在电脑将资料上传到QQ网盘，在手机端便能够轻松下载，进行浏览，QQ网盘支持图片、PDF、Word、Excel等多种常用格式查看；或者您也可以将手机端的文件上传至电脑，节省手机存储空间。另外，手机管家与QQ客户端的QQ网盘使用相同的云端存储（电脑需安装最新QQ2011正式版）
+\u0009\u0009QQ网盘是一个可以实现云端存贮的移动硬盘。在手机端和电脑端的资料随时随地上传下载。你可在电脑将资料上传到QQ网盘，在手机端便能够轻松下载，进行浏览，QQ网盘支持图片、PDF、Word、Excel等多种常用格式查看；或者你也可以将手机端的文件上传至电脑，节省手机存储空间。另外，手机管家与QQ客户端的QQ网盘使用相同的云端存储（电脑需安装最新QQ2011正式版）
 
 \u0009\u00098. 如何防止每月流量超额使用？
-\u0009\u0009流量监控功能可对手机上网流量进行实时统计，开启流量监控开关，您可查看本月已用流量和剩余流量的情况。另外通过“流量监控设置”您还可以设置每月套餐限额，月结算日及流量报警，当月使用流量超过90%，系统会自动报警，防止流量超额扣费。
+\u0009\u0009流量监控功能可对手机上网流量进行实时统计，开启流量监控开关，你可查看本月已用流量和剩余流量的情况。另外通过“流量监控设置”你还可以设置每月套餐限额，月结算日及流量报警，当月使用流量超过90%，系统会自动报警，防止流量超额扣费。
 
 \u0009\u00099. 自动校正流量有什么好处？
-\u0009\u0009自动校正流量发送免费短信帮您校正已用流量，使您的流量和运营商实时同步，可在流量监控设置里面开启自动校正流量，开启时需先配置”本机归属地“和“SIM卡类型”。
+\u0009\u0009自动校正流量发送免费短信帮你校正已用流量，使你的流量和运营商实时同步，可在流量监控设置里面开启自动校正流量，开启时需先配置”本机归属地“和“SIM卡类型”。
 
 \u0009\u000910. 如何杜绝垃圾短信，推销电话的骚扰？
-\u0009\u0009在“骚扰拦截”模块，我们默认为您开启“标准拦截模式”，此模式会智能拦截垃圾短信和响一声来电，为您轻松杜绝骚扰。此外，您也可以点击右上角的设置，添加黑白名单，其中“黑名单”是您希望被拦截的号码，“白名单”是被放行的号码，并在“拦截设置”选择您需要的拦截模式。当有被拦截的短信和电话时，手机管家会在通知栏提示您，您可以点击进入“骚扰拦截”页面查看。
+\u0009\u0009在“骚扰拦截”模块，我们默认为你开启“标准拦截模式”，此模式会智能拦截垃圾短信和响一声来电，为你轻松杜绝骚扰。此外，你也可以点击右上角的设置，添加黑白名单，其中“黑名单”是你希望被拦截的号码，“白名单”是被放行的号码，并在“拦截设置”选择你需要的拦截模式。当有被拦截的信息和电话时，手机管家会在通知栏提示你，你可以点击进入“骚扰拦截”页面查看。
 
 \u0009\u000911. 手机病毒越来越猖狂了，如何防止病毒侵害？
 \u0009\u0009定期进行手机病毒查杀，能够有效防止病毒侵害。点击“快速扫描”，可以快速扫描手机关键位置，防止手机被病毒感染；
-\u0009\u0009“全盘扫描”则全方位地对手机进行扫描，查杀更彻底；同时您可开启定期查杀功能，让手机病毒无处可循。
+\u0009\u0009“全盘扫描”则全方位地对手机进行扫描，查杀更彻底；同时你可开启定期查杀功能，让手机病毒无处可循。
 
 \u0009\u000912. 病毒查杀时，进行云查杀有什么好处？
 \u0009\u0009在查杀病毒的时候，如果发现有未知软件会进行联网云查杀，云查杀只需耗费极少的流量。联网云查杀设置入口：病毒查杀，右上角设置-“联网云查杀”开启。
 
 \u0009\u000913. 手机电池越来越不耐用了，如何节省电量的使用？
-\u0009\u0009可以在主界面进入省电管理，省电管理提供智能省电、超长待机、极限模式三种省电模式。根据您的省电需要智能设置21个省电项目，有效减少电量消耗，延长使用时间。包括智能调节Wi-Fi、移动网络、设置屏幕亮度和屏幕、蓝牙等项目。同时也提供了自定义省电模式，打造专属的省电策略。
+\u0009\u0009可以在主界面进入省电管理，省电管理提供智能省电、超长待机、极限模式三种省电模式。根据你的省电需要智能设置21个省电项目，有效减少电量消耗，延长使用时间。包括智能调节Wi-Fi、移动网络、设置屏幕亮度和屏幕、蓝牙等项目。同时也提供了自定义省电模式，打造专属的省电策略。
 
 \u0009\u000914. 使用智能省电时，为什么屏幕关闭时，Wi-Fi会自动关闭？
-\u0009\u0009Wi-Fi是最耗电的项目之一，当关闭屏幕时，手机管家会在屏幕关闭10分钟后自动关闭Wi-Fi,当屏幕开启时，会根据您之前Wi-Fi连接状态判断是否自动开启。当您的屏幕关闭时，更加智能地为您节省电量，延长电池使用时长。
+\u0009\u0009Wi-Fi是最耗电的项目之一，当关闭屏幕时，手机管家会在屏幕关闭10分钟后自动关闭Wi-Fi,当屏幕开启时，会根据你之前Wi-Fi连接状态判断是否自动开启。当你的屏幕关闭时，更加智能地为你节省电量，延长电池使用时长。
 
 \u0009\u000915. 怎样快速寻找和下载每日最新最酷的软件？
-\u0009\u0009“软件游戏”每天为您精心推荐最新最酷的软件，此外您可以在装机必备和软件分类下载手机管家验证的各类绿色软件，通过右上角的搜索功能，可方便快速地找到所需要的软件。
+\u0009\u0009“软件游戏”每天为你精心推荐最新最酷的软件，此外你可以在装机必备和软件分类下载手机管家验证的各类绿色软件，通过右上角的搜索功能，可方便快速地找到所需要的软件。
 \u0009\u0009
 
-\u0009\u000916. 私密空间有什么作用？
-\u0009\u0009私密空间是您个人的私密保险箱。在您添加私密联系人之后，您和您私密联系人的往来信息和通话记录将存放在私密空间，系统收件箱及通话记录中将不再显示。进入私密空间时，需要输入您设置的密码。
+\u0009\u000916. 隐私信箱有什么作用？
+\u0009\u0009隐私信箱是你个人的隐私保险箱。在你添加隐私联系人之后，你和你隐私联系人的往来信息和通话记录将存放在隐私信箱，系统收件箱及通话记录中将不再显示。进入隐私信箱时，需要输入你设置的密码。
 \u0009\u0009
 
-\u0009\u000917. 私密空间密码丢失了，怎样找回密码？
-\u0009\u0009如果忘记密码，您可点击忘记密码，输入您曾经设置过的私密联系人的号码，以便重置密码；如果您从未设置过无私密联系人，则直接重置密码。 
+\u0009\u000917. 隐私信箱独立密码丢失了，怎样找回密码？
+\u0009\u0009如果忘记密码，你可点击忘记密码，输入你曾经设置过的隐私联系人的号码，以便重置密码；如果你从未设置过无隐私联系人，则直接重置密码。 
 
 \u0009\u000918. 手机被盗时，防盗功能能够做什么？
-\u0009\u0009如果您开启手机防盗，当丢失手机被卸下或更换SIM卡时，将自动锁定手机并向紧急联系人发送预设短信，提醒您的手机可能被盗。此外，您还可以通过远程控制来锁定丢失手机、删除手机全部数据、定位手机。
+\u0009\u0009如果你开启手机防盗，当丢失手机被卸下或更换SIM卡时，将自动锁定手机并向紧急联系人发送预设短信，提醒你的手机可能被盗。此外，你还可以通过远程控制来锁定丢失手机、删除手机全部数据、定位手机。
 \u0009\u0009
 
 \u0009\u000919. 使用手机防盗功能时，能不能对本机进行远程控制操作？
 \u0009\u0009远程控制是对丢失手机进行远程删除数据、定位和锁机等操作，不能对本机进行操作，如果对本机进行操作，会出现删除本机数据、锁机等后果。 
 
 \u0009\u000920. 怎样防止手机被无故扣费？
-\u0009\u0009在主界面进入扣费扫描，可扫描是否有被无故扣费，同时扣费扫描可提供实时监控功能，当您收到疑似扣费短信时有通知栏提醒，避免被无故外扣费。 
+\u0009\u0009在主界面进入扣费扫描，可扫描是否有被无故扣费，同时扣费扫描可提供实时监控功能，当你收到疑似扣费短信时有通知栏提醒，避免被无故外扣费。 
 
 \u0009\u000921. QQ安全中心有什么作用？
 \u0009\u0009QQ安全中心是保护QQ账户、Q币和游戏帐号安全的有效工具，可以让你随时查看手机令牌动态密码，实时接收帐号消费、异常，查询QQ登录足迹。
 \u0009\u0009
 
 \u0009\u000922. 怎样能够快速进行手机截屏？（需ROOT权限）
-\u0009\u0009您可在实用工具找到快速截屏功能，您可以选择通知栏截屏或者摇晃截屏，开启通知栏截屏后，将在通知栏显示截屏图标，点击图标，进行截屏；或者开启摇晃截屏后，摇一摇手机，可以快速截屏，截屏后截图将为您保留在预设位置。
+\u0009\u0009你可在实用工具找到快速截屏功能，你可以选择通知栏截屏或者摇晃截屏，开启通知栏截屏后，将在通知栏显示截屏图标，点击图标，进行截屏；或者开启摇晃截屏后，摇一摇手机，可以快速截屏，截屏后截图将为你保留在预设位置。
 \u0009\u0009
 
 \u0009\u000923. 什么是ROOT权限？
@@ -647,15 +700,15 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
 \u0009\u0009
 
 \u0009\u000924. 如何获取ROOT权限？
-\u0009\u0009目前没有官方的获取ROOT权限的方法，网上介绍的做法是通过第三方软件获取ROOT。第三方获取ROOT的软件可以通过一些知名的Android电子市场搜索下载。管家提醒您，由于手机硬件和软件环境的不同，获取ROOT存在一定的风险。
+\u0009\u0009目前没有官方的获取ROOT权限的方法，网上介绍的做法是通过第三方软件获取ROOT。第三方获取ROOT的软件可以通过一些知名的Android电子市场搜索下载。管家提醒你，由于手机硬件和软件环境的不同，获取ROOT存在一定的风险。
 \u0009\u0009
 
 \u0009\u000925. 为何部分手机未能成功授予手机管家ROOT权限？
-\u0009\u0009原因一：在手机管家申请获取ROOT权限时，您没有授予手机管家权限，您可以进入授权管理软件，例如Superuser或者“授权管理”授予手机管家权限；原因二：您的手机没有对系统外第三方软件授予ROOT权限，
+\u0009\u0009原因一：在手机管家申请获取ROOT权限时，你没有授予手机管家权限，你可以进入授权管理软件，例如Superuser或者“授权管理”授予手机管家权限；原因二：你的手机没有对系统外第三方软件授予ROOT权限，
 \u0009\u0009因此手机管家未能成功获取ROOT权限。 
 
 \u0009\u000926. 授予手机管家ROOT权限有什么作用？
-\u0009\u0009授予手机管家ROOT权限后，您可以：
+\u0009\u0009授予手机管家ROOT权限后，你可以：
 \u0009\u0009彻底清除深层手机病毒，保护手机安全
 \u0009\u0009•清理多余的系统软件，优化手机性能
 \u0009\u0009•设置开机启动项，加快手机开机
@@ -669,7 +722,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
 
  ◇病毒查杀：一键查杀所有病毒，让手机里的病毒无所遁形。强力推出云查杀功能，更及时精准查杀手机病毒
 
- ◇系统优化：包括任务管理、缓存清理和白名单程序。任务管理可以对手机当前正在运行的进程进行管理，并查看手机内存占用情况，您可以选择关闭一些不必要的运行程序；缓存清理可以对手机上网产生的缓存文件进行清理，白名单程序可以自由添加手机可以信任运行的程序；通过系统优化，可以加速您手机的运行速度。
+ ◇系统优化：包括任务管理、缓存清理和白名单程序。任务管理可以对手机当前正在运行的进程进行管理，并查看手机内存占用情况，你可以选择关闭一些不必要的运行程序；缓存清理可以对手机上网产生的缓存文件进行清理，白名单程序可以自由添加手机可以信任运行的程序；通过系统优化，可以加速你手机的运行速度。
 
  ◇软件管理：使用软件管理可以下载通过手机管家验证的各类绿色软件，同时还提供装机必备软件批量安装的功能，其中“我的软件”功能让用户可以更新、卸载、查看已安装软件详情，在下载管理里，用户可以实时了解当前软件的下载进度，并能一键安装和快速卸载，下载安装一目了然。
 
@@ -679,13 +732,13 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
 
  ◇常用工具：包括归属地查询、常用号码查询、和IP拨号。当用户手动设置IP拨号后，IP拨号将会启动。还可以设置拨打全部号码或者拨打长途使用。
 
- ◇手机备份：安全集成QQ同步助手功能，通过网络将您的通讯录上传至服务器免费加密存储，方便您在需要的时候取回恢复到手机中。现已支持在上千种手机上转移通讯录资料。更有PCQQ、Web、Wap、邮箱等多种渠道供您管理备份过的资料。 ◇系统设置：是否显示归属地并对其进行位置调整以及对扣费短信监控等进行设置。
+ ◇手机备份：安全集成QQ同步助手功能，通过网络将你的通讯录上传至服务器免费加密存储，方便你在需要的时候取回恢复到手机中。现已支持在上千种手机上转移通讯录资料。更有PCQQ、Web、Wap、邮箱等多种渠道供你管理备份过的资料。 ◇系统设置：是否显示归属地并对其进行位置调整以及对扣费短信监控等进行设置。
 
  主菜单介绍：
 
- ◇反馈： 在使用过程中，将您对软件的建议或意见以及归属地问题通过menu菜单的“反馈”告诉我们，感谢您帮助我们进步！
+ ◇反馈： 在使用过程中，将你对软件的建议或意见以及归属地问题通过menu菜单的“反馈”告诉我们，感谢你帮助我们进步！
 
- ◇推荐好友：您可以通过短信推荐本软件给您的好友(短信方式推荐给朋友，除正常短信费外，无任何费用)。
+ ◇推荐好友：你可以通过短信推荐本软件给你的好友(短信方式推荐给朋友，除正常短信费外，无任何费用)。
 
  ◇检查更新：软件会定时更新，也可以通过menu菜单，手动更新软件至最高版本，以获得更好的服务。
 
@@ -697,7 +750,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="help_manager_contactlist">"黑名单是用户拒绝接受来电和信息的号码列表。软件默认用户设置的黑名单号码的所有来电或短信都会被拦截掉。
 白名单是用户愿意接收信息和来电的号码列表（联系人号码默认接受，无需添加到白名单）。
 
-您可以通过右侧的添加按钮添加。
+你可以通过右侧的添加按钮添加。
 右侧的添加按钮可通过：
  a.手动添加；
  b.从联系人添加；
@@ -705,14 +758,14 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
  d.从通话记录添加；
  e.从短信列表添加。
 
-添加过程中，会提示您是选择只拦截电话、只拦截信息还是电话和信息都拦截。
+添加过程中，会提示你是选择只拦截电话、只拦截信息还是电话和信息都拦截。
 如果已有联系人，单击联系人，会出现编辑，删除，呼叫与发送短信的功能，可以对所选联系人进行相应操作。
 菜单栏中有名单备份、名单恢复、全部删除等功能。
 名单备份：同步所有黑白名单联系人；
 名单恢复：恢复之前备份过的黑白名单联系人；
 全部删除：删除所有黑名单联系人、所有白名单联系人以及所有黑白名单的联系人。
 "</string>
-    <string name="help_manager_keywords">用户可以选择添加需要过滤的短信关键字，您可以通过右上角的添加按钮添加关键字。</string>
+    <string name="help_manager_keywords">用户可以选择添加需要过滤的短信关键字，你可以通过右上角的添加按钮添加关键字。</string>
     <string name="help_filter_logs">"可以查看被拦截的信息和来电记录
  1、点击被拦截信息时，可以对其进行删除、举报，更多操作可以对其进行呼叫、回复短信、保存为联系人、加入黑白名单、恢复到系统信息
  2、点击被拦截的通话记录，可以对其进行呼叫、保存为联系人、加入黑白名单、删除等操作。
@@ -722,7 +775,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
 
  ◆点击加入黑白名单：把此拦截号码设置为黑白名单
 
- ◆点击举报：举报恶意信息，此举可帮助我们改善智能拦截信息或来电的效果，更好的保护您的手机和其他用户的手机免受骚扰
+ ◆点击举报：举报恶意信息，此举可帮助我们改善智能拦截信息或来电的效果，更好的保护你的手机和其他用户的手机免受骚扰
 
  ◆点击删除：可直接删除被拦截信息或来电
 
@@ -735,7 +788,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
 
  2、只拦截黑名单：只拦截黑名单内的号码，接受其他号码短信和来电
 
- 3、只接受白名单：只接受白名单内的号码，拦截其他号码的短信和电话
+ 3、只接受白名单：只接受白名单内的号码，拦截其他号码的信息和电话
 
  4、自定义模式：自由设置各项拦截规则，点击自定义，可编辑自定义模式，可编辑自定义模式。
  a.是否接受白名单；
@@ -757,13 +810,13 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
 
  来电拦截方式默认选项为“挂机”，可选项有：
 
- a.挂机：拦截来电后，对方将听到“您好，您拨打的电话正在通话中，请稍后再拨”的忙音提示；
+ a.挂机：拦截来电后，对方将听到“你好，你拨打的电话正在通话中，请稍后再拨”的忙音提示；
 
- b.停机：拦截来电后，对方将听到“您好，您所拨打的电话已停机。”的停机提示；
+ b.停机：拦截来电后，对方将听到“你好，你所拨打的电话已停机。”的停机提示；
 
- c.空号：拦截来电后，对方将听到“您所拨打的号码是空号。”的空号提示；
+ c.空号：拦截来电后，对方将听到“你所拨打的号码是空号。”的空号提示；
 
- d.关机:拦截来电后，对方将听到“对不起，您拨打的电话已关机。”的关机提示。
+ d.关机:拦截来电后，对方将听到“对不起，你拨打的电话已关机。”的关机提示。
 
  联通卡暂时只能用默认拦截方式为挂机模式。
  来电或短信拦截提示：可设置来电或短信拦截有提示或不提示
@@ -773,10 +826,10 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
  系统更新
  数据库：更新反病毒库、智能防骚扰与归属地更新。
  软件版本：显示软件当前版本，可手动选择更新最新版本。"</string>
-    <string name="help_securespace">"用户通过定义私密联系人，可将私密的往来信息和通话记录隐藏在私密空间，系统收件箱及通话记录中将不再显示。首次使用，需要设置密码。如果您忘记密码，您可以点击忘记密码，输入您私密联系人的号码，以便重置密码，如果无私密联系人可直接重置密码。在拨号状态下输入“密码+*”，再按“呼叫”或“拨号”可以快速进入私密空间。
+    <string name="help_securespace">"用户通过定义隐私联系人，可将隐私的往来信息和通话记录隐藏在隐私信箱，系统收件箱及通话记录中将不再显示。首次使用，需要设置密码。如果你忘记密码，你可以点击忘记密码，输入你隐私联系人的号码，以便重置密码，如果无隐私联系人可直接重置密码。在拨号状态下输入“密码+*”，再按“呼叫”或“拨号”可以快速进入隐私信箱。
 
- 1、私密短信记录
- 显示私密联系人的短信来往记录
+ 1、隐私短信记录
+ 显示隐私联系人的短信来往记录
  功能介绍：
  ◆呼叫：点击选呼叫，直接拨打选中号码；
 
@@ -790,8 +843,8 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
 
  ◆删除所有短信：点击删除所有短信，可将显示的记录全部删除。
 
- 2、私密通话记录
- 显示和私密联系人的所有来往电话记录，包括已拨、已接和未接来电。
+ 2、隐私通话记录
+ 显示和隐私联系人的所有来往电话记录，包括已拨、已接和未接来电。
  功能介绍：
  ◆呼叫：点击选呼叫，直接拨打选中号码；
 
@@ -803,49 +856,49 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
 
  ◆删除所有来电：点击删除所有来电，可以将显示的记录全部删除。
 
- 3、私密联系人
- 添加：点击右下角“私密联系人”可进入添加私密联系人界面。点击添加按键可手动添加/从联系人添加/从通话记录添加/从短信列表添加，从而创造您的私密名单。
- ◆导入保护内容：添加号码，系统将自动扫描，出现提示“您是否要把该联系人的所有通信记录导入到私密空间”，选择“导入”则将此联系人的通信记录导入私密中心，选择取消则不导入。
+ 3、隐私联系人
+ 添加：点击右下角“隐私联系人”可进入添加隐私联系人界面。点击添加按键可手动添加/从联系人添加/从通话记录添加/从短信列表添加，从而创造你的隐私名单。
+ ◆导入保护内容：添加号码，系统将自动扫描，出现提示“你是否要把该联系人的所有通信记录导入到隐私信箱”，选择“导入”则将此联系人的通信记录导入隐私中心，选择取消则不导入。
 
  ◆编辑号码：选中号码，即可编辑，可以修改名称和号码。
 
- ◆删除私密联系人：选中联系人，点击删除选项，系统出现提示“确定要删除吗”，选择“是”即出现“您是否需要把联系人的所有私密通信记录恢复到系统”，取消则继续保留在私密空间，点击确定则恢复到系统。
+ ◆删除隐私联系人：选中联系人，点击删除选项，系统出现提示“确定要删除吗”，选择“是”即出现“你是否需要把联系人的所有隐私通信记录恢复到系统”，取消则继续保留在隐私信箱，点击确定则恢复到系统。
 
- ◆发消息：点击发消息，可对选中的私密号码发短信；
+ ◆发消息：点击发消息，可对选中的隐私号码发短信；
 
  ◆呼叫：可对选中的号码进行通话操作。
 
  主菜单介绍
- 私密空间设置
- 可对私密空间进行各项设置。
- a.私密短信
+ 隐私信箱设置
+ 可对隐私信箱进行各项设置。
+ a.隐私短信
  ◆短信提醒：选择提醒方式，有无提醒、通知栏提醒、短信铃声提醒和通知栏+短信铃声，振动提醒、通知栏+振动。
 
  ◆通知栏提醒：可以设置通知栏提醒的标题和内容。
 
- b.私密来电
- ◆私密来电接听方式：可选择正常接听、来电挂断和来电挂断并回复短信。
+ b.隐私来电
+ ◆隐私来电接听方式：可选择正常接听、来电挂断和来电挂断并回复短信。
 
- ◆来电提醒：如果私密来电选择正常接听，可以设置来电提醒为静音、电话铃声和振动。
+ ◆来电提醒：如果隐私来电选择正常接听，可以设置来电提醒为静音、电话铃声和振动。
 
- ◆挂断提醒：如果私密来电选择来电挂断，可以设置挂断提醒为无提醒、响一声、通知栏提醒和通知栏提醒+响一声。
+ ◆挂断提醒：如果隐私来电选择来电挂断，可以设置挂断提醒为无提醒、响一声、通知栏提醒和通知栏提醒+响一声。
 
- ◆回复短信内容：私密来电如果选择来电挂断并回复短信，可以设置短信回复内容。
+ ◆回复短信内容：隐私来电如果选择来电挂断并回复短信，可以设置短信回复内容。
 
  ◆通知栏提醒：如果挂断提醒里选择通知栏提醒或通知栏+响一声，可以设置通知栏目的标题与内容。
 
  c.密码设置
- ◆密码失效时间：设置私密空间密码失效时间。
+ ◆密码失效时间：设置隐私信箱独立密码失效时间。
 
- ◆修改密码：重新设置进入私密空间的密码。
+ ◆修改密码：重新设置进入隐私信箱的密码。
 
 "</string>
     <string name="help_filter_mode_setting">"拦截模式
  1.标准模式：接受白名单和联系人通话和短信，接听常用电话白名单和陌生人电话，拦截黑名单电话和短信，拦截陌生人短信和常用电话黑名单。
 
- 2.只拦黑名单：只拦截黑名单内的号码，接受其他号码短信和电话。
+ 2.只拦黑名单：只拦截黑名单内的号码，接受其他号码信息和电话。
 
- 3.只接受白名单：只接受白名单和联系人内的号码，拦截其他号码的短信和电话。
+ 3.只接受白名单：只接受白名单和联系人内的号码，拦截其他号码的信息和电话。
 
  4.自定义模式：自由设置各项拦截规则，点击自定义，可编辑自定义模式。
  a.是否接受白名单；
@@ -858,9 +911,9 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="help_filter_mode_setting_for_htc">"拦截模式
  1.标准模式：接受白名单和联系人通话和短信，接听常用电话白名单、陌生人电话和陌生人短信，拦截黑名单电话和短信，拦截常用电话黑名单。
 
- 2.只拦黑名单：只拦截黑名单内的号码，接受其他号码短信和电话。
+ 2.只拦黑名单：只拦截黑名单内的号码，接受其他号码信息和电话。
 
- 3.只接受白名单：只接受白名单和联系人内的号码，拦截其他号码的短信和电话。
+ 3.只接受白名单：只接受白名单和联系人内的号码，拦截其他号码的信息和电话。
 
  4.自定义模式：自由设置各项拦截规则，点击自定义，可编辑自定义模式。
  a.是否接受白名单；
@@ -876,7 +929,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
 
  可以查看已安装应用和可更新软件，并对其进行卸载与安装，其中已安装应用包括个人软件和系统软件。
 
- a、应用卸载：显示手机里已安装的软件列表，您可以点击软件查看详细介绍、评分、存储状态以及软件权限，可对其进行卸载、评分与举报软件流氓行为等操作。
+ a、应用卸载：显示手机里已安装的软件列表，你可以点击软件查看详细介绍、评分、存储状态以及软件权限，可对其进行卸载、评分与举报软件流氓行为等操作。
  系统软件卸载需要root权限。
  菜单栏上选择批量卸载，可以对所选软件标记，进行批量卸载的操作。
  长按软件可以查看软件详情、打开与卸载。
@@ -899,7 +952,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
  1、回收站：保留系统软件((系统软件需要root权限))的备份，以避免用户卸载系统软件后出现手机运行不正常，可以在此恢复相应的系统软件。长按或点击右边还原按钮可回复相应的系统软件。
  2、下载管理
  可以查看当前软件的下载进度，用户可以实时了解当前软件的下载进度，并能一键安装和快速卸载，下载安装一目了然。
- 软件安装：显示已下载软件列表，您可以点击安装包进行查看详情、评分、安装、删除等操作 
+ 软件安装：显示已下载软件列表，你可以点击安装包进行查看详情、评分、安装、删除等操作 
  长按安装软件包可以安装、查看详情与删除。
  ◆详情：可以查看软件详细介绍、相关评分、存储状态以及软件权限，可对其进行安装、举报软件流氓行为等操作；
  ◆安装：安装所选软件包；
@@ -918,8 +971,8 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
  ◆缓存清理
  可以对手机上网产生的缓存文件进行扫描，显示手机缓存文件大小并及时进行清理；点击右边的按钮可以进入手机系统逐个清除缓存。
 
- 通过系统优化，可以加速您手机的运行速度。"</string>
-    <string name="help_traffic_monitor_for_pad">"可以让您时刻了解Wi-Fi的使用流量和使用时长；进入上网管理可以查看本日流量和本月流量；还可以设置调整流量监控。点击菜单，可以清空和查看帮助。
+ 通过系统优化，可以加速你手机的运行速度。"</string>
+    <string name="help_traffic_monitor_for_pad">"可以让你时刻了解Wi-Fi的使用流量和使用时长；进入上网管理可以查看本日流量和本月流量；还可以设置调整流量监控。点击菜单，可以清空和查看帮助。
 
  1、上网设置：
  ◆上网流量统计：可开启或关闭上网流量统计
@@ -934,7 +987,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
  3、使用帮助：可以查看相关的帮助文档
 
 "</string>
-    <string name="help_traffic_monitor">"可以让您时刻了解上网流量和设置流量限额提醒；进入上网管理可以查看本日流量和本月流量；还可以设置调整流量监控。点击菜单，可以清空和查看帮助。
+    <string name="help_traffic_monitor">"可以让你时刻了解上网流量和设置流量限额提醒；进入上网管理可以查看本日流量和本月流量；还可以设置调整流量监控。点击菜单，可以清空和查看帮助。
 
  1、上网设置：
  ◆上网流量统计：可开启或关闭上网流量统计
@@ -978,7 +1031,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
  主菜单有以下选项下载管理、刷新等功能。
  1、下载管理
  可以查看当前软件的下载进度，用户可以实时了解当前软件的下载进度，并能一键安装和快速卸载，下载安装一目了然。
- 软件安装：显示已下载软件列表，您可以点击安装包进行查看详情、评分、安装、删除等操作 
+ 软件安装：显示已下载软件列表，你可以点击安装包进行查看详情、评分、安装、删除等操作 
  长按安装软件包可以安装、查看详情与删除。
  ◆详情：可以查看软件详细介绍、相关评分、存储状态以及软件权限，可对其进行安装、举报软件流氓行为等操作；
  ◆安装：安装所选软件包；
@@ -1000,20 +1053,20 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
 3、归属地查询：只需要输入手机号码的前7位，或者区号的前4位，即可查询号码的归属地。
 
 4、常用号码查询：为用户提供常用号码查询服务，包括电信运营商充值电话及客服电话，肯德基麦当劳外卖电话以及机票酒店预定电话等。用户可以便捷的查找自己所需的号码。"</string>
-    <string name="help_permission_monitor">"手机管家发现越来越多高危险、跟踪软件已经开始植入到手机底层，软件权限监控可以保护您的隐私安全，防止你的信息、联系人、位置信息被恶意软件访问。
+    <string name="help_permission_monitor">"手机管家发现越来越多高危险、跟踪软件已经开始植入到手机底层，软件权限监控可以保护你的隐私安全，防止你的信息、联系人、位置信息被恶意软件访问。
  ◆Android ROOT权限：
  Android系统中权利最高的管理员权限，可管理系统内部文件。由于系统限制，若手机未获取ROOT权限，或不授予手机管家ROOT权限，暂不能实现管理软件权限功能。
  ◆监控软件：
- 用户可以对需要监控的对象进行权限设置，可以禁止、允许或询问软件访问您的私有数据。
+ 用户可以对需要监控的对象进行权限设置，可以禁止、允许或询问软件访问你的私有数据。
  ◆信任软件：
- 可以将用户信任的软件添加到信任列表中，该列表中的所有软件在访问您的私有数据时将默认为允许。
+ 可以将用户信任的软件添加到信任列表中，该列表中的所有软件在访问你的私有数据时将默认为允许。
  ◆监控日志：
- 记录监控软件访问您的私有数据的情况。
+ 记录监控软件访问你的私有数据的情况。
  ◆设置：
  可以对是否开启软件监控进行设置，还可以设置监控提醒方式，监控提示时间等等。"</string>
     <string name="help_software_recycle">"保留系统软件((系统软件需要root权限))的备份，以避免用户卸载系统软件后出现手机运行不正常，可以在此恢复相应的系统软件。长按或点击右边还原按钮可回复相应的系统软件。
 "</string>
-    <string name="help_battery_manager" formatted="false">"省电管理： 提供智能省电、超长待机、极限模式三种省电模式。根据您的省电需要设置21个省电项目，有效减少电量消耗延长使用时间。包括智能调节Wi-Fi、GPRS网络连接、设置屏幕亮度和屏幕、蓝牙等项目。
+    <string name="help_battery_manager" formatted="false">"省电管理： 提供智能省电、超长待机、极限模式三种省电模式。根据你的省电需要设置21个省电项目，有效减少电量消耗延长使用时间。包括智能调节Wi-Fi、GPRS网络连接、设置屏幕亮度和屏幕、蓝牙等项目。
 
  智能省电：智能设置21个省电项目。自动调节屏幕亮度，智能开启、恢复Wi-Fi和移动网络服务等项目。
 
@@ -1024,7 +1077,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
  自定义模式：可以编辑属于自己的省电模式。自定义模式选项中将Wi-Fi、移动网络（2.3以上系统无法设置移动网络）、蓝牙关闭后，切换该自定义模式时以上三种无线网络会被切断。用户可以手动通过系统将无线网络开启，此时可以自定义模式中设置的Wi-Fi、移动网络的自动关闭设置依然生效。
 
 "</string>
-    <string name="help_screenshot">"手机截屏可以对您的手机进行截图操作。您可以选择通知栏截屏或者摇晃截屏，开启通知栏截屏后，将在通知栏显示截屏图标，点击图标，手机自动截屏；开启摇晃截屏后，摇一摇手机，快速截屏，截屏后截图将为您保留在预设位置。
+    <string name="help_screenshot">"手机截屏可以对你的手机进行截图操作。你可以选择通知栏截屏或者摇晃截屏，开启通知栏截屏后，将在通知栏显示截屏图标，点击图标，手机自动截屏；开启摇晃截屏后，摇一摇手机，快速截屏，截屏后截图将为你保留在预设位置。
 
  手机截屏：开启或关闭手机截屏功能 
 
@@ -1041,7 +1094,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="stop_task">结束任务</string>
     <string name="start_task">打开软件</string>
     <string name="uninstall_soft">卸载软件</string>
-    <string name="setting_show_block_icon">来电或短信拦截提示</string>
+    <string name="setting_show_block_icon">来电或信息拦截提示</string>
     <string name="setting_standard_mod">标准模式</string>
     <string name="setting_block_blacklist_only">只拦截黑名单</string>
     <string name="setting_accept_white_only">只接受白名单</string>
@@ -1066,9 +1119,10 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="ranking_title">人气排行</string>
     <string name="game">游戏</string>
     <string name="settingManager">设置管理</string>
-    <string name="secure_space">私密空间</string>
+    <string name="secure_space">隐私信箱</string>
     <string name="chargeback_scan">扣费扫描</string>
     <string name="phone_token">QQ安全中心</string>
+    <string name="notification_adblock">广告拦截</string>
     <string name="common_util">实用工具</string>
     <string name="private_protect">隐私保护</string>
     <string name="special_category">专题.分类</string>
@@ -1091,7 +1145,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="CHINA_TELECOM">中国电信</string>
     <string name="fast_scan">快速扫描</string>
     <string name="one_key_wipe">一键清除（%1$d）</string>
-    <string name="virus_scan_result">"病毒软件：%1$d     谨慎使用：%2$d"</string>
+    <string name="virus_scan_result">"高风险软件：%1$d     谨慎使用：%2$d"</string>
     <string name="virus_local_scan">关键位置</string>
     <string name="virus_update_data">更新病毒库</string>
     <string name="virus_update_later">正在查杀，请稍后再更新反病毒库</string>
@@ -1105,13 +1159,22 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="virus_description_long_term">可能存在安全隐患</string>
     <string name="virus_description_hint_long_term">已经%1$s没有扫描，建议立即扫描</string>
     <string name="virus_description_hint_time_reverse">上次扫描在%1$s</string>
-    <string name="virus_description_never">您未进行过扫描</string>
+    <string name="virus_description_never">你未进行过扫描</string>
     <string name="virus_description_hint_never">建议立即进行扫描</string>
     <string name="virus_description_scaning_single">双核引擎扫描中...</string>
     <string name="virus_description_hint_scaning_up">扫描数：%1$d</string>
     <string name="virus_description_hint_scaning_down">总耗时：%1$s</string>
     <string name="virus_scan_cancle_back">扫描取消，点击返回</string>
     <string name="virus_scan_done_back">扫描完成，点击返回</string>
+    <string name="virus_scan_close_colud_tip">关闭云查杀，查杀不彻底，可能留下安全隐患</string>
+    <string name="virus_scan_cloud_error_title">网络连接失败</string>
+    <string name="virus_scan_cloud_error_content">"云查杀未完成，可能存在安全隐患
+请检查网络后再试"</string>
+    <string name="description_not_official">【高风险-支付风险】该支付类软件不是现行官方版本，若使用此软件进行帐号相关操作，存在帐号被窃取、财产遭受损失等风险，请谨慎使用。</string>
+    <string name="find_risk">发现风险</string>
+    <string name="install_not_official_tips">发现支付风险软件%1$d个，成功清除0个，待处理%2$d个！点击查看详情</string>
+    <string name="risk_notification_text_title">你安装的%1$s为%2$s版本，可能存在风险。</string>
+    <string name="not_official">非现行官方</string>
     <string name="virus_scan_setting_title">设置</string>
     <string name="virus_scan_timming_block_head">定时查杀</string>
     <string name="virus_scan_setting_block_head">查杀设置</string>
@@ -1120,44 +1183,50 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="virus_clear_look_uninstall_method">查看卸载方法</string>
     <string name="virus_clear_look_method">查看清除方法</string>
     <string name="virus_clear_get_root">获取Root权限</string>
-    <string name="virus_clear_get_root_1">%1$s为Rom内置病毒，请您授予手机管家ROOT权限，以清除该病毒。</string>
-    <string name="virus_clear_get_root_2">%1$s为Rom内置病毒，请您获取ROOT权限并授予手机管家后，再次尝试清除该病毒。</string>
+    <string name="virus_clear_get_root_1">%1$s为Rom内置病毒，请你授予手机管家ROOT权限，以清除该病毒。</string>
+    <string name="virus_clear_get_root_2">%1$s为Rom内置病毒，请你获取ROOT权限并授予手机管家后，再次尝试清除该病毒。</string>
     <string name="virus_clear_download_killer">下载专杀清除</string>
     <string name="virus_notification_clear_now">立即清除</string>
     <string name="virus_notification_goto_view">进入病毒查杀</string>
-    <string name="virus_notification_title">手机管家发现%1$d个病毒</string>
+    <string name="virus_notification_title">手机管家发现%1$d个高风险软件</string>
     <string name="virus_database_update">数据库更新</string>
     <string name="virus_database_update_content">"发现最新反病毒库:%1$s
 最新病毒:%2$s
 风险级别:%3$s
 %4$s"</string>
     <string name="virus_database_update_toast">病毒库更新完毕，建议立即进行扫描</string>
-    <string name="virus_notification_text_title">您安装的%1$s被%2$s感染。</string>
+    <string name="virus_notification_text_title">你安装的%1$s被%2$s感染。</string>
     <string name="virus_notification_delete_failed">%1$d个病毒清除失败，建议你进入手机管家病毒查杀，查看更详细的操作建议 。</string>
     <string name="virus_notification_deleting">正在清除%1$s…%2$d/%3$d</string>
+    <string name="virus_startup_pay_app_notification">你安装的%1$s为%2$s版本，如果继续使用，可能存在账号和财产风险。</string>
+    <string name="virus_startup_uninstall_now">立即卸载</string>
+    <string name="virus_startup_pay_app_safe">手机支付环境安全 请放心使用</string>
+    <string name="virus_startup_scan_close_warring">关闭后，当你使用支付软件时，管家将无法保护你的账号财产安全，确认关闭？</string>
+    <string name="virus_startup_scan_setting_title">支付软件安全检测</string>
     <string name="virus_scan_no_found">安全状况良好</string>
     <string name="virus_scan_no_found_hint">扫描未发现安全风险</string>
     <string name="virus_scan_found_virus">手机处在危险中</string>
-    <string name="virus_scan_found_virus_hint">发现病毒软件,建议立即清除</string>
+    <string name="virus_scan_found_virus_hint">发现高风险软件,建议立即清除</string>
     <string name="virus_scan_found_risk">手机存在安全隐患</string>
     <string name="virus_scan_found_risk_handled">成功清除所有高风险软件</string>
     <string name="virus_scan_found_risk_hint">发现谨慎使用软件，请确认风险后按需处理</string>
     <string name="virus_scan_found_all_handled">安全状况良好</string>
     <string name="virus_scan_found_all_handled_hint">已成功清除所有病毒软件</string>
-    <string name="virus_scan_result_empty_tips">未发现危险</string>
+    <string name="virus_scan_result_empty_tips">成功扫描软件%d个，未发现危险</string>
     <string name="virus_scan_cancle_no_found">暂未发现危险</string>
-    <string name="virus_scan_cancle_no_found_hint">扫描已取消,建议继续扫描</string>
+    <string name="virus_scan_cancle_no_found_hint">扫描已取消 建议重新查杀</string>
     <string name="virus_scan_no_found_cloud_off">未发现危险</string>
-    <string name="virus_scan_no_found_cloud_off_hint">建议开启云查杀,查杀更彻底</string>
+    <string name="virus_scan_no_found_cloud_off_hint">云查杀未开启，建议开启后再查杀</string>
     <string name="virus_scan_no_found_no_cloud">未发现危险</string>
-    <string name="virus_scan_no_found_no_cloud_hint">建议在联网下扫描,查杀更彻底</string>
-    <string name="virus_manager_tips">您还可以手动管理</string>
-    <string name="virus_sub_full_scan_hint">查杀更彻底</string>
-    <string name="virus_sub_kiil_root_hint">部分病毒可使用专杀工具查杀</string>
+    <string name="virus_scan_no_found_no_cloud_hint">云查杀未完成，建议联网后再查杀</string>
+    <string name="virus_manager_tips">你还可以全面查杀</string>
+    <string name="virus_sub_full_scan_hint">扫描更全面 查杀更彻底</string>
+    <string name="virus_sub_kiil_root_hint">针对流行病毒进行专项查杀</string>
     <string name="virus_sub_update_hint_out_of_date">反病毒库已过期,建议立即更新</string>
     <string name="virus_sub_update_hint_version">,版本号:</string>
     <string name="virus_sub_update_hint_to_latest">已更新</string>
     <string name="virus_sub_update_hint_in_latest">已是最新</string>
+    <string name="virus_sub_update_hint_in_latest_2">已是最新版本</string>
     <string name="virus_sub_update_hint_little_term">刚刚更新</string>
     <string name="virus_sub_update_hint_short_term">%1$s进行了更新</string>
     <string name="virus_sub_update_hint_mid_term">已%1$s没有更新,存在安全隐患</string>
@@ -1169,6 +1238,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="virus_record_infobar">共%1$d条查杀记录</string>
     <string name="hint_full_scanning">手机管家全盘扫描中...</string>
     <string name="wap_monitor_setting">监控设置</string>
+    <string name="wap_traffic_adjust_setting">已用流量校正</string>
     <string name="wap_package_setting">流量套餐设置</string>
     <string name="wap_setting">网络设置</string>
     <string name="remain_wap_enough_hint_title_no_service">"建议开启流量监控
@@ -1182,7 +1252,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="system_software">系统软件</string>
     <string name="software_recycle">回收站</string>
     <string name="download_manager">下载管理</string>
-    <string name="download_manager_empty">还没有下载内容，再没工作偶要下岗了</string>
+    <string name="download_manager_empty">在此显示软件下载进度</string>
     <string name="download">下载</string>
     <string name="download_space">下 载</string>
     <string name="downloaded">已下载</string>
@@ -1224,26 +1294,27 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="optimize_item">待优化项</string>
     <string name="optimized_item">已优化项</string>
     <string name="save_item">安全项</string>
+    <string name="from_source">来自：</string>
+    <string name="danger_paysoft_front">检测到%1$s款非官方支付风险软件</string>
+    <string name="danger_malware_front">检测到%1$s款恶意软件</string>
     <string name="optimize_tips_dialog">优化提示</string>
     <string name="suggest_clear_data">是否立即清理全部缓存垃圾文件？</string>
     <string name="Optimize_clear_data">已清理缓存垃圾文件</string>
-    <string name="danger_malware_front">检测到恶意软件</string>
-    <string name="danger_malware_middle">款</string>
     <string name="danger_noopen_service">未开启安全服务</string>
     <string name="danger_noopen_cloud_kill">未开启联网云查杀</string>
     <string name="danger_noopen_flow_service">未开启流量监控</string>
     <string name="danger_noopen_smschekc_service">未开启扣费短信监控</string>
     <string name="cancle_scan_charged_sms">扣费扫描即将完成，确定要取消吗？</string>
-    <string name="optimize_backruning_front">运行服务</string>
+    <string name="optimize_backruning_front">运行进程</string>
     <string name="optimize_backruning_middle">个,占内存</string>
-    <string name="optimize_rubbish_front">扫描到缓存垃圾文件</string>
+    <string name="optimize_rubbish_front">缓存垃圾文件</string>
     <string name="waiting_for_close_process">正在结束任务进程...请稍候</string>
     <string name="waiting_for_free_cache">正在清理缓存文件...请稍候</string>
     <string name="optimize_lib_before">已</string>
     <string name="optimize_lib_middle">天没检查病毒库更新</string>
-    <string name="save_sercure_switch">检查是否开启隐私保护</string>
+    <string name="save_sercure_switch">已开启隐私保护</string>
     <string name="optimize_sercure_switch">未开启隐私保护</string>
-    <string name="optimized_sercure_switch">已为您开启隐私保护</string>
+    <string name="optimized_sercure_switch">已为你开启隐私保护</string>
     <string name="optimize_version_before">已</string>
     <string name="optimize_version_middle">天没有检查版本更新</string>
     <string name="danger_nocheck_virus_before">已</string>
@@ -1256,18 +1327,20 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="traffic_monitor">流量监控</string>
     <string name="traffic_monitor_setting">流量监控设置</string>
     <string name="traffic_monitor_info">距月结日还有%1$d天</string>
-    <string name="save_malware">检查是否有恶意软件</string>
-    <string name="save_rubbish">检查是否有缓存垃圾文件</string>
+    <string name="save_malware">没有发现恶意软件</string>
+    <string name="save_paysoft">没有发现支付风险软件</string>
+    <string name="save_rubbish">没有缓存垃圾文件</string>
     <string name="save_backruning_front">检查运行服务和内存使用率</string>
-    <string name="save_chargesms">检查是否开启扣费短信监控</string>
-    <string name="save_version">检查是否定期更新版本</string>
-    <string name="save_check">检查是否定期云查杀</string>
-    <string name="save_lib">检查是否定期更新反病毒库</string>
-    <string name="save_open_service_for_pad">检查是否开启病毒监控服务</string>
-    <string name="save_open_service">检查是否开启安全服务</string>
-    <string name="save_open_cloud_kill">检查是否开启联网云查杀</string>
-    <string name="save_open_flow_service">检查是否开启流量监控</string>
+    <string name="save_chargesms">已开启扣费短信监控</string>
+    <string name="save_version">定期更新版本</string>
+    <string name="save_check">定期进行云查杀</string>
+    <string name="save_lib">定期更新反病毒库</string>
+    <string name="save_open_service_for_pad">已开启病毒监控服务</string>
+    <string name="save_open_service">已开启安全服务</string>
+    <string name="save_open_cloud_kill">已开启联网云查杀</string>
+    <string name="save_open_flow_service">已开启流量监控</string>
     <string name="optimized_malware">已成功删除恶意软件</string>
+    <string name="optimized_paysoft">已成功删除支付风险软件</string>
     <string name="check_autorun_app_done_before">有</string>
     <string name="check_autorun_app_done_middle">个开机自启动项待优化</string>
     <string name="check_autorun_app_ing">正在检查开机自启动程序...</string>
@@ -1276,8 +1349,8 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="save_open">已开启</string>
     <string name="save_normal">正常</string>
     <string name="save_not_found">无发现</string>
-    <string name="optimized_has_stop">已停止</string>
-    <string name="optimized_apps">个任务,</string>
+    <string name="optimized_has_stop">已结束</string>
+    <string name="optimized_apps">个进程,</string>
     <string name="optimized_release">释放</string>
     <string name="optimized_ram">内存</string>
     <string name="optimized_cpu">CPU</string>
@@ -1298,26 +1371,28 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="update_lib_ing">检查更新信息库中</string>
     <string name="dowith_bad_software">处理恶意软件</string>
     <string name="input_error">输入有误</string>
-    <string name="set_secret_password">设置私密空间密码</string>
+    <string name="set_secret_password">设置隐私信箱独立密码</string>
     <string name="edit_error_phonenull">编辑失败，号码不能为空</string>
     <string name="operator_over_time">超时后操作</string>
     <string name="cache_data_size">缓存</string>
     <string name="check_done_danger_title">手机处在危险中</string>
     <string name="check_done_danger_info">发现%1$d个危险项,建议立即优化</string>
     <string name="check_done_optimization_title">手机还可以更健康</string>
-    <string name="check_done_optimization_info">有%1$d个待处理项,建议优化</string>
-    <string name="check_done_optimization_no_info">您还有%1$d个可优化项</string>
+    <string name="check_done_optimization_info">有%1$d个待优化项,建议优化</string>
+    <string name="check_done_optimization_no_info">你还有%1$d个可优化项</string>
     <string name="check_done_save_title">嗯!手机状况不错</string>
-    <string name="check_done_save_info">您的手机状况良好</string>
+    <string name="check_done_save_info">定期体检，手机更健康</string>
     <string name="optimation_continue_tips">还可以继续优化</string>
     <string name="optimation_weibo_words_tips">嗨，#我正使用腾讯手机管家#，经过专业检测，我的手机健康指数是100分噢，你的呢？快去试一下吧http://msm.qq.com</string>
     <string name="wandoujia_apk_name">豌豆荚</string>
+    <string name="mobile_token_app_name">QQ安全中心</string>
     <string name="wandoujia">豌豆荚应用搜索</string>
     <string name="wandoujia_tips">海量应用、音乐、视频等手机资源免费获取</string>
     <string name="wandoujia_dialog_title">豌豆荚</string>
     <string name="wandoujia_dialog_info">手机上安装豌豆荚，可随时随地获取海量应用游戏，轻松管理手机应用、音乐、图片及视频。</string>
-    <string name="mainactivity_infobar_text">手机管家全面保护您的手机</string>
-    <string name="qqpimsecure_service_for">手机管家已为您服务了</string>
+    <string name="mobile_token_download_note">安装QQ安全中心，全面保护你的QQ帐号安全</string>
+    <string name="mainactivity_infobar_text">手机管家全面保护你的手机</string>
+    <string name="qqpimsecure_service_for">手机管家已为你服务了</string>
     <string name="day">天</string>
     <string name="hours">小时</string>
     <string name="gprs_total">每月套餐限额</string>
@@ -1326,22 +1401,34 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="network_warnning_tips">超过限额90%时弹出提示</string>
     <string name="network_connection_close_when_run_out">流量超限额自动断网</string>
     <string name="gprs_used">校正本月已用流量</string>
-    <string name="gprs_used_handmake">手动调整已用流量</string>
-    <string name="keyword_num_info">共 %1$s 个关键字拦截</string>
-    <string name="reset_network_tips">请输入本月已用流量,您可通过短信或电话进行查询。</string>
+    <string name="gprs_used_handmake">修改本月已用</string>
+    <string name="keyword_num_info">共 %1$s 个拦截关键字</string>
+    <string name="reset_network_tips">请输入本月已用流量,你可通过短信或电话进行查询。</string>
     <string name="check_by_phone">电话查询</string>
     <string name="trafficwindow">流量实时监控窗口</string>
     <string name="trafficwindow_tips_opened">屏幕流量实时监控窗口已开启</string>
     <string name="trafficwindow_tips_closed">屏幕流量实时监控窗口已关闭</string>
     <string name="trafficwindow_moveable_open">开启时流量监控窗口位置固定</string>
     <string name="trafficwindow_moveable_close">关闭时流量监控窗口位置可移动</string>
-    <string name="traffic_auto_adjust_flag">自动校正流量</string>
+    <string name="flow_accurate_report_success">反馈成功</string>
+    <string name="flow_accurate_mark_title">流量不准怎么办</string>
+    <string name="flow_accurate_mark">流量不准怎么办?</string>
+    <string name="flow_accurate_method_1">方法一：</string>
+    <string name="flow_accurate_method_1_detail">假如你发现自动校正后的流量不准确，可点击“我要反馈”按钮，我们会尽快解决。</string>
+    <string name="flow_accurate_method_2">方法二：</string>
+    <string name="flow_accurate_method_2_detail">可点击“手动调整”按钮，校正已用流量。</string>
+    <string name="flow_accurate_report">我要反馈</string>
+    <string name="flow_accurate_handle_adjust">手动调整</string>
+    <string name="flow_accurate_now">立即校正</string>
+    <string name="traffic_auto_adjust_flag">立即自动校正流量</string>
+    <string name="traffic_auto_adjust_schedule_flag">定期校正</string>
     <string name="traffic_auto_adjust_summry">自动发送免费短信校正已用流量</string>
     <string name="your_phone_area">本机所属地区</string>
     <string name="noip_number_count">共%1$d个号码</string>
     <string name="use_ip_call">使用IP拨号</string>
     <string name="current_area_noselect">未选择</string>
     <string name="version_word">版</string>
+    <string name="size">大小:</string>
     <string name="save_service_setting">安全服务设置</string>
     <string name="net_cloud_scan">联网云查杀</string>
     <string name="bad_sms_report">参加用户体验计划</string>
@@ -1360,7 +1447,8 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="shortcut_succ_tips">成功创建桌面快捷</string>
     <string name="version_characteristic">版本特性</string>
     <string name="update_version">更新软件版本</string>
-    <string name="black_import_tips">黑名单引导提示</string>
+    <string name="black_import_tips">陌生来电拉黑提示</string>
+    <string name="black_import_summary">陌生电话通话不足5秒提示</string>
     <string name="sms_check_tips">疑似扣费短信通知栏提示</string>
     <string name="open_sms_check_tips">已开启通知栏疑似扣费短信实时提醒</string>
     <string name="close_sms_check_tips">已关闭通知栏疑似扣费短信实时提醒</string>
@@ -1370,26 +1458,26 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="cancel_download">取消下载</string>
     <string name="default_setting">恢复默认</string>
     <string name="hint_necessary_installed_welcome_text">安全、绿色下载平台，请放心使用。</string>
-    <string name="hint_sure_to_uninstall_text">您确定要卸载 %1$s吗?</string>
-    <string name="hint_qqsecure_notify_text">手机管家提醒您</string>
-    <string name="hint_battery_full_notify_text">"手机管家提醒您
-您的手机已经完成日常充电"</string>
-    <string name="hint_battery_full_notify_content">您的手机已经完成日常充电</string>
-    <string name="hint_sure_to_uninstall_qqsecure_text">卸载手机管家将使软件管理中当前正在进行的下载、更新等软件操作无法进行也无法再提供软件管理功能！您确认要卸载吗？</string>
-    <string name="hint_confirm_to_uninstall_qqsecure_text">卸载手机管家将使您的手机无法抵御手机病毒、骚扰短信和电话，隐私安全也无法继续被保护。您确认要卸载吗？</string>
+    <string name="hint_sure_to_uninstall_text">你确定要卸载 %1$s吗?</string>
+    <string name="hint_qqsecure_notify_text">手机管家提醒</string>
+    <string name="hint_battery_full_notify_text">"手机管家提醒你
+你的手机已经完成日常充电"</string>
+    <string name="hint_battery_full_notify_content">你的手机已经完成日常充电</string>
+    <string name="hint_sure_to_uninstall_qqsecure_text">卸载手机管家将使软件管理中当前正在进行的下载、更新等软件操作无法进行也无法再提供软件管理功能！你确认要卸载吗？</string>
+    <string name="hint_confirm_to_uninstall_qqsecure_text">卸载手机管家将使你的手机无法抵御手机病毒、骚扰信息和电话，隐私安全也无法继续被保护。你确认要卸载吗？</string>
     <string name="hint_delete_successfully_text">删除成功!</string>
     <string name="KONG">空</string>
     <string name="copy_right">Copyright © 2010-2012 Tencent.</string>
     <string name="all_rights_reserved">All Rights Reserved</string>
     <string name="score_tips_title">手机体检</string>
     <string name="score_tips_help">"1、什么是手机体检？
-手机体检是对您的手机进行全面健康检查，可以为您的手机加速、扫描病毒、更新反病毒库，清理缓存垃圾文件等。建议您定期进行手机体检。
+手机体检是对你的手机进行全面健康检查，可以为你的手机加速、扫描病毒、更新反病毒库，清理缓存垃圾文件等。建议你定期进行手机体检。
 
 2、怎样进行手机体检？
-您在手机管家的首页点击“一键体检”即可快速进行全面的手机体检，体检完成后根据提示可以使用“一键优化”解决所有体检发现的问题，也可以手动单个解决发现的问题。建议您使用“一键优化”。
+你在手机管家的首页点击“一键体检”即可快速进行全面的手机体检，体检完成后根据提示可以使用“一键优化”解决所有体检发现的问题，也可以手动单个解决发现的问题。建议你使用“一键优化”。
 
 3、为什么体检优化后分数也拿不到满分？
-由于手机系统环境存在差异，部分手机系统自带的软件占用的内存是无法释放的。建议您通过手机管家的软件卸载功能，卸载多余软件，优化系统环境，提高分数。
+由于手机系统环境存在差异，部分手机系统自带的软件占用的内存是无法释放的。建议你通过手机管家的软件卸载功能，卸载多余软件，优化系统环境，提高分数。
 
 "</string>
     <string name="action_is_canceled">操作已取消</string>
@@ -1443,14 +1531,14 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="gprs_regulate_not_be_none">流量不能为空</string>
     <string name="RI">日</string>
     <string name="ZHENG_ZAI_TI_JIAO_QING_SHAO_HOU">正在提交，请稍候...</string>
-    <string name="TI_JIAO_CHENG_GONG_GAN_XIE_NIN_DE_FAN_KUI">提交成功，感谢您的反馈！</string>
+    <string name="TI_JIAO_CHENG_GONG_GAN_XIE_NIN_DE_FAN_KUI">提交成功，感谢你的反馈！</string>
     <string name="WANG_LUO_CUO_WU">网络错误</string>
     <string name="TI_JIAO_SHI_BAI">提交失败</string>
-    <string name="FAN_KUI">反馈</string>
+    <string name="FAN_KUI">意见反馈</string>
     <string name="QING_SHU_RU_FAN_KUI_NEI_RONG">请输入反馈内容</string>
-    <string name="secure_space_password_valide_summary">超过%1$s分钟无操作，自动退出私密空间</string>
+    <string name="secure_space_password_valide_summary">超过%1$s分钟无操作，自动退出隐私信箱</string>
     <string name="MIAO">秒</string>
-    <string name="FEN_ZHONG">分钟</string>
+    <string name="FEN_ZHONG">分</string>
     <string name="BIAO_TI_SHE_ZHI_WU_XIAO">标题设置无效</string>
     <string name="NEI_RONG_SHE_ZHI_WU_XIAO">内容设置无效</string>
     <string name="SHI_JIAN_BU_NENG_DI_YU_MIAO">时间不能低于50秒</string>
@@ -1463,6 +1551,9 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="KUAI_JIE_CAO_ZUO">快捷操作</string>
     <string name="BAI_MING_DAN">白名单</string>
     <string name="HEI_MING_DAN">黑名单</string>
+    <string name="LIAN_XI_REN_DIAN_HUA">联系人电话</string>
+    <string name="LIAN_XI_REN_DUAN_XIN">联系人短信</string>
+    <string name="MO_SHENG_REN_DIAN_HUA">陌生人电话</string>
     <string name="intercepted">已拦截</string>
     <string name="GUAN_JIAN_ZI_LAN_JIE">关键字拦截</string>
     <string name="ZHI_NENG_LAN_JIE">智能拦截</string>
@@ -1471,13 +1562,14 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="MO_SHENG_REN_LAI_DIAN">陌生人来电</string>
     <string name="JIN_QI_BO_CHU_HAO_MA">近期拨出号码</string>
     <string name="DUAN_XIN">短信</string>
+    <string name="CAI_XIN">彩信</string>
     <string name="DA_KAI">打开</string>
     <string name="HU_LVE">忽略</string>
     <string name="processes_stop">结束了%1$d个任务</string>
     <string name="WEN_XIN_TI_XING">温馨提醒</string>
     <string name="AN_QUAN_FU_WU_JI_GUAN_BI">安全服务己关闭</string>
-    <string name="QQ_AN_QUAN_ZHU_SHOU_TI_XING_NIN">手机管家提醒您</string>
-    <string name="GUAN_BI_YUN_CHA_SHA_JIANG_SHI_NIN_DE_SHOU_JI_CHU_YU_GAO_WEI_ZHUANG_TAI_WU_FA_DI_YU_ZUI_XIN_LIU_XING_BING_DU_NIN_SHI_FOU_QUE_REN_GUAN_BI">关闭云查杀将使您的手机处于高危状态，无法抵御最新流行病毒。您是否确认关闭？</string>
+    <string name="QQ_AN_QUAN_ZHU_SHOU_TI_XING_NIN">手机管家提醒你</string>
+    <string name="QU_XIAO_E_YI_WANG_ZHI_GAO_JING_TI_XING_RONG_YI_YIN_QI_SHANG_WANG_FENG_XIAN">取消恶意网址检测，易引起上网风险</string>
     <string name="DANG_QIAN_BAN_BEN">当前版本：</string>
     <string name="BU_NENG_SHU_RU_KONG_NEI_RONG">不能输入空内容</string>
     <string name="SHAN_CHU">删除</string>
@@ -1486,64 +1578,66 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="LAN_JIE_MO_SHI">拦截模式</string>
     <string name="regular_setting">常规设置</string>
     <string name="keyword_setting">关键字设置</string>
-    <string name="keyword_setting_summary">拦截含有关键字内容的陌生短信</string>
+    <string name="keyword_setting_summary">拦截含有关键字内容的陌生信息</string>
     <string name="TI_SHI">提示</string>
     <string name="AN_ZHUANG_BAO_YI_PO_SUN_WU_FA_DU_QU">安装包已破损，无法读取，是否现在删除?</string>
     <string name="AN_ZHUANG_BAO_YI_JING_BEI_SHAN_CHU_HUO_ZHE_WU_FA_DU_QU">安装包已经被删除或者无法读取。</string>
-    <string name="NIN_SHI_FOU_YAO_SHAN_CHU_WEN_JIAN">您是否要删除文件:</string>
-    <string name="AN_QUAN_ZHU_SHOU_TI_XING_NIN">手机管家提醒您</string>
+    <string name="NIN_SHI_FOU_YAO_SHAN_CHU_WEN_JIAN">你是否要删除文件:</string>
+    <string name="AN_QUAN_ZHU_SHOU_TI_XING_NIN">手机管家提醒你</string>
     <string name="YI_AN_ZHUANG_JIAO_XIN_BAN_BEN_SHI_FOU_JI_XU_BEN_CI_AN_ZHUANG">已安装较新版本，是否继续本次安装?</string>
     <string name="JING_SHI">警示</string>
     <string name="XIE_ZAI_QQ_AN_QUAN_ZHU_SHOU_JIANG_SHI_RUAN_JIAN_GUAN_LI_ZHONG_DANG_QIAN_ZHENG_ZAI_JIN_XING_DE_XIA_ZAI_GENG_XIN_DENG_RUAN_JIAN_CAO_ZUO_WU_FA_JIN_XING">卸载手机管家将使软件管理中当前正在进行的下载、更新等软件操作无法进行，</string>
-    <string name="YE_WU_FA_ZAI_TI_GONG_RUAN_JIAN_GUAN_LI_GONG_NENG_NIN_QUE_REN_YAO_XIE_ZAI_MA">也无法再提供软件管理功能！您确认要卸载吗？</string>
-    <string name="XIE_ZAI_QQ_AN_QUAN_ZHU_SHOU_JIANG_SHI_NIN_DE_SHOU_JI_WU_FA_DI_YU_SHOU_JI_BING_DU_SAO_RAO_DUAN_XIN_HE_DIAN_HUA_YIN_SI_AN_QUAN_YE_WU_FA_JI_XU_BEI_BAO_HU_NIN_QUE_REN_YAO_XIE_ZAI_MA">卸载手机管家将使您的手机无法抵御手机病毒、骚扰短信和电话，隐私安全也无法继续被保护。您确认要卸载吗？</string>
+    <string name="YE_WU_FA_ZAI_TI_GONG_RUAN_JIAN_GUAN_LI_GONG_NENG_NIN_QUE_REN_YAO_XIE_ZAI_MA">也无法再提供软件管理功能！你确认要卸载吗？</string>
+    <string name="XIE_ZAI_QQ_AN_QUAN_ZHU_SHOU_JIANG_SHI_NIN_DE_SHOU_JI_WU_FA_DI_YU_SHOU_JI_BING_DU_SAO_RAO_DUAN_XIN_HE_DIAN_HUA_YIN_SI_AN_QUAN_YE_WU_FA_JI_XU_BEI_BAO_HU_NIN_QUE_REN_YAO_XIE_ZAI_MA">卸载手机管家将使你的手机无法抵御手机病毒、骚扰信息和电话，隐私安全也无法继续被保护。你确认要卸载吗？</string>
     <string name="AN_QUAN_FU_WU_JI_KAI_QI">安全服务己开启</string>
     <string name="HAO_MA_BU_NENG_WEI_KONG">号码不能为空</string>
     <string name="ZHI_YUN_XU_SHU_RU_SHU_ZI_HE_FEI_LIAN_XU_TONG_PEI_FU">只允许输入数字和非连续通配符*</string>
     <string name="CUN_ZAI_ZHONG_FU_HAO_MA_ZHONG_FU_HAO_MA_BU_TIAN_JIA">存在重复号码，重复号码不添加</string>
     <string name="TIAN_JIA">添加</string>
     <string name="DIAN_HUA_HAO_MA_BU_NENG_WEI_KONG">电话号码不能为空</string>
-    <string name="NIN_SHU_RU_DE_HAO_MA_YI_CUN_ZAI">您输入的号码已存在</string>
+    <string name="NIN_SHU_RU_DE_HAO_MA_YI_CUN_ZAI">你输入的号码已存在</string>
     <string name="TIAN_JIA_CHENG_GONG">添加成功</string>
     <string name="BIAN_JI">编辑</string>
     <string name="XIU_GAI_CHENG_GONG">修改成功</string>
     <string name="SHAN_CHU_CHENG_GONG">删除成功</string>
     <string name="suggest_check_sms">建议进行免费包月查询</string>
     <string name="sms_check_sum_text_got">疑似扣费短信：%1$d条</string>
-    <string name="suspected_chargeback_sms_doing">正在为您扫描...</string>
-    <string name="suspected_chargeback_sms_doing_analysis">正在为您分析...</string>
+    <string name="suspected_chargeback_sms_doing">正在为你扫描...</string>
+    <string name="suspected_chargeback_sms_doing_analysis">正在为你分析...</string>
     <string name="suspected_chargeback_sms_done_has_result">发现疑似扣费短信%1$d条</string>
     <string name="suspected_chargeback_sms_done_has_result_hint">建议进行免费扣费查询</string>
     <string name="suspected_chargeback_sms_done_no_result">没有发现扣费短信</string>
     <string name="suspected_chargeback_sms_done_no_result_hint">定期进行扣费扫描，防止恶意扣费</string>
     <string name="BAO_YUE_CHA_XUN">扣费查询</string>
-    <string name="JIANG_TONG_GUO_YUN_YING_SHANG_ZI_DONG_MIAN_FEI_CHA_XUN_BAO_YUE_FU_WU_JIE_GUO_JIANG_FA_SONG_DAO_NIN_DE_SHOU_JIAN_XIANG_SHI_FOU_QUE_REN_CHA_XUN">将发送免费短信查询您的包月业务，确定查询？</string>
+    <string name="JIANG_TONG_GUO_YUN_YING_SHANG_ZI_DONG_MIAN_FEI_CHA_XUN_BAO_YUE_FU_WU_JIE_GUO_JIANG_FA_SONG_DAO_NIN_DE_SHOU_JIAN_XIANG_SHI_FOU_QUE_REN_CHA_XUN">将发送免费短信查询你的包月业务，确定查询？</string>
     <string name="unit_card_tips_info">（部分联通品牌无短信指令，请直接拨打10010查询）</string>
     <string name="FA_SONG_CHENG_GONG_QING_SHAO_HOU_CHA_KAN_SHOU_JIAN_XIANG">短信发送中</string>
-    <string name="BAO_QIAN_WEI_NENG_SHI_BIE_NIN_DE_SHOU_JI_QIA_YUN_YING_SHANG">抱歉，未能识别您的手机卡运营商！</string>
-    <string name="NIN_DE_SHOU_JI_WEI_JIAN_CE_DAO_SHOU_JI_QIA_QING_JIAN_CHA_NIN_DE_SHOU_JI_QIA_SHI_FOU_CHA_WEN_XIE_XIE">未检测到您的手机卡信息，请检查您是否开启了飞行模式或者手机卡是否插稳！谢谢！</string>
+    <string name="BAO_QIAN_WEI_NENG_SHI_BIE_NIN_DE_SHOU_JI_QIA_YUN_YING_SHANG">抱歉，未能识别你的手机卡运营商！</string>
+    <string name="NIN_DE_SHOU_JI_WEI_JIAN_CE_DAO_SHOU_JI_QIA_QING_JIAN_CHA_NIN_DE_SHOU_JI_QIA_SHI_FOU_CHA_WEN_XIE_XIE">未检测到你的手机卡信息，请检查你是否开启了飞行模式或者手机卡是否插稳！谢谢！</string>
     <string name="QU_XIAO">取消</string>
     <string name="SHAN_CHU_JI_LU">删除记录</string>
-    <string name="NIN_QUE_DING_SHAN_CHU_BEN_TIAO_JI_LU_MA">您确定删除本条记录吗？</string>
+    <string name="NIN_QUE_DING_SHAN_CHU_BEN_TIAO_JI_LU_MA">你确定删除本条记录吗？</string>
     <string name="DUAN_XIN_JU_BAO">短信举报</string>
-    <string name="NIN_JIANG_LIAN_WANG_JU_BAO_KOU_FEI_XIN_XI_CI_JU_JIANG_WEI_YOU_LI_YU_DA_JI_E_YI_KOU_FEI">您将联网举报扣费信息，此举将为有利于打击恶意扣费。</string>
+    <string name="NIN_JIANG_LIAN_WANG_JU_BAO_KOU_FEI_XIN_XI_CI_JU_JIANG_WEI_YOU_LI_YU_DA_JI_E_YI_KOU_FEI">你将联网举报扣费信息，此举将为有利于打击恶意扣费。</string>
     <string name="JIAN_CE_JIE_GUO_YOU_WU_JU_BAO_SHI_BAI">检测结果有误,举报失败</string>
     <string name="JU_BAO_CHENG_GONG">举报成功</string>
+    <string name="report_sucess">成功举报</string>
     <string name="JU_BAO_SHI_BAI">举报失败</string>
-    <string name="report_success_sms1">手机管家和 “12321举报中心”联合开展反垃圾短信公益活动，您的举报将帮助上千万用户免受骚扰。</string>
-    <string name="report_success_sms2">感谢您对反垃圾短信公益的支持，您的举报将帮助上千万用户免受骚扰。</string>
-    <string name="report_success_sms3">感谢您和管家一起构建手机健康生活，您的举报将帮助上千万用户免受骚扰。</string>
-    <string name="report_success_call1">手机管家和 “12321举报中心”联合开展举报骚扰电话公益活动，您的举报将帮助上千万用户免受骚扰。</string>
-    <string name="report_success_call2">感谢您参与举报骚扰电话公益活动，您的举报将帮助上千万用户免受骚扰。</string>
-    <string name="report_success_call3">感谢您和管家一起构建手机健康生活，您的举报将帮助上千万用户免受骚扰。</string>
+    <string name="report_success_sms1">手机管家和“12321举报中心”联合开展反垃圾短信公益活动，你的举报会上传12321举报中心，帮助上千万用户免受骚扰。</string>
+    <string name="report_success_sms2">感谢你对反垃圾短信公益的支持，你的举报将帮助上千万用户免受骚扰。</string>
+    <string name="report_success_sms3">手机管家和 “12321举报中心”联合开展反垃圾短信公益活动，你的举报将帮助上千万用户免受骚扰。</string>
+    <string name="report_success_call1">手机管家和“12321举报中心”联合开展反骚扰电话公益活动，你的举报会上传12321举报中心，帮助上千万用户免受骚扰。</string>
+    <string name="report_success_call2">感谢你参与举报骚扰电话公益活动，你的举报将帮助上千万用户免受骚扰。</string>
+    <string name="report_success_call3">感谢你和管家一起构建手机健康生活，你的举报将帮助上千万用户免受骚扰。</string>
+    <string name="report_success_operator_data_sync">感谢你的反馈，我们会尽快处理自动校正不准问题。</string>
     <string name="ZHUAN_FA">转发</string>
     <string name="JU_BAO">举报</string>
-    <string name="RUO_MO_SHENG_DIAN_HUA">若陌生电话</string>
-    <string name="DUI_NIN_ZAO_CHENG_LE_SAO_RAO_NIN_KE_YI_TONG_GUO_AN_QUAN_ZHU_SHOU_JIANG_QI_TIAN_JIA_DAO_HEI_MING_DAN">对您造成了骚扰，您可以通过手机管家将其添加到黑名单。</string>
+    <string name="RUO_MO_SHENG_DIAN_HUA">若陌生号码</string>
+    <string name="DUI_NIN_ZAO_CHENG_LE_SAO_RAO_NIN_KE_YI_TONG_GUO_AN_QUAN_ZHU_SHOU_JIANG_QI_TIAN_JIA_DAO_HEI_MING_DAN">对你造成骚扰，你可将其添加到黑名单，此号码所有信息和电话将会被拦截。</string>
     <string name="JIANG_YOU">将有</string>
-    <string name="hint_software_center_deal_software_and_apk">将有%1$d个软件和%2$d个安装包被清理，您是否确认清理?</string>
-    <string name="hint_software_center_deal_software">将有%1$d个软件被清理，您是否确认清理?</string>
-    <string name="hint_software_center_deal_apk">将有%1$d个安装包被清理，您是否确认清理?</string>
+    <string name="hint_software_center_deal_software_and_apk">将有%1$d个软件和%2$d个安装包被清理，你是否确认清理?</string>
+    <string name="hint_software_center_deal_software">将有%1$d个软件被卸载，是否确认卸载?</string>
+    <string name="hint_software_center_deal_apk">将有%1$d个安装包被清理，你是否确认清理?</string>
     <string name="hint_uninstall_system_app_tips">"
 (卸载不常见内置软件需要手机Root权限，当弹出授权提示时请选择允许)"</string>
     <string name="ZI_DONG_CHA_SHA_JI_HUA">查杀计划</string>
@@ -1564,16 +1658,16 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="JIN_SHEN">【谨慎】</string>
     <string name="KE_YI_XIE_ZAI">可以清除</string>
     <string name="YI_QING_CHU">已清除</string>
-    <string name="DAI_CHU_LI">待处理</string>
+    <string name="DAI_CHU_LI">分析结果</string>
     <string name="WEI_CHU_LI">未处理</string>
-    <string name="NIN_BEN_YUE_JI_YONG_LIU_LIANG_YI_JING_CHAO_E_JIAN_YI_GUAN_BI_WANG_LUO_LIAN_JIE">您本月使用的流量已经超过月限额设置的90%，请谨慎使用上网流量！</string>
-    <string name="BEN_YUE_LIU_LIANG_YI_CHAO_E_XI_TONG_ZI_DONG_DUAN_KAI_WANG_LUO">您本月已用流量超过限额，系统已经自动断开网络。</string>
-    <string name="network_outof_total">您本月已用流量超过限额，可点击网络设置快捷关闭网络</string>
+    <string name="NIN_BEN_YUE_JI_YONG_LIU_LIANG_YI_JING_CHAO_E_JIAN_YI_GUAN_BI_WANG_LUO_LIAN_JIE">你本月的已用流量已超过限额的90%，要省着点用啦！</string>
+    <string name="BEN_YUE_LIU_LIANG_YI_CHAO_E_XI_TONG_ZI_DONG_DUAN_KAI_WANG_LUO">你本月已用流量超过限额，系统已经自动断开网络。</string>
+    <string name="network_outof_total">你本月已用流量超过限额，可点击网络设置快捷关闭网络</string>
     <string name="QING_SHAO_DENG_ZHENG_ZAI_JIA_ZAI_SHU_JU">请稍等，正在加载数据...</string>
     <string name="CONG_LIAN_XI_REN_TIAN_JIA">从联系人添加</string>
     <string name="CONG_SIM_QIA_TIAN_JIA">从电话卡添加</string>
     <string name="CONG_TONG_HUA_JI_LU_TIAN_JIA">从通话记录添加</string>
-    <string name="CONG_DUAN_XIN_LIE_BIAO_TIAN_JIA">从短信列表添加</string>
+    <string name="CONG_DUAN_XIN_LIE_BIAO_TIAN_JIA">从信息列表添加</string>
     <string name="WAN_CHENG">完成</string>
     <string name="WAN_CHENG_SPACE">完 成</string>
     <string name="one_record_has_been_deleted">查杀报告已删除</string>
@@ -1594,18 +1688,18 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="YOU_JIN_SHEN_SHI_YONG_RUAN_JIAN_JIAN_YI_MA_SHANG_QU_CHA_SHA_BAO_GAO_QUE_REN_CHU_LI">有谨慎使用软件，建议去查杀报告处理</string>
     <string name="SAO_MIAO_QU_XIAO_WU_FA_PAN_DUAN_NIN_SHOU_JI_DE_AN_QUAN_XING">扫描取消，无法判断手机安全状况</string>
     <string name="BEN_DI_SAO_MIAO_WEI_FA_XIAN_BING_DU">本地扫描未发现病毒</string>
-    <string name="GONG_XI_NIN_DE_SHOU_JI_AN_QUAN_ZHUANG_TAI_LIANG_HAO">您的手机安全状况良好</string>
+    <string name="GONG_XI_NIN_DE_SHOU_JI_AN_QUAN_ZHUANG_TAI_LIANG_HAO">你的手机安全状况良好</string>
     <string name="GE_BING_DU_YI_QINGCHU">个病毒,已清除</string>
     <string name="cloud_scan_virus_result_before">云查杀发现恶意软件</string>
     <string name="cloud_scan_virus_result_middle">款</string>
     <string name="ZHENG_ZAI_CHU_SAO_MIAO_BAO_GAO">正在出扫描报告...</string>
     <string name="ZHENG_ZAI_CHU_SHI_HUA_CHA_SHA_YIN_QING">正在初始化查杀引擎...</string>
     <string name="FA_XIAN">发现</string>
-    <string name="GE_WEI_ZHI_RUAN_JIAN_WEI_LE_BAO_ZHANG_NIN_DE_SHOU_JI_AN_QUAN_JIAN_YI_YUN_CHA_SHA">个未知软件，为了保障您的手机安全，建议云查杀。</string>
+    <string name="GE_WEI_ZHI_RUAN_JIAN_WEI_LE_BAO_ZHANG_NIN_DE_SHOU_JI_AN_QUAN_JIAN_YI_YUN_CHA_SHA">个未知软件，为了保障你的手机安全，建议云查杀。</string>
     <string name="WEN_XIN_TI_SHI">温馨提示</string>
     <string name="ZHENG_ZAI_CHA_SHA_BING_DU_QUE_DING_YAO_QU_XIAO_MA">正在查杀病毒，确定要取消吗？</string>
     <string name="TI_XING">提醒</string>
-    <string name="QU_XIAO_DANG_QIAN_XIA_ZAI_REN_WU_JIANG_SHAN_CHU_YI_XIA_ZAI_DE_BU_FEN_WEN_JIAN_NIN_QUE_REN_YAO_SHAN_CHU_MA">取消当前下载任务将删除已下载的部分文件，您确认要删除吗？</string>
+    <string name="QU_XIAO_DANG_QIAN_XIA_ZAI_REN_WU_JIANG_SHAN_CHU_YI_XIA_ZAI_DE_BU_FEN_WEN_JIAN_NIN_QUE_REN_YAO_SHAN_CHU_MA">取消当前下载任务将删除已下载的部分文件，你确认要删除吗？</string>
     <string name="ZHENG_ZAI_TI_JIAO_PING_FEN">正在提交评分...</string>
     <string name="PING_FEN_CHENG_GONG">评分成功</string>
     <string name="PING_FEN_SHI_BAI">评分失败(错误码:%1$d)</string>
@@ -1615,7 +1709,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="QI_TA_WANG_LUO_YUN_YING_SHANG">其他网络运营商</string>
     <string name="QING_CHA_RU_SIM_QIA">请插入SIM卡</string>
     <string name="DUAN_XIN_CHA_XUN">短信查询</string>
-    <string name="BU_NENG_SHI_BIE_WANG_LUO_YUN_YING_SHANG_HUO_ZHE_MEI_YOU_SIM_QIA_NIN_KE_YI_TONG_GUO_QI_TA_FANG_SHI_CHA_XUN_LIU_LIANG_SHI_YONG_QING_KUANG">不能识别网络运营商或者没有SIM卡，您可以通过其它方式查询流量使用情况。</string>
+    <string name="BU_NENG_SHI_BIE_WANG_LUO_YUN_YING_SHANG_HUO_ZHE_MEI_YOU_SIM_QIA_NIN_KE_YI_TONG_GUO_QI_TA_FANG_SHI_CHA_XUN_LIU_LIANG_SHI_YONG_QING_KUANG">不能识别网络运营商或者没有SIM卡，你可以通过其它方式查询流量使用情况。</string>
     <string name="FA_SONG">发送：</string>
     <string name="DAO">到：</string>
     <string name="NEI_RONG_SHU_RU_BU_ZHENG_QUE">内容输入不正确</string>
@@ -1625,9 +1719,9 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="FA_SONG_SHI_BAI">发送失败</string>
     <string name="free_sms_sender">免费流量查询短信已发送</string>
     <string name="GE_AN_ZHUANG_BAO_BEI_SHAN_CHU_NIN_SHI_FOU_QUE_REN_SHAN_CHU_ZHE_XIE_AN_ZHUANG_BAO_MA">个安装包被删除，是否确认删除?</string>
-    <string name="NIN_HAO_WO_XIAN_ZAI_YOU_SHI_YI_HUI_ER_ZAI_HE_NIN_LIAN_XI">您好，我现在有事，一会儿再和您联系！</string>
-    <string name="NIN_YOU_XIN_DE_XIAO_XI">您有新的消息</string>
-    <string name="NIN_YOU_XIN_DE_LAI_DIAN">您有新的来电</string>
+    <string name="NIN_HAO_WO_XIAN_ZAI_YOU_SHI_YI_HUI_ER_ZAI_HE_NIN_LIAN_XI">你好，我现在有事，一会儿再和你联系！</string>
+    <string name="NIN_YOU_XIN_DE_XIAO_XI">你有新的消息</string>
+    <string name="NIN_YOU_XIN_DE_LAI_DIAN">你有新的来电</string>
     <string name="KE_YI">[可疑]</string>
     <string name="CUO_WU_DUAN_XIN_NEI_RONG_ZHI_SHAO_YAO_QIU_YOU_GE_ZI_FU_QING_ZHONG_XIN_SHU_RU_DUAN_XIN_NEI_RONG">错误：短信内容至少要求有1个字符，请重新输入短信内容。</string>
     <string name="MEI_YOU_XUAN_ZHONG_XIANG">没有选中项</string>
@@ -1644,23 +1738,20 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="XIA_ZAI_WAN_CHENG">下载完成</string>
     <string name="QUE_DING">确定</string>
     <string name="LIE_BIAO_XUAN_ZE">列表选择</string>
-    <string name="NIN_DE_FAN_BING_DU_KU_YI_SHI_ZUI_XIN">您的反病毒库已是最新</string>
+    <string name="NIN_DE_FAN_BING_DU_KU_YI_SHI_ZUI_XIN">你的反病毒库已是最新</string>
     <string name="WANG_LUO_CUO_WU_GENG_XIN_SHI_BAI">网络错误，更新失败</string>
     <string name="QQ_AN_QUAN_ZHU_SHOU_ZHENG_ZAI_SAO_MIAO">手机管家正在扫描新安装应用...</string>
     <string name="AN_QUAN">未发现风险</string>
     <string name="install_virus_tips">发现病毒%1$d个，成功清除0个，待处理%2$d个！点击查看详情</string>
     <string name="JIAN_CHA_CHU_BING_DU">检查出病毒</string>
     <string name="SHAN_CHU_SHI_BAI">删除失败</string>
-    <string name="NIN_DE_SHOU_JI_LING_PAI_BU_SHI_ZUI_XIN_BAN_BEN_SHI_FOU_XU_YAO_GENG_XIN">您的QQ安全中心不是最新版本，是否需要更新？</string>
-    <string name="SHOU_JI_QQ_LING_PAI_SHUO_MING">QQ安全中心说明</string>
-    <string name="SHOU_JI_LING_PAI_SHI_YI_ZU_WEI_DONG_TAI_MI_MA_SHI_BAO_HU_QQ_ZHANG_HU_Q_BI_HE_YOU_XI_ZHANG_HAO_AN_QUAN_YOU_XIAO_GONG_JU_AN_ZHUANG_SHOU_JI_LING_PAI_KE_YI_RANG_NIN_BIAN_JIE_DE_JI_HUO_SHOU_JI_LING_PAI_SUI_SHI_CHA_KAN_WEI_DONG_TAI_MI_MA">QQ安全中心是保护QQ账户、Q币和游戏帐号安全的有效工具，可以让你随时查看手机令牌动态密码，实时接收帐号消费、异常，查询QQ登录足迹。</string>
     <string name="DENG_LU_SI_MI_KONG_JIAN">登录%1$s</string>
     <string name="MI_MA_YOU_WU_QING_ZHONG_XIN_SHU_RU">密码有误，请重新输入</string>
-    <string name="NIN_WEI_CENG_SHE_ZHI_SI_MI_LIAN_XI_REN">您未曾设置私密联系人</string>
-    <string name="JIN_TIAN_NIN_YI_SHU_CUO_CI_QING_MING_TIAN_ZAI_SHI">今天您已输错3次，请明天再试</string>
+    <string name="NIN_WEI_CENG_SHE_ZHI_SI_MI_LIAN_XI_REN">你未曾设置隐私联系人</string>
+    <string name="JIN_TIAN_NIN_YI_SHU_CUO_CI_QING_MING_TIAN_ZAI_SHI">今天你已输错3次，请明天再试</string>
     <string name="ZHONG_ZHI_SI_MI_KONG_JIAN_MI_MA">重置%1$s密码</string>
     <string name="WANG_JI_MI_MA">忘记密码</string>
-    <string name="NI_DE_SHU_RU_BU_ZHENG_QUE_NIN_HUAN_YOU">您的输入不正确，您还有</string>
+    <string name="NI_DE_SHU_RU_BU_ZHENG_QUE_NIN_HUAN_YOU">你的输入不正确，你还有</string>
     <string name="CI_JI_HUI">次机会</string>
     <string name="LAN_JIE">拦截</string>
     <string name="LAI_DIAN_HUO_DUAN_XIN">来电或短信</string>
@@ -1677,12 +1768,12 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="QQ_AN_QUAN_ZHU_SHOU_FU_WU_YI_GUAN_BI">手机管家服务已关闭</string>
     <string name="QQ_AN_QUAN_ZHU_SHOU_LIU_LIANG_JIAN_KONG_QI_DONG">手机管家流量监控启动</string>
     <string name="QQ_AN_QUAN_ZHU_SHOU_LIU_LIANG_JIAN_KONG_YI_GUAN_BI">手机管家流量监控已关闭</string>
-    <string name="ZHENG_ZAI_BAO_HU_NIN_DE_SHOU_JI_AN_QUAN">正在保护您的手机安全！</string>
+    <string name="ZHENG_ZAI_BAO_HU_NIN_DE_SHOU_JI_AN_QUAN">正在保护你的手机安全！</string>
     <string name="XIANG_YI_SHENG_LAI_DIAN">响一声来电：</string>
     <string name="LAN_JIE_XIANG_YI_SHENG_LAI_DIAN_X_GE">拦截响一声电话 %1$s 个</string>
     <string name="QQ_SHOU_JI_GUAN_JIA_LAN_JIE_TI_XING">手机管家拦截提醒</string>
-    <string name="MING_DAN_S_YI_JING_CUN_ZAI_YU_HEI_MING_DAN_LIE_BIAO_DIAN_JI_QUE_DING_JIANG_SHAN_CHU_HEI_MING_DAN_LI_ZHONG_FU_DE_MING_DAN_DIAN_JI_QU_XIAO_ZE_BU_ZUO_CHU_LI">名单%s已经存在于黑名单列表，点击【确定】，将删除黑名单里重复的名单；点击【取消】，则不作处理。</string>
-    <string name="MING_DAN_S_YI_JING_CUN_ZAI_YU_BAI_MING_DAN_LIE_BIAO_DIAN_JI_QUE_DING_JIANG_SHAN_CHU_BAI_MING_DAN_LI_ZHONG_FU_DE_MING_DAN_DIAN_JI_QU_XIAO_ZE_BU_ZUO_CHU_LI">名单%s已经存在于白名单列表，点击【确定】，将删除白名单里重复的名单；点击【取消】，则不作处理。</string>
+    <string name="MING_DAN_S_YI_JING_CUN_ZAI_YU_HEI_MING_DAN_LIE_BIAO_DIAN_JI_QUE_DING_JIANG_SHAN_CHU_HEI_MING_DAN_LI_ZHONG_FU_DE_MING_DAN_DIAN_JI_QU_XIAO_ZE_BU_ZUO_CHU_LI">名单%s已在黑名单列表，你是否将其加为白名单？</string>
+    <string name="MING_DAN_S_YI_JING_CUN_ZAI_YU_BAI_MING_DAN_LIE_BIAO_DIAN_JI_QUE_DING_JIANG_SHAN_CHU_BAI_MING_DAN_LI_ZHONG_FU_DE_MING_DAN_DIAN_JI_QU_XIAO_ZE_BU_ZUO_CHU_LI">名单%s已在白名单列表，你是否将其加为黑名单？</string>
     <string name="MING_DAN_S_YI_JING_CUN_ZAI_DIAN_JI_QUE_DING_JIANG_FU_GAI_YI_CUN_ZAI_DE_MING_DAN_DIAN_JI_QU_XIAO_ZE_BU_ZUO_CHU_LI">名单%s，已经存在，点击【确定】，将覆盖已存在的名单；点击【取消】，则不作处理。</string>
     <string name="FAN_KUI_JIAN_YI">反馈建议</string>
     <string name="GUI_SHU_DI_FAN_KUI">归属地反馈</string>
@@ -1701,12 +1792,14 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="QUAN_BU_XUAN">全不选</string>
     <string name="cancel_selected_all">取消全选</string>
     <string name="PI_LIANG_XIE_ZAI">批量卸载</string>
+    <string name="DENG">等</string>
     <string name="SHUA_XIN">刷新</string>
     <string name="MING_DAN_BEI_FEN">名单备份</string>
     <string name="MING_DAN_HUI_FU">名单恢复</string>
-    <string name="SI_MI_SHE_ZHI">私密设置</string>
+    <string name="SI_MI_SHE_ZHI">隐私设置</string>
     <string name="clear_gprs_data">清空流量数据</string>
     <string name="GENG_XIN_FAN_BING_DU_KU">更新反病毒库</string>
+    <string name="clean_notication_msg_record">清除记录</string>
     <string name="HUI_FU_TONG_XUN_JI_LU">恢复通讯记录</string>
     <string name="QUE_DING_HUI_FU_LIAN_XI_REN">确定恢复联系人</string>
     <string name="DE_SUO_YOU_TONG_XUN_JI_LU">的所有通讯记录？</string>
@@ -1717,7 +1810,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="QUE_DING_DAO_RU_LIAN_XI_REN">确定导入联系人</string>
     <string name="DE_SUO_YOU_TONG_HUA_JI_LU">的所有通话记录？</string>
     <string name="restore_black_contact_info">确定恢复所有黑名单联系人的通讯记录？</string>
-    <string name="restore_secure_contact_info">确定恢复所有私密联系人的通讯记录？</string>
+    <string name="restore_secure_contact_info">确定恢复所有隐私联系人的通讯记录？</string>
     <string name="CHENG_GONG_DAO_RU">成功导入</string>
     <string name="TIAO_TONG_HUA_JI_LU">条通话记录</string>
     <string name="DAO_RU_SHI_BAI">导入失败</string>
@@ -1726,6 +1819,7 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="DE_SUO_YOU_DUAN_XIN">的所有短信？</string>
     <string name="TIAO_DUAN_XIN">条短信</string>
     <string name="SHI_FANG_NEI_CUN">释放内存</string>
+    <string name="TIAO_JI_LU">条记录</string>
     <string name="scheduled_virus_scan">定时病毒查杀计划提醒</string>
     <string name="VIRUS_SCAN_WARNING">请点击进入查杀，摆脱潜伏病毒</string>
     <string name="START_SCAN">开始查杀</string>
@@ -1773,23 +1867,23 @@ QQ管理：电脑登录QQ—&amp;gt;进入应用盒子—&amp;gt;通讯录（如
     <string name="DING_SHI_REN_WU_TI_XING">定时任务提醒</string>
     <string name="YI_QI_DONG">“%1$s”任务已启动</string>
     <string name="timed_task_tips">点击新建任务</string>
-    <string name="import_black_contact_msg_confirm_text">您可以将此联系人的所有通讯记录导入拦截记录，这些记录将在系统记录中删除。是否确认导入？</string>
-    <string name="import_secure_contact_msg_confirm_text">您可以将此联系人的所有通讯记录导入私密空间，这些记录将在系统记录中删除。是否确认导入？</string>
+    <string name="import_black_contact_msg_confirm_text">是否导入此号码所有通讯记录？导入后这些记录将在系统中删除。</string>
+    <string name="import_secure_contact_msg_confirm_text">是否导入此联系人所有通讯记录？导入后这些记录将在系统中删除。</string>
     <string name="num_not_null">名单号码不能为空</string>
     <string name="keyword_not_null">关键字不能为空</string>
-    <string name="keyword_existed">您输入的关键字已经存在</string>
+    <string name="keyword_existed">你输入的关键字已经存在</string>
     <string name="confirm_to_del">确定要删除%1$s吗？</string>
     <string name="del_all_keyword">确定要删除所有关键字吗？</string>
     <string name="apk_manager_no_others">扫描完成，未发现安装包</string>
-    <string name="software_update_none">您的软件都是最新版本</string>
+    <string name="software_update_none">你的软件都是最新版本</string>
     <string name="software_update_network_error">网络不给力，无法拿到更新数据</string>
     <string name="software_gone_error">非常抱歉，由于发现该病毒的最新变种，专杀工具升级中，暂不提供下载。</string>
     <string name="has_not_cache_data">暂无缓存</string>
     <string name="scaning_cache_data">正在扫描手机中的缓存</string>
-    <string name="secure_null_tips">点击+添加私密联系人</string>
-    <string name="keyword_null_tips">点击+添加过滤关键字</string>
-    <string name="blacklist_null_tips">点击+添加黑名单</string>
-    <string name="whitelist_null_tips">点击+添加白名单</string>
+    <string name="secure_null_tips">点击+添加隐私联系人</string>
+    <string name="keyword_null_tips">拦截含有所添加关键字的陌生人信息</string>
+    <string name="blacklist_null_tips">默认拦截黑名单号码的信息和电话</string>
+    <string name="whitelist_null_tips">默认放行白名单号码的信息和电话</string>
     <string name="interrupt_msg_infobar_format">当前拦截模式：%1$s</string>
     <string name="hint_about">"手机管家 %1$s for Android Build%2$s
 
@@ -1802,10 +1896,18 @@ Copyright © 2010- 2012 Tencent. All Rights Reserved.
     <string name="hint_network_error_text">网络不给力啊，设置一下网络再试试吧(错误代码%1$s)。</string>
     <string name="hint_server_busy_text">奇怪，网络好像正在塞车，稍后再试试吧(错误代码%1$s)。</string>
     <string name="hint_wifi_redirect_text">Wi-Fi连接需认证后才能上网，确定进入认证页面？</string>
+    <string name="wifi_approve_detect_setting">Wi-Fi认证提示</string>
+    <string name="wifi_null_ssid">Wi-Fi热点SSID无效</string>
     <string name="wifi_approve">Wi-Fi认证</string>
-    <string name="wifi_need_approve">点击进入Wi-Fi认证页面</string>
+    <string name="wifi_enter_approve_window">点击显示Wi-Fi认证窗口</string>
     <string name="wifi_had_approved">Wi-Fi已连接</string>
     <string name="wifi_approved_success">Wi-Fi已认证成功</string>
+    <string name="wifi_approve_hiden_window">隐藏窗口</string>
+    <string name="wifi_ssid_changed">Wi-Fi网络SSID已改变</string>
+    <string name="wifi_system_notify_wifi_disconnected">Wi-Fi网络已退出</string>
+    <string name="wifi_js_alert_dialog">温馨提示</string>
+    <string name="wifi_js_confirm_dialog">请确认</string>
+    <string name="wifi_js_prompt_dialog">请输入并提交</string>
     <string name="version_description">新版特性</string>
     <string name="hint_about_contact_info">"
 网址：
@@ -1827,13 +1929,13 @@ http://ti.3g.qq.com/g/s?aid=h&amp;u=qqsecure
     <string name="not_record">暂无记录</string>
     <string name="noticebar_setting">通知栏提醒设置</string>
     <string name="sms_context_setting">短信内容设置</string>
-    <string name="change_space_password">修改私密空间密码</string>
+    <string name="change_space_password">修改隐私信箱独立密码</string>
     <string name="check_now">一键体检</string>
     <string name="sure_cancel_scan">取消扫描</string>
     <string name="sure_continue_scan">继续扫描</string>
     <string name="sure_cancel_optimize">取消优化</string>
     <string name="sure_continue_optimize">继续优化</string>
-    <string name="tips_donot_optimation">您的手机系统可以继续优化,确定要取消吗</string>
+    <string name="tips_donot_optimation">你的手机系统可以继续优化,确定要取消吗</string>
     <string name="check_result_virus_software">检测到恶意软件%1$d款</string>
     <string name="check_result_virus_lib">反病毒库已%1$d天没有更新</string>
     <string name="check_result_software_version">软件版本已%1$d天没有更新</string>
@@ -1842,20 +1944,22 @@ http://ti.3g.qq.com/g/s?aid=h&amp;u=qqsecure
     <string name="check_tips_software_version">正在检查软件版本是否是最新版...</string>
     <string name="check_tips_rubbish_file">正在扫描缓存垃圾文件...</string>
     <string name="check_before_tips">正在初始化体检引擎...</string>
-    <string name="software_move_lowsdk_warn">android系统2.2及以下版本不支持已安装软件移动，软件搬家功能在您的系统上无法使用。</string>
+    <string name="software_move_lowsdk_warn">android系统2.2及以下版本不支持已安装软件移动，软件搬家功能在你的系统上无法使用。</string>
     <string name="virus_init_scan_err_tips">病毒扫描引擎初始化失败,错误码%1$d</string>
     <string name="not_software_traffic_statistics">暂无流量数据，稍后再来看看</string>
     <string name="not_professional_killer">暂无专杀工具</string>
-    <string name="not_sms_filter_record">在此显示被拦截短信</string>
+    <string name="not_sms_filter_record">在此显示被拦截信息</string>
     <string name="not_call_filter_record">在此显示被拦截电话</string>
-    <string name="not_sms_secure_record">还没有人和您说悄悄话</string>
-    <string name="not_call_secure_record">还没有人和您说悄悄话</string>
-    <string name="add_secure_contact_guide">点击右上角可添加私密联系人</string>
+    <string name="not_sms_secure_record">还没有人和你说悄悄话</string>
+    <string name="not_call_secure_record">还没有人和你说悄悄话</string>
+    <string name="add_secure_contact_guide">点击右上角可添加隐私联系人</string>
     <string name="not_sms_sys_record">收件箱空空如也</string>
+    <string name="not_call_sys_record">通话记录空空如也</string>
     <string name="not_sync_record">无同步记录</string>
     <string name="hint_sure_to_report">如果此软件有恶意行为，请举报</string>
-    <string name="hint_sure_to_report_sms">确认举报这些短信吗？</string>
-    <string name="hint_sure_to_import_sms_after_report">您可将这些举报短信移入拦截信箱里面，这些短信将在系统信箱中删除，确定移入？</string>
+    <string name="hint_sure_to_report_sms">确认举报这些选择吗？</string>
+    <string name="hint_sure_to_import_sms_after_report">被举报短信将被移入拦截信箱</string>
+    <string name="hint_sure_to_import_call_after_report">被举报电话记录将被移入拦截电话</string>
     <string name="hint_notify_text">温馨提示</string>
     <string name="hint_please_enter_sms_content">请输入回复短信内容</string>
     <string name="hint_please_enter_password">请输入密码（1-16位）：</string>
@@ -1866,12 +1970,12 @@ http://ti.3g.qq.com/g/s?aid=h&amp;u=qqsecure
     <string name="password_confirm">密码确认</string>
     <string name="verify_code">验证码</string>
     <string name="sync_mobile_register_password_tips">密码为6-16位，不可包含空格</string>
-    <string name="sync_mobile_register_tips">为了确保您手机资料的安全，我们需要帮助您自动发送一条短信进行校验才能完成注册，该条短信由运营商收取1毛钱短信资费。手机管家的使用过程中除同步资料时产生的网络流量外不会收取额外费用。</string>
+    <string name="sync_mobile_register_tips">为了确保你手机资料的安全，我们需要帮助你自动发送一条短信进行校验才能完成注册，该条短信由运营商收取1毛钱短信资费。手机管家的使用过程中除同步资料时产生的网络流量外不会收取额外费用。</string>
     <string name="read_and_agree">我已阅读提醒并同意</string>
-    <string name="sync_mobile_manual_activate_tips">为了您的手机安全请输入收到的验证码</string>
+    <string name="sync_mobile_manual_activate_tips">为了你的手机安全请输入收到的验证码</string>
     <string name="register">注册</string>
     <string name="get_verify_code">获取验证码</string>
-    <string name="sync_notification1">您已较长时间没备份联系人，建议马上备份</string>
+    <string name="sync_notification1">你已较长时间没备份联系人，建议马上备份</string>
     <string name="sync_notification2">检测到联系人变化，请及时备份</string>
     <string name="str_mobileregister_areacode">国家/地区</string>
     <string name="str_mobileregister_areacode_default">中国(+86)</string>
@@ -1896,12 +2000,12 @@ http://ti.3g.qq.com/g/s?aid=h&amp;u=qqsecure
     <string name="str_mobileregister_verify_tip">请输入验证码</string>
     <string name="str_mobileregister_forget_mobilepwd">忘记手机密码？</string>
     <string name="str_mobileregister_get_verifycode_wait">秒后可重新获取</string>
-    <string name="str_mobileregister_forget_state">忘记手机账户密码需要重新注册校验您的手机号，确认继续</string>
+    <string name="str_mobileregister_forget_state">忘记手机账户密码需要重新注册校验你的手机号，确认继续</string>
     <string name="str_mobileregister_statement">同意《QQ同步助手软件许可及服务协议》</string>
     <string name="str_mobileregister_statement_title">软件许可及服务协议</string>
     <string name="str_mobileregister_agreement_tip">请查看并确认是否同意《隐私协议及帐号使用条款》</string>
     <string name="str_mobileregister_confirme_state_title">QQ同步助手使用条款</string>
-    <string name="str_mobileregister_confirme_state_content">"QQ同步助手是永久免费的服务，腾讯公司不收取任何费用。如您需要注册手机帐号，为确保您的资料安全，我们需要帮您自动发送1条短信进行校验才能完成注册。（该条短信资费由运营商收取）。此外，使用过程中会产生手机上网的数据流量费，也由网络运营商收取。推荐您开通数据包月套餐，能降低您的流量资费，详情请咨询当地运营商。
+    <string name="str_mobileregister_confirme_state_content">"QQ同步助手是永久免费的服务，腾讯公司不收取任何费用。如你需要注册手机帐号，为确保你的资料安全，我们需要帮你自动发送1条短信进行校验才能完成注册。（该条短信资费由运营商收取）。此外，使用过程中会产生手机上网的数据流量费，也由网络运营商收取。推荐你开通数据包月套餐，能降低你的流量资费，详情请咨询当地运营商。
 QQ同步助手在服务器中的用户数据，无论是用户个人资料，还是用户手机上的各种信息都采用加密存储，确保了个人数据的安全。在客户端与服务端通讯时，我们通过数字证书加密通道传输信息，保证信息加密传输。采用专业的数字证书加密，并对网站、手机客户端进行了安全认证。本地备份信息都是加密存储，不用担心卡丢失导致个人信息丢失。"</string>
     <string name="search_no_software">对不起，没有搜到相关内容，看看大家在搜什么</string>
     <string name="str_warmtip_accountInvalidate">帐号填写不规范，请重新输入</string>
@@ -1911,7 +2015,7 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="str_password_set_detail_tip">请设置6-16位密码(空格无效)</string>
     <string name="str_password_again_tip">请再次输入密码</string>
     <string name="network_setting">网络设置</string>
-    <string name="hint_secure_contact_input">请输入您曾经设置过的联系人号码：</string>
+    <string name="hint_secure_contact_input">请输入你曾经设置过的联系人号码：</string>
     <string name="do_not_remind">不再提示</string>
     <string name="remember_password">记住密码</string>
     <string name="hint_about_zte">欢迎使用手机管家客户端软件，客户端使用完全免费，在使用过程中会产生流量费，流量费请咨询当地运营商，是否允许用户建立连接。</string>
@@ -1940,7 +2044,7 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="hint_total">套餐流量</string>
     <string name="hint_over">超标流量</string>
     <string name="month_do_not_remind">本月不再提示</string>
-    <string name="input_secure_psw">请输入%1$s密码:</string>
+    <string name="input_secure_psw">请输入%1$s独立密码:</string>
     <string name="forget_psw">忘记密码</string>
     <string name="sim_none">电话卡没有联系人</string>
     <string name="phone_none">手机没有联系人</string>
@@ -1956,11 +2060,11 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="add_to_desktop">添加至桌面</string>
     <string name="now_name">当前名称：</string>
     <string name="fake_tips">虚假提示：</string>
-    <string name="secure_space_icon_summary">“私密空间”模块显示的图标</string>
-    <string name="secure_space_fake_tips_summary">输入虚假密码时，进入虚假私密空间</string>
+    <string name="secure_space_icon_summary">“隐私信箱”模块显示的图标</string>
+    <string name="secure_space_fake_tips_summary">输入虚假密码时，进入虚假隐私信箱</string>
     <string name="secure_space_fake_tips_text_moren">系统读取信息时出错,暂时无法访问.</string>
-    <string name="qucik_entry_display_tips_summary">在快捷入口显示未读私密短信和来电信息</string>
-    <string name="input_secure_name">输入私密空间显示名称</string>
+    <string name="qucik_entry_display_tips_summary">在快捷入口显示未读隐私短信和来电信息</string>
+    <string name="input_secure_name">输入隐私信箱显示名称</string>
     <string name="edit_not_null">输入框不能为空</string>
     <string name="input_fake_tips_text">输入虚假提示内容</string>
     <string name="set_fake_password">设置虚假密码</string>
@@ -1969,7 +2073,7 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="hint_psw_conflict">虚假密码与真密码冲突</string>
     <string name="warm_tips">温馨提示</string>
     <string name="set_fake_psw">设置虚假密码</string>
-    <string name="warm_tips_text">使用虚假密码进入时，将弹出错误提示信息，拒绝他人请求进入私密空间。请先设置虚假密码。</string>
+    <string name="warm_tips_text">使用虚假密码进入时，将弹出错误提示信息，拒绝他人请求进入隐私信箱。请先设置虚假密码。</string>
     <string name="sms_attention_mode1">短信铃声提醒</string>
     <string name="sms_attention_mode2">振动提醒</string>
     <string name="sms_attention_mode3">通知栏提醒</string>
@@ -1990,12 +2094,12 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="wifi_close_tips">Wi-Fi正在关闭,请稍等......</string>
     <string name="apn_switch_net_tips">APN接入点已切换为Net</string>
     <string name="apn_switch_wap_tips">APN接入点已切换为Wap</string>
-    <string name="unit_m">(M)</string>
+    <string name="unit_m">MB</string>
     <string name="switch_before_apn">请开启APN后再切换</string>
     <string name="mobile_connect_open_tips">移动网络数据连接正在开启,请稍等......</string>
     <string name="mobile_connect_close_tips">移动网络数据连接正在关闭,请稍等......</string>
     <string name="action_msg_title">下载送豪礼</string>
-    <string name="action_msg_tip">恭喜您获得“下载送豪礼”活动参与机会！现在领取排队码，数字逢6、8就有奖！Q币、超级QQ加速卡/体验卡、iPod touch天天送，周周iPad2送不停！ 您可通过主菜单的下载有礼链接了解活动！谢谢关注！</string>
+    <string name="action_msg_tip">恭喜你获得“下载送豪礼”活动参与机会！现在领取排队码，数字逢6、8就有奖！Q币、超级QQ加速卡/体验卡、iPod touch天天送，周周iPad2送不停！ 你可通过主菜单的下载有礼链接了解活动！谢谢关注！</string>
     <string name="action_btn_zajiang">立刻领取</string>
     <string name="action_btn_cancel">下次再说</string>
     <string name="action_btn_notip">不再提示</string>
@@ -2007,10 +2111,13 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="forbid_autoboot">已禁止开机启动</string>
     <string name="had_permit">已允许</string>
     <string name="had_forbid">已禁止</string>
+    <string name="operate_faile">操作失败</string>
     <string name="software_autoboot">软件开机自启动</string>
     <string name="this_boost">本次加速新禁止%1$d个软件开机自启动</string>
     <string name="unit">个</string>
     <string name="DeskAssisCloseSettingTipMsg">快捷助手浮窗已关闭，可在手机管家系统设置中开启</string>
+    <string name="DeskAssisTaskManagerTitle">运行进程%d个，点击可单个结束</string>
+    <string name="DeskAssisTaskManagerLoading">正在载入...</string>
     <string name="not_need_to_boost">开机加速已配置好</string>
     <string name="have_no_super_permision">未获得ROOT权限，暂不能进行加速</string>
     <string name="title_permit_num">已允许：%1$d</string>
@@ -2019,12 +2126,12 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="minute">分</string>
     <string name="second">秒</string>
     <string name="autoboot_software_num">自启动软件</string>
-    <string name="autoboot_no_root">您的手机没有获取ROOT权限，无法修改开机自启动项</string>
-    <string name="autoboot_no_author">您的手机未成功授予手机管家ROOT权限，无法修改开机自启动项</string>
-    <string name="permission_monitor_no_root">您的手机没有获取ROOT权限，无法使用隐私监控</string>
-    <string name="permission_monitor_no_author">您的手机未成功授予手机管家ROOT权限，无法使用隐私监控</string>
-    <string name="system_software_uninstall_no_root">您的手机没有获取ROOT权限，无法卸载系统软件</string>
-    <string name="system_software_uninstall_no_author">您的手机未成功授予手机管家ROOT权限，无法卸载系统软件</string>
+    <string name="autoboot_no_root">你的手机没有获取ROOT权限，无法修改开机自启动项</string>
+    <string name="autoboot_no_author">你的手机未成功授予手机管家ROOT权限，无法修改开机自启动项</string>
+    <string name="permission_monitor_no_root">你的手机没有获取ROOT权限，无法使用隐私监控</string>
+    <string name="permission_monitor_no_author">你的手机未成功授予手机管家ROOT权限，无法使用隐私监控</string>
+    <string name="system_software_uninstall_no_root">你的手机没有获取ROOT权限，无法卸载系统软件</string>
+    <string name="system_software_uninstall_no_author">你的手机未成功授予手机管家ROOT权限，无法卸载系统软件</string>
     <string name="kingroot_recommend_when_no_root">。建议下载获取root权限工具，获得更多功能</string>
     <string name="kingroot_download">下载</string>
     <string name="grant_root">授予权限</string>
@@ -2035,22 +2142,22 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
  通俗来讲ROOT权限相当于我们的电脑中Windows系统的超级管理员权限，拥有ROOT权限，可以对Android的系统文件进行修改、删除等，但是，ROOT权限的功能过于强大，会有一定的风险。因此，Android系统默认是没有ROOT权限的，要想获得ROOT权限，必须用破解的方法来实现。
 
  2、如何获取ROOT权限？
- 目前没有官方的获取ROOT权限的方法，网上介绍的做法是通过第三方软件获取ROOT。第三方获取ROOT的软件可以在一些知名的android电子市场搜索下载。管家提醒您，由于手机硬件和软件环境的不同，获取ROOT存在一定的风险。
+ 目前没有官方的获取ROOT权限的方法，网上介绍的做法是通过第三方软件获取ROOT。第三方获取ROOT的软件可以在一些知名的android电子市场搜索下载。管家提醒你，由于手机硬件和软件环境的不同，获取ROOT存在一定的风险。
 
  3、授予手机管家ROOT权限有什么作用？
- 授予手机管家ROOT权限后，您可以：
+ 授予手机管家ROOT权限后，你可以：
  ▪彻底清除深层手机病毒，保护手机安全
  ▪清理多余的系统软件，优化手机性能
  ▪设置开机启动项，加快手机开机
  ▪对软件进行权限监控，防止软件窃取私隐等"</string>
     <string name="root_knowledge_1">"1、为何部分手机未能成功授予手机管家ROOT权限？
- 原因一：在手机管家申请获取ROOT权限时，您没有授予手机管家权限，您可以进入授权管理软件，例如Superuser或者“授权管理”授予手机管家权限；原因二：您的手机没有对系统外第三方软件授予ROOT权限， 因此手机管家未能成功获取ROOT权限。
+ 原因一：在手机管家申请获取ROOT权限时，你没有授予手机管家权限，你可以进入授权管理软件，例如Superuser或者“授权管理”授予手机管家权限；原因二：你的手机没有对系统外第三方软件授予ROOT权限， 因此手机管家未能成功获取ROOT权限。
 
  2、什么是ROOT权限？
  通俗来讲ROOT权限相当于我们的电脑中Windows系统的超级管理员权限，拥有ROOT权限，可以对Android的系统文件进行修改、删除等。
 
  3、授予手机管家ROOT权限有什么作用？
- 授予手机管家ROOT权限后，您可以：
+ 授予手机管家ROOT权限后，你可以：
  ▪彻底清除深层手机病毒，保护手机安全
  ▪清理多余的系统软件，优化手机性能
  ▪设置开机启动项，加快手机开机
@@ -2078,7 +2185,7 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="auto_after_seconds">秒钟后自动</string>
     <string name="need_reboot_your_phone">隐私监控引擎已升级，建议重启手机激活新引擎</string>
     <string name="need_reboot_network_your_phone">联网防火墙已升级，需重启手机才能使用此功能</string>
-    <string name="need_reboot_exception">权限监控变更需重启手机，您还没有重启!</string>
+    <string name="need_reboot_exception">权限监控变更需重启手机，你还没有重启!</string>
     <string name="other_exception">权限监控启动失败！</string>
     <string name="start_killer_failed">启动专杀工具失败，请到应用列表独立启用</string>
     <string name="reboot">重启</string>
@@ -2100,18 +2207,20 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="name_r_get_neightboring_cell_location">neightboring cell id</string>
     <string name="name_r_get_gps_info">读取定位信息</string>
     <string name="name_r_media_record">录音</string>
+    <string name="name_r_notification">发送通知</string>
     <string name="describe_r_call">可直接拨打电话</string>
     <string name="describe_r_send_sms">可直接发送信息</string>
-    <string name="describe_r_visit_contact_data">访问您的系统联系人</string>
-    <string name="describe_r_visit_call_log_data">访问您的通话记录</string>
-    <string name="describe_r_visit_sms_data">访问您的信息收信箱</string>
-    <string name="describe_r_phone_state_listen">监听您的手机来电</string>
+    <string name="describe_r_visit_contact_data">访问你的系统联系人</string>
+    <string name="describe_r_visit_call_log_data">访问你的通话记录</string>
+    <string name="describe_r_visit_sms_data">访问你的信息收信箱</string>
+    <string name="describe_r_phone_state_listen">监听你的手机来电</string>
     <string name="describe_r_visit_internet">链接互联网</string>
-    <string name="describe_r_get_icc_imei_imsi_info">获取您的IMEI、IMSI、本机号码、SIM卡序列号等</string>
+    <string name="describe_r_get_icc_imei_imsi_info">获取你的IMEI、IMSI、本机号码、SIM卡序列号等</string>
     <string name="describe_r_get_cell_location">获取cell id</string>
     <string name="describe_r_get_neightboring_cell_location">获取neightboring cell id</string>
-    <string name="describe_r_get_gps_info">通过蜂窝网或卫星定位您的手机</string>
-    <string name="describe_r_media_record">可录制您的音频</string>
+    <string name="describe_r_get_gps_info">通过蜂窝网或卫星定位你的手机</string>
+    <string name="describe_r_media_record">可录制你的音频</string>
+    <string name="describe_r_notification">可发送通知栏通知</string>
     <string name="permit_value_respond">允许</string>
     <string name="forbid_value_respond">禁止</string>
     <string name="answer_value_respond">每次提示</string>
@@ -2143,18 +2252,27 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="app_count_with_permission_gps_info">共%1$d款软件可获取手机位置信息隐私</string>
     <string name="app_count_with_permission_phone_info">共%1$d款软件可获取手机识别码，型号</string>
     <string name="app_trust_listview_infobar_text">开启软件信任将允许所有权限</string>
-    <string name="monitor_view_noroot_infobar_text">您未获得root权限，无法修改权限</string>
-    <string name="trust_listview_noroot_infobar_text">您未获得root权限，无法设置信任软件</string>
+    <string name="monitor_view_noroot_infobar_text">你未获得root权限，无法修改权限</string>
+    <string name="trust_listview_noroot_infobar_text">你未获得root权限，无法设置信任软件</string>
     <string name="permission_monitor_app_count">共有%1$d款软件正在调用隐私信息</string>
     <string name="tips_open_permission_monitor">隐私监控未开启，点击直接开启</string>
-    <string name="private_secure_open">正在保护您的隐私</string>
-    <string name="private_secure_close">立即开启，保护您的隐私</string>
+    <string name="private_secure_open">正在保护你的隐私</string>
+    <string name="private_secure_close">立即开启，保护你的隐私</string>
     <string name="start_permission_control_faile">隐私监控开启失败，请授予管家root权限</string>
+    <string name="start_notication_block_faile">广告拦截开启失败，请授予管家root权限</string>
     <string name="start_permission_control_no_reboot">隐私监控开启失败，请重启手机升级引擎</string>
-    <string name="start_permission_control_network_faile">网络防火墙启动失败</string>
-    <string name="permission_open_dialog">隐私监控未开启，开启后能有效保护您的隐私。</string>
+    <string name="start_notication_block_no_reboot">广告拦截开启失败，请重启手机升级引擎</string>
+    <string name="start_permission_control_network_faile">你未获取ROOT权限，无法修改联网权限</string>
+    <string name="start_permission_control_network_faile_nofeature">你的硬件不支持，无法使用联网防火墙</string>
+    <string name="start_permission_control_network_faile_init">联网防火墙初始化失败</string>
+    <string name="notication_block_noroot_infobar_text">你未获得root权限，无法使用广告拦截</string>
+    <string name="permission_open_dialog">开启隐私监控，由你决定谁能读取通讯录等个人信息</string>
     <string name="permission_4_0_adapt">非常抱歉，我们正在努力适配安卓4.0版本下的隐私监控，预计下个版本可以实现完全的适配。</string>
     <string name="permission_4_0_adapt_tips">正在努力适配4.0版本的隐私监控</string>
+    <string name="sim_card_province">手机卡所属省份</string>
+    <string name="sim_card_city">手机卡所属城市</string>
+    <string name="sim_card_carry">运营商</string>
+    <string name="sim_card_brand">手机卡类型</string>
     <string name="net_manager_regulate_dialog_title">校正已用流量</string>
     <string name="net_manager_auto_regulate">自动校正</string>
     <string name="net_manager_handmake_regulate">手动校正</string>
@@ -2163,12 +2281,13 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="net_manager_adjust_switch_on">开启自动校正流量</string>
     <string name="net_manager_adjust_config_hint_1">自动校正已用流量,请先配置:</string>
     <string name="net_manager_adjust_config_hint_2">开启自动校正流量,请先配置:</string>
-    <string name="net_manager_adjust_config_hint_3">由于自动校正流量功能升级,请您重新配置以下信息:</string>
+    <string name="net_manager_adjust_config_hint_3">由于自动校正流量功能升级,请你重新配置以下信息:</string>
+    <string name="net_manager_adjust_config_hint_4">请先确认以下信息是否正确</string>
     <string name="net_manager_adjust_config_please_select">请选择</string>
     <string name="net_manager_adjust_config_please_select_provice_first">请先选择省份</string>
     <string name="net_manager_adjust_config_please_select_carry_first">请先选择运营商</string>
     <string name="net_manager_adjust_config_incomplete_config">信息配置未完成</string>
-    <string name="net_manager_auto_config">配置自动校正流量</string>
+    <string name="net_manager_auto_config">手机卡设置</string>
     <string name="net_manager_flow_toll_package_setting">设置每月套餐限额</string>
     <string name="net_manager_flow_toll_package_setting_hint">为了更准确地校正流量，请先设置:</string>
     <string name="net_manager_flow_toll_package_limit_input_empty">每月套餐限额不能为空</string>
@@ -2188,24 +2307,24 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="sw_update_reminder_tips">发现%1$d个可更新软件</string>
     <string name="update_reminder">软件更新提醒</string>
     <string name="uninstall_sysapp_warning_title">手机管家警告</string>
-    <string name="uninstall_sysapp_warning_network_title">警告!建议联网获取系统软件信息作为卸载参考，错误卸载系统关键软件可能会造成您手机无法正常使用</string>
+    <string name="uninstall_sysapp_warning_network_title">警告!建议联网获取系统软件信息作为卸载参考，错误卸载系统关键软件可能会造成你手机无法正常使用</string>
     <string name="uninstall_getinfo">获取信息</string>
-    <string name="uninstall_sys_app_warning">注意!卸载系统软件可能会影响您的手机正常使用，请谨慎确认。</string>
+    <string name="uninstall_sys_app_warning">注意!卸载系统软件可能会影响你的手机正常使用，请谨慎确认。</string>
     <string name="uninstall_sys_app_warning_notice">(卸载系统软件需要手机Root权限，当弹出许可时请接受)</string>
     <string name="uninstall_sys_app_warning_tips_title">温馨提示:</string>
     <string name="uninstall_sys_app_warning_tips1">-误删的软件可以从回收站还原</string>
     <string name="uninstall_sys_app_warning_tips2">-标红的软件可能是关键软件，请注意</string>
     <string name="uninstall_sys_app_warning_tips3">-部分软件需要重启手机方可完成卸载</string>
-    <string name="uninstall_spaciel_warning_text">警告!此软件可能为系统关键软件,卸载有可能严重影响您的手机使用，强烈建议保留</string>
+    <string name="uninstall_spaciel_warning_text">警告！卸载此软件可能引起系统功能无法使用，强烈建议保留</string>
     <string name="recycle_null">被卸载的系统软件可在此还原</string>
     <string name="hint_sure_to_rollback">确定要还原该系统软件吗？</string>
     <string name="hint_sure_to_delete">注意!确认删除了将无法还原该系统软件，请谨慎!</string>
     <string name="roll_back">还原</string>
     <string name="hint_recycle_infobar_text">共%1$d款软件可还原</string>
     <string name="batch_remove_all">一键清空</string>
-    <string name="secure_protection_setting">私密保护设置</string>
-    <string name="secure_sms_setting">私密信息设置</string>
-    <string name="secure_call_setting">私密来电设置</string>
+    <string name="secure_protection_setting">隐私保护设置</string>
+    <string name="secure_sms_setting">隐私信息设置</string>
+    <string name="secure_call_setting">隐私来电设置</string>
     <string name="guise_setting">伪装设置</string>
     <string name="access_denied_setting">虚假界面设置</string>
     <string name="titlebar_msg_notify">短信通知栏提醒</string>
@@ -2215,16 +2334,19 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
 *卸载关键系统软件可能会造成手机无法正常使用"</string>
     <string name="hint_uninstall_rom_app_warning">将有不常见内置软件被卸载，是否确定卸载？</string>
     <string name="auto_boot_white_list">禁止该程序开机启动可能会影响到软件使用，建议不要禁止</string>
-    <string name="auto_boot_other_app">开启该程序的开机启动会影响您的开机速度，建议不要开启</string>
+    <string name="auto_boot_other_app">开启该程序的开机启动会影响你的开机速度，建议不要开启</string>
     <string name="continue_permit">继续开启</string>
     <string name="continue_forbid">继续禁止</string>
     <string name="handling">正在处理，请稍等...</string>
-    <string name="sms_report_filter">举报拦截短信</string>
-    <string name="sms_report_system">举报系统短信</string>
+    <string name="sms_report_filter">举报拦截信息</string>
+    <string name="sms_report_system">举报系统信息</string>
+    <string name="filter_sms">拦截信息</string>
+    <string name="system_sms">系统信息</string>
+    <string name="filter_call">拦截电话</string>
+    <string name="system_call">系统电话</string>
     <string name="hint_reboot_tips">部分系统软件卸载须重启手机方可完成</string>
-    <string name="hint_have_root_but_uninstall_failure_tips">您的手机系统不支持卸载系统软件，无法实现卸载操作</string>
+    <string name="hint_have_root_but_uninstall_failure_tips">你的手机系统不支持卸载系统软件，无法实现卸载操作</string>
     <string name="number_query">号码查询</string>
-    <string name="battery_manager">省电管理</string>
     <string name="battery_save_mode">省电模式</string>
     <string name="battery_notify_mode">通知栏电池</string>
     <string name="battery_notify_mode_choose">切换电量图标</string>
@@ -2252,15 +2374,12 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="battery_savemode_not_set">未开启省电</string>
     <string name="battery_savemode_common">智能省电</string>
     <string name="savemode_detail_common">保留通讯功能，自动调节Wi-Fi</string>
-    <string name="savemode_message_common">"切换至智能省电后：
- 保留正常通话、短信、基础网络连接，能够智能关闭并恢复网络连接。正常使用情况下，有效节约电量。"</string>
+    <string name="savemode_message_common">保留正常通话、短信、与网络，动态调整屏幕亮度</string>
     <string name="battery_savemode_strong">超长待机</string>
     <string name="savemode_detail_strong">保留通讯功能，关闭Wi-Fi</string>
-    <string name="savemode_message_strong">"切换至超长待机后：
- 保留正常通话、短信。关闭Wi-Fi网络。建议在电量低于20%以下时使用，为您有效延长电池使用时长。"</string>
+    <string name="savemode_message_strong">保留正常通话、短信。关闭Wi-Fi网络。</string>
     <string name="battery_savemode_extream">极限模式</string>
-    <string name="savemode_message_extream">"切换至极限模式后：
- 仅保留闹铃，一切耗电项设置为最低标准，最大限度节约电量"</string>
+    <string name="savemode_message_extream">关闭所有耗电功能，仅保留闹铃</string>
     <string name="battery_save_message">省电管理合理设置21个省电项，延长电池使用时长</string>
     <string name="minute_short">分</string>
     <string name="savemode_detail_extream">仅保留闹铃，启动飞行模式</string>
@@ -2297,50 +2416,21 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="diy_bt_autoclose_case_nodevice_link">没有连接到其他蓝牙设备</string>
     <string name="diy_bt_autoclose_case_none">不停用</string>
     <string name="battery_save_info_table">省电模式详细对比</string>
-    <string name="battery_charge_time_rest">预计剩余:</string>
-    <string name="battery_use_remain_time">预计可用时间:</string>
-    <string name="battery_mainview_charge_remain_time">预计充满还需:</string>
-    <string name="battery_cpu_state">CPU状态</string>
-    <string name="cpu_deep_battery_save">CPU深度省电</string>
-    <string name="cpu_deep_save_summary_noroot">获取root权限后即可开启</string>
-    <string name="cpu_deep_save_summary_root">动态调节频率，降低耗电</string>
-    <string name="battery_optimize">电池优化</string>
-    <string name="cpu_deep_svae_tips">开启深度省电后，CPU频率将会动态调节，为您节省更多电量。</string>
-    <string name="cpu_kernal">核心%1$d</string>
-    <string name="cpu_state_sleep">正在休眠</string>
-    <string name="cpu_state_active">运行中</string>
-    <string name="cpu_state_close_battery_save">未开启省电</string>
-    <string name="cpu_state_smart_control">智能调节</string>
-    <string name="change_mode">切换</string>
-    <string name="battery_low_tips_summary">当前电量低于20%，建议您切换到省电模式：</string>
-    <string name="battery_charging_window">充电屏保</string>
-    <string name="battery_low_tips_setting_title">低电量提醒</string>
-    <string name="battery_low_tips_setting_summary">电量低于20%时，提醒切换省电模式</string>
-    <string name="phase">阶段</string>
-    <string name="phase_quick">快速</string>
-    <string name="phase_continuum">连续</string>
-    <string name="phase_waterlogging">涓流</string>
-    <string name="battery_charge_state">充电状态</string>
-    <string name="battery_charge_vindicator">充电维护</string>
-    <string name="healthy_charge">健康充电：</string>
-    <string name="healthy_charge_summary_nocharging">电量低于20%是最佳充电时机，可以极大限度延长电池寿命</string>
-    <string name="healthy_charge_summary_quick">手机电量较低时，手机管家让手机快速充电，保证正常使用</string>
-    <string name="healthy_charge_summary_continuum">手机电量将要充满时，逐渐减少充电电流，确保完全充满</string>
-    <string name="healthy_charge_waterlogging">手机电量充满后，保持一段时间小电流充电让电子流动，可以延迟电池寿命</string>
-    <string name="battery_charge_state_finish">已完成</string>
-    <string name="battery_charge_state_waiting">等待中</string>
-    <string name="battery_charge_state_doing">进行中</string>
-    <string name="battery_cpu_one_kernel">单核心</string>
-    <string name="battery_cpu_two_kernel">双核心</string>
-    <string name="battery_cpu_four_kernel">四核心</string>
-    <string name="battery_last_charge_state">上次充电趋势图</string>
-    <string name="battery_deep_charge">深度充电</string>
-    <string name="battery_getting_cpu">正在获取CPU信息</string>
-    <string name="battery_charge_full">充满</string>
+    <string name="battery_not_running_tips">立即开启，节省更多电量</string>
+    <string name="battery_low_tips">电量低，请连接充电器</string>
+    <string name="battery_normal_tips">电量%1$d%%，正在为你节省电量</string>
+    <string name="battery_charging_tips">充电中...</string>
+    <string name="battery_download_rightnow">立即启动</string>
+    <string name="battery_maintain">充电维护</string>
+    <string name="battery_maintain_tips">激活电池活力，老电池也能更耐用</string>
+    <string name="battery_deepsave">深度省电</string>
+    <string name="battery_deepsave_tips">核心CPU省电技术，让手机更持久</string>
+    <string name="battery_manager">省电管理</string>
+    <string name="battery_manager_tips">智能省电模式，平均延长30%使用时间</string>
     <string name="pickproof">手机防盗</string>
     <string name="pickproofsettingguidetitle">设置向导</string>
     <string name="pickproofsettingguide_tips">新手引导</string>
-    <string name="pickproofsettingguidetitle1">本向导帮您熟悉和完成以下防盗设置</string>
+    <string name="pickproofsettingguidetitle1">本向导帮你熟悉和完成以下防盗设置</string>
     <string name="pickproofsettingguidetitle1a">防盗功能能够在手机被盗时，通过远程发送指令来删除手机数据，锁定手机和定位手机</string>
     <string name="pickproofsettingguidecontent1a">设置防盗密码</string>
     <string name="pickproofsettingguidecontent1b">设置紧急联系人号码</string>
@@ -2375,9 +2465,9 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="pickproofsettingguidecontent3j">号码不能为空</string>
     <string name="pickproofsettingguidecontent3l">我是</string>
     <string name="pickproofsettingguidecontent3m">此短信是手机管家自动发送的防盗提醒，我的手机有可能被盗，请尽快将发送此短信的号码告诉我，谢谢！</string>
-    <string name="pickproofsettingguidecontent3p">请输入紧急联系人号码，当手机丢失时，方便您的紧急联系人联系您。</string>
-    <string name="pickproofsettingguidecontent3q">请输入您的姓名，当手机丢失并被更换SIM卡时，您的紧急联系人可及时联系您。</string>
-    <string name="pickproofsettingguidecontent3r">建议输入您的真实姓名</string>
+    <string name="pickproofsettingguidecontent3p">请输入紧急联系人号码，当手机丢失时，方便你的紧急联系人联系你。</string>
+    <string name="pickproofsettingguidecontent3q">请输入你的姓名，当手机丢失并被更换SIM卡时，你的紧急联系人可及时联系你。</string>
+    <string name="pickproofsettingguidecontent3r">建议输入你的真实姓名</string>
     <string name="pickproofsettingguidecontent3s">超过15字，无法输入</string>
     <string name="pickproofsettingguide3selfphone">请不要输入本机号码</string>
     <string name="pickproofsettingguidetitle4">设置向导(3/4)</string>
@@ -2389,34 +2479,34 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="pickproof_title_control">远程控制</string>
     <string name="pickproofmainbtnopen">立即开启</string>
     <string name="pickproofmainbtnopentip">手机被盗时，防盗功能可远程删除隐私资料</string>
-    <string name="pickproof_open_tips_info">您的手机处于安全状态</string>
-    <string name="pickproof_close_tips_info">请立即开启保护您的手机安全</string>
+    <string name="pickproof_open_tips_info">你的手机处于安全状态</string>
+    <string name="pickproof_close_tips_info">请立即开启保护你的手机安全</string>
     <string name="pickproof_close_title">未开启手机防盗</string>
     <string name="pickproof_open_title">防盗保护中</string>
     <string name="pickproofshowpwd">显示密码</string>
-    <string name="pickproof_cmd_delete_error">您发送的密码错误，可发送#QQDeleteAll#手机防盗密码删除丢失手机的隐私信息</string>
+    <string name="pickproof_cmd_delete_error">你发送的密码错误，可发送#QQDeleteAll#手机防盗密码删除丢失手机的隐私信息</string>
     <string name="pickproofsettingguidebtnfinish">完成</string>
-    <string name="pickproof_cmd_lock">手机管家提示您：远程手机锁定功能已生效，丢失手机已被成功锁定。</string>
-    <string name="pickproof_cmd_lock_error">您发送的密码错误，您可发送#QQLock#手机防盗密码锁定丢失手机</string>
-    <string name="pickproof_cmd_delete_start">手机管家提示您：远程数据删除已开始</string>
-    <string name="pickproof_cmd_locating">手机管家提示您：正在定位您的丢失手机</string>
-    <string name="pickproof_cmd_locate_show">手机管家提示您：您的丢失手机目前位于%1$s[东经：%2$f，北纬：%3$f]</string>
+    <string name="pickproof_cmd_lock">手机管家提示你：远程手机锁定功能已生效，丢失手机已被成功锁定。</string>
+    <string name="pickproof_cmd_lock_error">你发送的密码错误，你可发送#QQLock#手机防盗密码锁定丢失手机</string>
+    <string name="pickproof_cmd_delete_start">手机管家提示你：远程数据删除已开始</string>
+    <string name="pickproof_cmd_locating">手机管家提示你：正在定位你的丢失手机</string>
+    <string name="pickproof_cmd_locate_show">手机管家提示你：你的丢失手机目前位于%1$s[东经：%2$f，北纬：%3$f]</string>
     <string name="pickproof_cmd_locate_close">位置服务已被关闭，无法获取手机位置</string>
-    <string name="pickproof_cdm_locate_error">您发送的密码错误，您可发送#QQLocate#手机防盗密码定位丢失手机</string>
-    <string name="pickproof_cmd_getpwd">手机管家提示您：您的防盗密码已经发送到紧急联系人%1$s手机</string>
-    <string name="pickproof_cmd_delete_end">手机管家提示您：远程数据删除已完成，您的隐私得到保护，请您放心！</string>
-    <string name="pickproof_cdm_locate_start">手机管家提示您：远程手机定位功能已开启，请等待定位信息返回。</string>
-    <string name="pickproof_cmd_getpwd_error">您发送的紧急联系人号码不正确，您可发送#QQPIN#安全手机号码远程找回防盗密码</string>
-    <string name="pickproof_infobar">手机管家全面保护您的手机安全</string>
+    <string name="pickproof_cdm_locate_error">你发送的密码错误，你可发送#QQLocate#手机防盗密码定位丢失手机</string>
+    <string name="pickproof_cmd_getpwd">手机管家提示你：你的防盗密码已经发送到紧急联系人%1$s手机</string>
+    <string name="pickproof_cmd_delete_end">手机管家提示你：远程数据删除已完成，你的隐私得到保护，请你放心！</string>
+    <string name="pickproof_cdm_locate_start">手机管家提示你：远程手机定位功能已开启，请等待定位信息返回。</string>
+    <string name="pickproof_cmd_getpwd_error">你发送的紧急联系人号码不正确，你可发送#QQPIN#安全手机号码远程找回防盗密码</string>
+    <string name="pickproof_infobar">手机管家全面保护你的手机安全</string>
     <string name="pickproof_pasword_error">密码错误，请重新输入</string>
     <string name="pickproof_unlock_maxcount_error">请明天再尝试</string>
-    <string name="pickproof_unlock_count_note">您今天还有 %1$s次输入密码的机会</string>
+    <string name="pickproof_unlock_count_note">你今天还有 %1$s次输入密码的机会</string>
     <string name="pickproof_no_sim">请插入SIM卡</string>
     <string name="pickproof_your_passord">%1$s正在使用手机管家密码找回功能，我的手机防盗密码为%2$s。请与我联系，谢谢！</string>
-    <string name="pickproof_find_password_confirm_prompt">密码将发送到您设置的紧急联系人手机，确定发送？</string>
-    <string name="pickproof_find_password_prompt">您的防盗密码已送达您设置的紧急联系人%1$s手机</string>
+    <string name="pickproof_find_password_confirm_prompt">密码将发送到你设置的紧急联系人手机，确定发送？</string>
+    <string name="pickproof_find_password_prompt">你的防盗密码已送达你设置的紧急联系人%1$s手机</string>
     <string name="pickproof_msg_lcokview">可登录以下网址查看远程控制指令：http://msm.qq.com/wap/faq_view.jsp?q=sjfd</string>
-    <string name="pickproof_lock">您的手机已被锁定，请输入您的手机防盗密码解锁</string>
+    <string name="pickproof_lock">你的手机已被锁定，请输入你的手机防盗密码解锁</string>
     <string name="pickproof_lock_jiesuo">解锁</string>
     <string name="pickproof_setting_on_off">手机防盗功能</string>
     <string name="pickproof_setting_sim_lock">更换SIM卡锁机</string>
@@ -2432,7 +2522,7 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="pickproof_confirm_pwd">确认新密码：</string>
     <string name="pickproof_title_pwd">密码修改</string>
     <string name="pickproof_hint_oldpwd_wrong">输入旧密码错误！</string>
-    <string name="hint_reset_password_same_error">您输入的新旧密码一致，请重新输入</string>
+    <string name="hint_reset_password_same_error">你输入的新旧密码一致，请重新输入</string>
     <string name="pickproof_login_title">登录手机防盗</string>
     <string name="pickproof_login_msg">请输入手机防盗密码：</string>
     <string name="pickproof_safe_phone">紧急联系人号码</string>
@@ -2440,14 +2530,14 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="pickproof_safe_phone_read">从联系人中读取</string>
     <string name="pickproof_msg_title">SIM卡被换后发送短信内容</string>
     <string name="pickproof_delete_title1">•或者用任意手机发送＃QQDeleteAll＃手机防盗密码到丢失手机当前使用的号码删除丢失手机的数据。</string>
-    <string name="pickproof_delete_title2">•您可以通过上方快速发送功能来删除丢失手机的数据（名片夹、通话记录、短彩信以及其他数据文件）。</string>
+    <string name="pickproof_delete_title2">•你可以通过上方快速发送功能来删除丢失手机的数据（名片夹、通话记录、短彩信以及其他数据文件）。</string>
     <string name="pickproof_delete_title3">注意：数据删除后将不能恢复，请慎重操作</string>
     <string name="pickproof_lock_title1">•或者用任意手机发送＃QQLock＃手机防盗密码到丢失手机当前使用的号码来对丢失手机进行锁屏。</string>
-    <string name="pickproof_lock_title2">•您可以通过上方快速发送功能来对丢失手机进行锁屏。</string>
+    <string name="pickproof_lock_title2">•你可以通过上方快速发送功能来对丢失手机进行锁屏。</string>
     <string name="pickproof_locate_title1">•或者用任意手机发送＃QQLocate＃手机防盗密码到丢失手机当前使用的号码来获取丢失手机的地理位置。</string>
-    <string name="pickproof_locate_title2">•您可以通过上方快速发送功能来获取丢失手机的地理位置。</string>
+    <string name="pickproof_locate_title2">•你可以通过上方快速发送功能来获取丢失手机的地理位置。</string>
     <string name="pickproof_getpwd_title1">•或者用任意手机发送＃QQPIN＃紧急联系人号码到丢失手机当前使用的号码来找回防盗密码。</string>
-    <string name="pickproof_getpwd_title2">•您可以通过上方快速发送功能找回防盗密码，密码将发送到紧急联系人手机。</string>
+    <string name="pickproof_getpwd_title2">•你可以通过上方快速发送功能找回防盗密码，密码将发送到紧急联系人手机。</string>
     <string name="pickproof_far_cmd_self_phone_wrong">不能给本机号码发送指令</string>
     <string name="pickproof_getpwd">找回密码</string>
     <string name="pickproof_phone">丢失手机当前使用的号码</string>
@@ -2460,8 +2550,8 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="pickproof_send_cmd">正在发送指令，请稍后...</string>
     <string name="pickproof_btn_warning">" 确定删除丢失手机的名片夹、通话记录和短彩信等数据
  "<font color="#ff0000">警告：删除后将无法恢复</font>" "</string>
-    <string name="pickproof_send_cmd_error">手机管家提示您：您输入的防盗密码错误，您今天还剩%1$d次机会。您可发送#QQPin#紧急联系人号码找回密码，密码将发送到您的紧急联系人。</string>
-    <string name="pickproof_send_cmd_error_end">手机管家提示您：您输入的防盗密码错误，请您明天再试！您可发送#QQPin#紧急联系人号码找回密码，密码将发送到您的紧急联系人。</string>
+    <string name="pickproof_send_cmd_error">手机管家提示你：你输入的防盗密码错误，你今天还剩%1$d次机会。你可发送#QQPin#紧急联系人号码找回密码，密码将发送到你的紧急联系人。</string>
+    <string name="pickproof_send_cmd_error_end">手机管家提示你：你输入的防盗密码错误，请你明天再试！你可发送#QQPin#紧急联系人号码找回密码，密码将发送到你的紧急联系人。</string>
     <string name="pickproof_main_del_sum">删除被盗手机数据</string>
     <string name="pickproof_main_lock_sum">对被盗手机进行锁屏操作</string>
     <string name="pickproof_main_locate_sum">追踪被盗手机当前位置</string>
@@ -2472,14 +2562,14 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="pickproof_set_done_tips_3">远程锁机:#QQLock#防盗密码</string>
     <string name="pickproof_set_done_tips_4">手机定位:#QQLocate#防盗密码</string>
     <string name="pickproof_set_done_tips_5">找回密码:#QQPIN#紧急联系人号码</string>
-    <string name="pickproof_sms_tips">我是%1$s.我正在使用手机管家的防盗功能，请您帮我保存防盗远程控制指令,#QQDeleteAll#防盗密码删除手机数据,#QQLock#防盗密码锁定丢失手机,#QQLocate#防盗密码定位丢失手机,#QQPIN#紧急联系人手机号码远程找回防盗密码</string>
-    <string name="pickproof_set_done_dialog_title">恭喜您</string>
-    <string name="pickproof_set_done_dialog_info">手机防盗已开启,建议您发送防盗指令到紧急人手机,以免手机被盗时忘记指令.</string>
+    <string name="pickproof_sms_tips">我是%1$s.我正在使用手机管家的防盗功能，请你帮我保存防盗远程控制指令,#QQDeleteAll#防盗密码删除手机数据,#QQLock#防盗密码锁定丢失手机,#QQLocate#防盗密码定位丢失手机,#QQPIN#紧急联系人手机号码远程找回防盗密码</string>
+    <string name="pickproof_set_done_dialog_title">恭喜你</string>
+    <string name="pickproof_set_done_dialog_info">手机防盗已开启,建议你发送防盗指令到紧急人手机,以免手机被盗时忘记指令.</string>
     <string name="pickproof_help">"手机防盗：
 
- 开启防盗功能需先设置防盗密码和紧急联系人号码，当您手机丢失时，进行远程控制需要防盗密码；如果您忘记密码，可以通过紧急联系人找回密码。
+ 开启防盗功能需先设置防盗密码和紧急联系人号码，当你手机丢失时，进行远程控制需要防盗密码；如果你忘记密码，可以通过紧急联系人找回密码。
 
- 开启防盗功能后，当丢失手机被卸下或更换SIM卡时，将自动锁定手机并向紧急联系人发送预设短信，提醒您的手机可能被盗。此外，您还可以通过远程控制来锁定丢失手机、删除手机全部数据、定位手机和找回防盗密码。"</string>
+ 开启防盗功能后，当丢失手机被卸下或更换SIM卡时，将自动锁定手机并向紧急联系人发送预设短信，提醒你的手机可能被盗。此外，你还可以通过远程控制来锁定丢失手机、删除手机全部数据、定位手机和找回防盗密码。"</string>
     <string name="hint_uninstall_sys_app_success">卸载成功，可在菜单回收站找回卸载软件</string>
     <string name="hint_recycle_sys_app_remove_all">注意！确认删除将无法还原软件，请谨慎！</string>
     <string name="hint_battery_save_notify_ticker_text">距上次充电，已延长使用时长%1$d</string>
@@ -2487,11 +2577,6 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="hint_soft_recycle_empty">回收站已空</string>
     <string name="hint_no_cache">暂无缓存</string>
     <string name="soon_last">刚刚</string>
-    <string name="hint_main_current_power_text">电量%1$s</string>
-    <string name="hint_main_power_go_on_text">电量%1$s，延长使用时长%2$s</string>
-    <string name="hint_main_power_suggest_text">电量%1$s，推荐%2$s</string>
-    <string name="hint_power_changing_text">充电中</string>
-    <string name="hint_battery_charging_time_remian">预计%1$s完成</string>
     <string name="hint_memory_not_enough">安装失败，手机内存不足!</string>
     <string name="no_sdcard_to_update">请先插入SD卡后更新</string>
     <string name="no_sdcard_to_download">请先插入SD卡后下载</string>
@@ -2514,17 +2599,18 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="shaker_screen">摇晃截屏</string>
     <string name="click_to_shot">请点击进行手机截屏</string>
     <string name="shot_success_tips">截图成功，保存在%1$s</string>
-    <string name="shot_fail_tips">截图失败,您的手机不支持手机截屏</string>
+    <string name="shot_fail_tips">截图失败,你的手机不支持手机截屏</string>
     <string name="click_notification_to_shot">点击通知栏图标进行截屏</string>
     <string name="click_to_close_shake_screen">点击可关闭摇晃截屏</string>
     <string name="shake_to_shot">摇一摇快速截屏</string>
-    <string name="screenshot_no_root">您的手机没有获取ROOT权限，无法使用手机截屏</string>
-    <string name="traffic_filter_no_root">您的手机没有获取ROOT权限，无法使用联网防火墙</string>
-    <string name="screenshot_no_author">您的手机未成功授予手机管家ROOT权限，无法使用手机截屏</string>
+    <string name="screenshot_no_root">你的手机没有获取ROOT权限，无法使用手机截屏</string>
+    <string name="traffic_filter_no_root">你的手机没有获取ROOT权限，无法使用联网防火墙</string>
+    <string name="notication_block_no_root">你的手机没有获取ROOT权限，无法使用广告拦截</string>
+    <string name="screenshot_no_author">你的手机未成功授予手机管家ROOT权限，无法使用手机截屏</string>
     <string name="screenshot_need_root">手机截屏需获取ROOT权限</string>
     <string name="sd_no_exist">SD卡当前未挂载</string>
-    <string name="sd_no_enough_100k_space">您的SD卡存储空间不足100K</string>
-    <string name="sd_no_enough_1m_space">您的SD卡存储空间不足1兆</string>
+    <string name="sd_no_enough_10k_space">你的SD卡存储空间不足10K</string>
+    <string name="sd_no_enough_1m_space">你的SD卡存储空间不足1兆</string>
     <string name="sd_no_read_write_permission">SD卡没有访问权限</string>
     <string name="file_no_exist">文件不存在</string>
     <string name="hint_data_clear_tips">将跳到系统设置页面，点击“清除缓存 ”清除软件缓存。</string>
@@ -2537,13 +2623,17 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="hint_software_move_notification_tips">%1$s可移动至SD卡,可节约%2$s空间</string>
     <string name="hint_software_move_notification_tips_1">%1$s可移动至SD卡</string>
     <string name="hint_software_move_notification_tips_2">可节约%1$s空间</string>
+    <string name="hint_software_move_moving_tips">%1$s正在搬家中...</string>
+    <string name="hint_software_move_moving">请进入软件搬家，节省手机空间</string>
+    <string name="hint_goto_activity_not_found_exception_tips">抱歉，你的系统被修改过，找不到可以跳转的系统页面</string>
     <string name="one_key_analysis">一键分析</string>
     <string name="hint_analysising">正在分析中...</string>
-    <string name="know_qqwebsite_link_text">" "<u>认识网盘</u>" "</string>
+    <string name="forget_qq_password_link_text">" "<u>忘记密码</u>" "</string>
+    <string name="forget_qq_password_link_text2">" "<u>忘记QQ密码?</u>" "</string>
     <string name="qqwebsite_login_out_tips">登录超时</string>
     <string name="i_konw">我知道了</string>
     <string name="netdisk_auto_logout_notice">退出网盘自动注销</string>
-    <string name="netdisk_notice">您可以使用QQ帐号登录网盘</string>
+    <string name="netdisk_notice">你可以使用QQ帐号登录网盘</string>
     <string name="netdisk_summary_line_one">手机管家与QQ客户端使用相同云端存储</string>
     <string name="netdisk_summary_line_two">可以轻松上传相片、视频等，永久保存</string>
     <string name="download_qqbrowser">是否下载QQ浏览器打开该链接，获取更好的浏览效果？</string>
@@ -2553,7 +2643,7 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="private_protect_opened_tips">对信息与通讯加密，防止软件窃取隐私</string>
     <string name="open_at_once">立即开启</string>
     <string name="monitor_software_tips">保护隐私信息不被恶意软件窃取</string>
-    <string name="private_space_tips">可对私密联系人的信息与通讯加密</string>
+    <string name="private_space_tips">可对隐私联系人的通讯记录加密</string>
     <string name="anti_eavesdrop_open_tips">通话中防止恶意软件窃听 已开启</string>
     <string name="anti_eavesdrop_close_tips">通话中防止恶意软件窃听 未开启</string>
     <string name="monitor_software_infobar">共%1$s个软件,信任软件有%2$s个</string>
@@ -2569,6 +2659,7 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="ask_recommend">提示(推荐)</string>
     <string name="had_trust">已信任</string>
     <string name="trust_app">信任软件</string>
+    <string name="reporting">正在举报</string>
     <string name="software_update">软件更新</string>
     <string name="software_uninstall">软件卸载</string>
     <string name="hint_software_uninstall_rom_app">不常见内置</string>
@@ -2577,7 +2668,7 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="hint_software_center_tips_first_time_title">手机也需要瘦身</string>
     <string name="hint_software_center_tips_first_time_second_title">快速分析多余安装包和软件</string>
     <string name="hint_software_center_tips_analysis_less_title">定期瘦身手机更健康</string>
-    <string name="hint_software_center_tips_analysis_less_second_title">上次分析在%1$s</string>
+    <string name="hint_software_center_tips_analysis_less_second_title">%1$s一键分析</string>
     <string name="hint_software_center_tips_analysis_more_title">手机空间可能被浪费</string>
     <string name="hint_software_center_tips_analysis_more_second_title">已经%1$d天没有分析，看看有哪些软件可以清理</string>
     <string name="hint_software_center_tips_memory_less_title">手机空间仅剩%1$d%%</string>
@@ -2587,12 +2678,26 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="hint_software_center_tips_analysised_memory_more_title">定期瘦身手机更健康</string>
     <string name="hint_software_center_tips_analysising_memory_low_title">及时清理给手机提速</string>
     <string name="hint_software_center_tips_analysising_memory_low_second_title">"待处理：
-软件%1$d个、安装包%2$d个"</string>
+安装包%2$d个、软件%1$d个"</string>
+    <string name="hint_software_center_tips_analysising_memory_low_second_title1">"待处理：
+安装包%1$d个"</string>
+    <string name="hint_software_center_tips_analysising_memory_low_second_title2">"待处理：
+软件%1$d个"</string>
+    <string name="hint_software_center_tips_analysising_memory_low_second_title_after">"分析结果：
+安装包%2$d个、软件%1$d个"</string>
+    <string name="hint_software_center_tips_analysising_memory_low_second_title1_after">"分析结果：
+安装包%1$d个"</string>
+    <string name="hint_software_center_tips_analysising_memory_low_second_title2_after">"分析结果：
+软件%1$d个"</string>
     <string name="hint_software_center_tips_analysising_memory_more_second_title">定期分析、适当清理给手机提速</string>
     <string name="hint_software_center_tips_analysised_none_title">暂无软件清理建议</string>
-    <string name="hint_software_center_tips_analysised_none_fifteen_less_second_title">按使用情况分析更精确，15天后再来看看吧</string>
+    <string name="hint_software_center_tips_analysised_none_fifteen_less_second_title">15天后按使用频率分析更精确</string>
     <string name="hint_software_center_tips_analysised_none_fifteen_more_second_title">空间不足，清理软件和安装包</string>
-    <string name="hint_software_center_tips_analysised_none_fifteen_more_second_title_2">您手机上没有冗余的软件或安装包</string>
+    <string name="hint_software_center_tips_analysised_none_fifteen_more_second_title_2">你手机上没有冗余的软件或安装包</string>
+    <string name="phone_size">手机可用:</string>
+    <string name="SDcard_size">存储卡可用:</string>
+    <string name="package_num">安装包数目:</string>
+    <string name="ignore_num">忽略软件 (%1$d)</string>
     <string name="hint_software_update_tips_null">查看所有可更新软件</string>
     <string name="hint_software_update_tips_common_start">有</string>
     <string name="hint_software_update_tips_common_end">款可更新软件</string>
@@ -2607,6 +2712,9 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="hint_software_move_tips_common">将软件移动到SD卡，手机更高效</string>
     <string name="hint_software_move_to_sdcard_tips">有%1$d款软件可移动到SD卡</string>
     <string name="double_apk">重复安装包</string>
+    <string name="repeat_and_oldversion">重复、旧版</string>
+    <string name="repeat_and_installed">重复、已安装</string>
+    <string name="can_not_move_soft">不支持移动的个人软件有%1$d款</string>
     <string name="hint_analysising_warning">正在结束上次分析进程</string>
     <string name="permission_text_info">%1$d个隐私权限</string>
     <string name="software_info">软件信息</string>
@@ -2632,7 +2740,7 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="software_update_complete">安装</string>
     <string name="software_installed">已安装</string>
     <string name="hint_software_uninstall_two_month_not_use">2个月未使用</string>
-    <string name="hint_software_uninstall_thirty_day_not_use">1个月未使用</string>
+    <string name="hint_software_uninstall_one_month_not_use">1个月未使用</string>
     <string name="hint_software_uninstall_fifteen_day_not_use">15天未使用</string>
     <string name="hint_software_uninstall_plugin">含插件软件</string>
     <string name="hint_analysising_wording_plugin">含插件软件:%1$d</string>
@@ -2644,7 +2752,8 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="system_software_text">系统</string>
     <string name="personal_software_text">个人</string>
     <string name="free_memory">剩余</string>
-    <string name="hint_software_manager_hand_clear">您还可以手动管理软件和安装包</string>
+    <string name="hint_software_manager_hand_clear">你还可以手动管理软件和安装包</string>
+    <string name="no_result">无扫描结果</string>
     <string name="none_update_item_tip_text">无可更新项</string>
     <string name="gprs_batch_update_tip_text">更新软件可能会消耗较多流量，建议在Wi-Fi环境下使用。是否继续更新。</string>
     <string name="hint_recycle_software_not_selected">请勾选需要清空的软件</string>
@@ -2655,11 +2764,25 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="apk_manager_null">手机轻装上阵，没有安装包</string>
     <string name="software_move_sdcard_null">手机上没有可移动的软件</string>
     <string name="software_move_phone_null">SD卡上没有可移动的软件</string>
+    <string name="software_no_ignore">被忽略更新的软件将在此显示</string>
+    <string name="ignore_sucess">忽略成功</string>
     <string name="one_key_faster">一键加速</string>
+    <string name="one_key_faster_tips_specal">"
+燃烧了%1$d个进程，释放%2$s内存"</string>
     <string name="one_key_faster_tips_suceess">"小火箭发射成功！
 燃烧了%1$d个进程，释放%2$s内存"</string>
+    <string name="one_key_faster_tips_suceess_for_moon">"嫦娥飞天奔月！
+带走了%1$d个进程，腾出了%2$s内存空间"</string>
+    <string name="color_egg_tips_suceess">"小火箭飞得太快了，卫星也接不上！
+燃烧了%1$d个进程，释放%2$s内存"</string>
+    <string name="color_ufo_tips_suceess">"小火箭飞得太猛了，连UFO都射下来！
+燃烧了%1$d个进程，释放%2$s内存"</string>
+    <string name="color_mooncake_tips_suceess">"嫦娥在广寒宫抛月饼下来了！
+带走了%1$d个进程，腾出了%2$s内存空间"</string>
     <string name="rocket_speed_up_tip">请松手，火箭发射加速</string>
+    <string name="moon_speed_up_tip">请松手，嫦娥飞天加速</string>
     <string name="one_key_faster_tips_clear">小火箭发射成功，手机状态已达最佳</string>
+    <string name="one_key_faster_tips_clear_for_moon">嫦娥飞天奔月，手机状态已达最佳</string>
     <string name="one_key_faster_tips_key_clear">状态已达最佳</string>
     <string name="deskAssFunctionNotifyMsg_open_wifi">正在开启Wi-Fi…</string>
     <string name="deskAssFunctionNotifyMsg_close_wifi">正在关闭Wi-Fi…</string>
@@ -2669,22 +2792,28 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="deskAssFunctionNotifyMsg_close_ring">铃声已关闭</string>
     <string name="deskAssFunctionNotifyMsg_open_flow">流量浮窗已开启</string>
     <string name="deskAssFunctionNotifyMsg_close_flow">流量浮窗已关闭</string>
-    <string name="one_key_faster_tips_first">"哇！您太聪明了！发现新功能！
+    <string name="deskAssOfflineOn">飞行模式已开启</string>
+    <string name="deskAssOfflineOff">飞行模式已关闭</string>
+    <string name="deskAssVibrOn">震动已开启</string>
+    <string name="deskAssVibrOff">震动已关闭</string>
+    <string name="deskAssRotationOn">屏幕旋转已开启</string>
+    <string name="deskAssRotationOff">屏幕旋转已关闭</string>
+    <string name="one_key_faster_tips_first">"哇！你太聪明了！发现新功能！
 释放内存:%1$s"</string>
     <string name="process_main_tips_title_low_mem">手机慢得像蜗牛</string>
     <string name="process_main_tips_title_mid_mem">还可以跑得更快</string>
     <string name="process_main_tips_title_high_mem">没有最快,只有更快</string>
     <string name="process_main_tips_title_optimized">手机状态不错</string>
     <string name="process_main_tips_summary_low_mem">立即一键加速吧</string>
-    <string name="process_main_tips_summary_mid_mem">一键加快运行速度，清理垃圾文件</string>
+    <string name="process_main_tips_summary_mid_mem">一键加速 清理垃圾</string>
     <string name="process_main_tips_summary_high_mem">一键加速，立即提高运行速度</string>
     <string name="process_main_tips_summary_optimized">手机慢了，记得来加速</string>
     <string name="process_main_optimize_finish">加速完成</string>
-    <string name="process_main_optimize_finish_summary_1">每天加速，手机更健康</string>
-    <string name="process_main_optimize_finish_summary_2">每天加速，手机更轻松</string>
-    <string name="process_main_optimize_finish_summary_3">手机慢了，记得来加速</string>
+    <string name="process_main_optimize_finish_summary_1">每天加速 手机更健康</string>
+    <string name="process_main_optimize_finish_summary_2">定期加速 手机更轻松</string>
+    <string name="process_main_optimize_finish_summary_3">手机慢了 记得来加速</string>
     <string name="phone_faster">手机加速</string>
-    <string name="hint_process_manager_tips">您还可以手动加速</string>
+    <string name="hint_process_manager_tips">你还可以手动加速</string>
     <string name="process_manager_summary">内存剩余%1$s</string>
     <string name="process_manager_warnning">内存剩余%1$s，尽快优化</string>
     <string name="hint_fasting_tips">加速详情：</string>
@@ -2693,8 +2822,8 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="hint_disable_faile">禁止失败</string>
     <string name="hint_enable">已允许</string>
     <string name="hint_cleared">已清理</string>
-    <string name="hint_fasting">正在为您加速...</string>
-    <string name="fasted">已加速，点击返回</string>
+    <string name="hint_fasting">正在为你加速...</string>
+    <string name="fasted">已加速，返回首页</string>
     <string name="optimize_finish">已加速</string>
     <string name="process_manager">结束进程</string>
     <string name="process_manager_stop_all">结束进程</string>
@@ -2702,7 +2831,7 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="data_clear_all">全部清除</string>
     <string name="auto_boot_funcs">开机加速</string>
     <string name="dataclear_summary">定期清理，释放手机空间</string>
-    <string name="auto_boot_summary">有%1$d个启动项拖慢了开机速度</string>
+    <string name="auto_boot_summary">有%1$d个建议优化的开机启动项</string>
     <string name="auto_boot_loading">正在获取数据...</string>
     <string name="auto_boot_none">暂无建议优化的启动项</string>
     <string name="process_kill_count">结束进程:%1$d</string>
@@ -2715,7 +2844,7 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="has_nothing_optimize">暂无可优化项</string>
     <string name="add_white_list_app_toast">已将%1$s加入加速白名单</string>
     <string name="user_whitelist_setting_view_title">添加白名单</string>
-    <string name="user_whitelist_setting_view_infobar">加速时不会结束白名单里的应用，加速更安心</string>
+    <string name="user_whitelist_setting_view_infobar">白名单保护常用程序不被关闭，加速更安心</string>
     <string name="user_whitelist_view_title">加速白名单</string>
     <string name="user_whitelist_view_infobar">加速时不会结束白名单里的应用，加速更安心</string>
     <string name="add_white_list_app">添加白名单程序</string>
@@ -2755,7 +2884,7 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="battery_charge_full_charging">充电完成阶段</string>
     <string name="battery_charge_continuum">连续充电阶段</string>
     <string name="battery_charge_purling">涓流充电阶段</string>
-    <string name="battery_cost_info_error">该功能暂不支持您的系统版本</string>
+    <string name="battery_cost_info_error">该功能暂不支持你的系统版本</string>
     <string name="diymode_name_conflict">模式名称重复,请修改名称</string>
     <string name="hint_about_chinatelecom">欢迎使用手机管家，在使用过程中会产生GPRS流量，具体资费标准请咨询当地运营商。</string>
     <string name="hint_special_category_info_bar_text">共%1$d个特色专题</string>
@@ -2769,8 +2898,9 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="shortcut_market_tips">是否创建“软件游戏”桌面快捷入口？</string>
     <string name="soft_version_hit">版本:%1$s</string>
     <string name="soft_size_hit">大小:%1$s</string>
+    <string name="need_refresh">可更新软件将在此显示</string>
     <string name="crash_upload_title">出错啦</string>
-    <string name="crash_upload_tips">汗！很抱歉管家出现异常了。是否上报错误信息帮助管家解决问题？您还可以输入QQ或者电话号方便联系，谢谢！</string>
+    <string name="crash_upload_tips">汗！很抱歉管家出现异常了。是否上报错误信息帮助管家解决问题？你还可以输入QQ或者电话号方便联系，谢谢！</string>
     <string name="hint_crash">程序出错啦，找开发哦亲:)</string>
     <string name="operator_chose">选择运营商</string>
     <string name="try_to_use">马上试用</string>
@@ -2783,24 +2913,25 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="funcmanager_open_warn">关闭这些项目会影响手机管家的使用！</string>
     <string name="funcmanager_open_chose">请选择对应操作来一键关闭所有服务或一键开启所有服务</string>
     <string name="load_plugin_failure">功能加载有误,请重新进入</string>
-    <string name="file_safe">文件保险箱</string>
-    <string name="sd_unmounted_msg">"检测到您的SD卡尚未挂载,可能由以下原因造成:
-1.您的手机尚未插入SD卡
-2.您在用数据线连接电脑，请断开数据线退出界面后重新进入"</string>
+    <string name="file_safe">照片保险箱</string>
+    <string name="first_encry_file_msg">文件加密后将会保存在SD卡内，部分软件的SD卡清理功能会删除加密文件，请慎重使用。</string>
+    <string name="sd_unmounted_msg">"检测到你的SD卡尚未挂载,可能由以下原因造成:
+1.你的手机尚未插入SD卡
+2.你在用数据线连接电脑，请断开数据线退出界面后重新进入"</string>
     <string name="sd_unmounted_toast">SD卡挂载异常</string>
-    <string name="file_safe_tips">可对图片、视频等文件进行加密</string>
-    <string name="file_safe_first_use_dialog_hint">文件保险箱可对SD卡上的文件进行加密，保护您的隐私。</string>
-    <string name="app_lock_first_use_dialog_hint">软件锁可锁住手机内的程序，保护您的隐私不被窥探。</string>
-    <string name="not_support_app_lock_msg">由于手机系统限制，您的手机无法启动软件锁</string>
+    <string name="file_safe_tips">可对照片、视频等文件进行加密</string>
+    <string name="file_safe_first_use_dialog_hint">照片保险箱可对SD卡上的文件进行加密，保护你的隐私。</string>
+    <string name="app_lock_first_use_dialog_hint">软件锁可锁住手机内的程序，保护你的隐私不被窥探。</string>
+    <string name="not_support_app_lock_msg">由于手机系统限制，你的手机无法启动软件锁</string>
     <string name="privacy_set_password_title">设置隐私保护密码</string>
-    <string name="secure_sep_psw_to_union_psw_msg">切换到隐私保护统一密码时，您的虚假密码将会失效</string>
+    <string name="secure_sep_psw_to_union_psw_msg">切换到隐私保护密码时，你的虚假密码将会失效</string>
     <string name="file_safe_change_password_title">修改隐私保护密码</string>
     <string name="privacy_input_error">密码错误或格式不对</string>
     <string name="file_safe_input_login_password">输入隐私保护密码</string>
-    <string name="file_safe_login">登录文件保险箱</string>
+    <string name="file_safe_login">登录照片保险箱</string>
     <string name="app_lock_login">登录软件锁</string>
     <string name="privacy_input_retry_hint">密码有误，请重新输入</string>
-    <string name="encry_pic">加密图片</string>
+    <string name="encry_pic">加密照片</string>
     <string name="encry_video">加密视频</string>
     <string name="encry_audio">加密音频</string>
     <string name="encry_doc">加密文档</string>
@@ -2809,12 +2940,12 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="file_save_main_tab_tips">共%1$d个文件</string>
     <string name="change_psw">修改密码</string>
     <string name="none_sd_tips">请确定是否已插入SD卡</string>
-    <string name="add_encry_pic">添加加密图片</string>
+    <string name="add_encry_pic">添加加密照片</string>
     <string name="add_encry_video">添加加密视频</string>
     <string name="add_encry_audio">添加加密音频</string>
     <string name="add_encry_doc">添加加密文档</string>
     <string name="add_encry_other">添加其他加密文件</string>
-    <string name="pic_browse">图片浏览</string>
+    <string name="pic_browse">照片浏览</string>
     <string name="video_browse">视频浏览</string>
     <string name="audio_browse">音频浏览</string>
     <string name="doc_browse">文档浏览</string>
@@ -2840,8 +2971,8 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="choose_del_file">请选择需要删除的文件</string>
     <string name="loading_encry_file">正在加载解密文件列表，请稍候</string>
     <string name="none_encry_file">保险箱空空如也</string>
-    <string name="uninstall_guanjia_tips">您确定要卸载手机管家吗?</string>
-    <string name="view_image">查看图片</string>
+    <string name="uninstall_guanjia_tips">你确定要卸载手机管家吗?</string>
+    <string name="view_image">查看照片</string>
     <string name="view_video">查看视频</string>
     <string name="choose_secret_queqtion">请输入密保问题</string>
     <string name="choose_secret_answer">请输入密保答案</string>
@@ -2864,14 +2995,18 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="has_the_last_page">已到最后一张</string>
     <string name="view_image_position_tips">%1$d/%2$d</string>
     <string name="none_encry_file_tips">无加密文件</string>
-    <string name="select_pic">选择图片</string>
+    <string name="select_pic">选择照片</string>
     <string name="select_video">选择视频</string>
     <string name="select_from_gallery">从图库选择</string>
-    <string name="select_auto">手动选择</string>
+    <string name="select_manu">从文件夹选择</string>
+    <string name="select_from_auto_scan">从相册选择</string>
+    <string name="sanning_sd_card">正在扫描SD卡</string>
     <string name="select_from_camera">拍照获取</string>
     <string name="no_gallery_app">无找到图库应用</string>
     <string name="no_camera_app">无找到拍照应用</string>
     <string name="encry_decry_ing">正在加解密中，请稍候</string>
+    <string name="select_none_picture">请先选择图片</string>
+    <string name="select_none_file">请先选择文件</string>
     <string name="tmfs_directory_caution_hint">_当前目录下文件非常重要，谨慎操作</string>
     <string name="update_now">立即升级</string>
     <string name="update_now_1">立即更新</string>
@@ -2883,7 +3018,8 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="hint_tab_content_charge_scan_default">定期扫描，防止恶意扣费</string>
     <string name="hint_tab_content_sync_assistant_default">定期备份联系人，防止资料丢失</string>
     <string name="hint_tab_content_pick_proof_default">手机丢失时可快速定位位置、删除资料</string>
-    <string name="hint_tab_content_phone_token_default">全方位保护您的QQ帐号安全</string>
+    <string name="hint_tab_content_phone_token_default">全方位保护你的QQ帐号安全</string>
+    <string name="hint_tab_content_notification_adblock">杜绝通知栏广告骚扰</string>
     <string name="privacy_lock">软件锁</string>
     <string name="open_lock_app_fail">打开加锁程序失败</string>
     <string name="locked">已加锁</string>
@@ -2892,8 +3028,8 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="unlocked_apps_msg">未加锁软件(%1$d)</string>
     <string name="lock">加锁</string>
     <string name="unlock">解锁</string>
-    <string name="privacy_lock_tab_content">锁定私密软件，防止他人偷窥隐私</string>
-    <string name="privacy_lock_use_dialog_hint">软件锁可对应用程序进行加密，保护您的隐私。</string>
+    <string name="privacy_lock_tab_content">锁定隐私软件，防止他人偷窥隐私</string>
+    <string name="privacy_lock_use_dialog_hint">软件锁可对应用程序进行加密，保护你的隐私。</string>
     <string name="privacy_lock_set_password_title">设置软件锁密码</string>
     <string name="privacy_lock_input_error">密码错误或格式不对</string>
     <string name="privacy_lock_input_login_password">输入登录密码</string>
@@ -2915,46 +3051,72 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="add_privacy_lock">添加软件锁</string>
     <string name="add_privacy_lock_title">添加要锁定的软件</string>
     <string name="psw_error">密码错误</string>
-    <string name="app_lock">您的软件已被锁定，请输入您的软件锁密码解锁</string>
+    <string name="app_lock">你的软件已被锁定，请输入你的软件锁密码解锁</string>
     <string name="psw_init_finish">密码设置完成</string>
     <string name="psw_init_message">"隐私保护密码将会对以下功能生效：
-文件保险箱
+照片保险箱
 软件锁
 请保护好密码安全，牢记密码。"</string>
     <string name="i_know">我知道了</string>
-    <string name="privacy_lock_first_use_tips">原文件保险箱密码已升级为隐私保护密码，您可以在文件保险箱和程序锁使用该密码</string>
+    <string name="privacy_lock_first_use_tips">原照片保险箱密码已升级为隐私保护密码，你可以在照片保险箱和程序锁使用该密码</string>
     <string name="lock_app_count_msg">已加锁%1$d款软件</string>
     <string name="initing_app">正在读取软件列表</string>
-    <string name="lock_app_none_msg">添加软件可锁住您的隐私</string>
+    <string name="lock_app_none_msg">添加软件可锁住你的隐私</string>
     <string name="loading_lock_app">正在读取加锁软件</string>
     <string name="clear_all">清空</string>
     <string name="none_lock_app">软件锁空空如也</string>
     <string name="none_app_to_add">哎呀，没有可以添加的软件了</string>
-    <string name="face_recognition_title">人脸识别-Beta</string>
+    <string name="face_recognition_title">人脸识别</string>
     <string name="face_recognition">人脸识别</string>
     <string name="face_recognition_hint">人脸识别作为密码</string>
-    <string name="take_picture">拍照</string>
-    <string name="tencent_face_recognition_in_cloud">使用腾讯云端人脸识别技术</string>
+    <string name="take_picture">点击确认</string>
+    <string name="tencent_face_recognition_in_cloud">使用腾讯研究院人脸识别技术</string>
     <string name="has_no_front_camera">没有前置摄像头</string>
-    <string name="face_recognition_in_scan">扫描中...</string>
-    <string name="face_recognition_capture_face">捕捉到人脸</string>
+    <string name="net_not_connect">无网络连接</string>
+    <string name="face_recognition_facelib_init_error">初始化人脸识别库失败</string>
+    <string name="no_deviceid_msg">你的手机没有设备唯一ID</string>
+    <string name="face_recognition_camera_open_camera_failed">打开摄像头失败，请稍候再试</string>
+    <string name="face_recognition_camera_init_camera">正在初始化摄像头</string>
+    <string name="face_recognition_camera_has_no_preview_size">摄像头不支持预览</string>
+    <string name="face_recognition_camera_init_error">摄像头初始化失败</string>
+    <string name="face_recognition_in_scan">请将脸部正对手机屏幕</string>
+    <string name="face_recognition_capture_face">请确保脸部清晰可见，点击确认</string>
     <string name="face_recognition_ready_for_capture_hint">请对准摄像头准备采集人脸...</string>
     <string name="face_recognition_scan_result">扫描结果</string>
-    <string name="face_recognition_scan_again">重新扫描</string>
-    <string name="face_recognition_finish">完成</string>
+    <string name="camera_success">成功</string>
+    <string name="submit_clear_photo">请提交更清晰的照片资料</string>
+    <string name="face_recognition_scan_again">重新录入</string>
+    <string name="face_recognition_finish">提　交</string>
     <string name="face_recognition_uploading_new_user_info">正在将识别资料提交至云端</string>
+    <string name="face_recognition_extract_sub_picture_failed">获取人脸图片失败</string>
+    <string name="face_recognition_init_name_value_pairs_err">数据初始化异常</string>
+    <string name="face_recognition_http_request_package_invalid">HTTP数据包非法</string>
+    <string name="face_recognition_network_request_failed">网络不给力，检查网络再试试看？</string>
+    <string name="face_recognition_server_internal_error">服务器内部异常</string>
+    <string name="face_recognition_operation_failed">上传失败</string>
+    <string name="face_recognition_request_parameter_invalid">请求参数非法</string>
+    <string name="face_recognition_picture_invalid">请提交更清晰的照片资料</string>
+    <string name="face_recognition_user_not_exist">用户不存在</string>
+    <string name="face_recognition_try_verify">看着你的手机即可进入隐私信箱</string>
     <string name="face_recognition_in_verify">识别中...</string>
     <string name="face_recognition_verify_ok">识别正确</string>
-    <string name="face_recongition_verify_failed">无法识别</string>
+    <string name="face_recognition_verify_failed">无法识别</string>
+    <string name="face_recognition_no_face_detected">识别失败</string>
+    <string name="face_recognition_use_number_psw">使用独立密码</string>
     <string name="traffic_suspended_window_switch">流量浮窗</string>
     <string name="desk_assis_network">移动网络</string>
     <string name="desk_assis_wifi">Wi-Fi</string>
     <string name="desk_assis_setting_title">系统桌面设置</string>
     <string name="desk_assis_switch_title">快捷助手浮窗</string>
+    <string name="desk_assis_offline">飞行模式</string>
+    <string name="desk_assis_vibr_model">振动</string>
+    <string name="desk_assis_gps">GPS</string>
+    <string name="desk_assis_rotation">屏幕旋转</string>
     <string name="desk_assis_style">桌面浮窗样式</string>
     <string name="ram_release">释放内存%1$s</string>
     <string name="hint_show_test_version">此为测试版本</string>
     <string name="desk_flow_window_setting_title">快捷助手浮窗</string>
+    <string name="desk_rocket_voice_setting_title">加速声效</string>
     <string name="desk_flow_window_after_close_hint">快捷助手浮窗已关闭，可在手机管家系统设置中开启</string>
     <string name="desk_min_window_style_setting_title">浮窗样式</string>
     <string name="share_QQPhoneSecure">推荐好友</string>
@@ -2993,26 +3155,19 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="draw_unlock_pattern">绘制解锁图案</string>
     <string name="redraw_unlock_pattern">重新绘制图案以确认</string>
     <string name="has_set_psw_success">设置成功</string>
-    <string name="ask_bind_msg">"隐私保护密码将会对以下功能生效：
-私密空间
-文件保险箱
-软件锁
-绑定QQ帐号保护密码,防止忘记密码"</string>
-    <string name="ask_bind_without_secure_space_msg">"隐私保护密码将会对以下功能生效：
-文件保险箱
-软件锁
-绑定QQ帐号保护密码,防止忘记密码"</string>
+    <string name="ask_bind_msg">建议设置密码保护，关联QQ帐号</string>
+    <string name="ask_bind_without_secure_space_msg">建议设置密码保护，关联QQ帐号</string>
     <string name="set_psw_protect">设置密码保护</string>
     <string name="enter_info">进入%1$s</string>
-    <string name="bing_qq">绑定QQ密保</string>
-    <string name="set_privacy_qq">建议设置关联QQ账号</string>
-    <string name="input_privacy_qq">请输入隐私保护关联QQ账号</string>
-    <string name="enter_qq">请输入QQ账号</string>
+    <string name="bing_qq">关联QQ密保</string>
+    <string name="set_privacy_qq">建议关联QQ帐号</string>
+    <string name="input_privacy_qq">请输入隐私保护关联QQ帐号</string>
+    <string name="enter_qq">请输入QQ帐号</string>
     <string name="enter_psw">请输入密码</string>
-    <string name="enter_privacy_psw">请输入隐私保护密码</string>
+    <string name="enter_privacy_psw">请输入密码</string>
     <string name="enter_psw_16">请输入密码(1-16位)</string>
     <string name="enter_psw_again">请再次输入密码</string>
-    <string name="forgot_psw_tips">忘记密码时，输入关联QQ账号密码即可重置</string>
+    <string name="forgot_psw_tips">忘记密码时，输入关联QQ帐号密码即可重置</string>
     <string name="psw_center">密码中心</string>
     <string name="psw_type">密码方式</string>
     <string name="secure_psw_type">密码方式</string>
@@ -3026,24 +3181,24 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="pattern_has_remember">图案已记录</string>
     <string name="redraw">重绘</string>
     <string name="account">账号</string>
-    <string name="your_new_unlock_pattern">您的新解锁图案</string>
+    <string name="your_new_unlock_pattern">你的新解锁图案</string>
     <string name="how_draw_unlock_pattern">如何绘制解锁图案</string>
     <string name="release_finger">完成后请松开手指</string>
     <string name="enter_at_least_4_point">请至少输入四个点</string>
     <string name="sorry_retry">密码错误，请重试</string>
     <string name="has_qq_forgot_psw_tips">"隐私保护密码将会对以下功能生效：
-文件保险箱
+照片保险箱
 软件锁
 如忘记密码可通过验证关联QQ号%1$s进行重置"</string>
     <string name="has_qq_forgot_psw_tips_with_sceurespace">"隐私保护密码将会对以下功能生效：
-私密空间
-文件保险箱
+隐私信箱
+照片保险箱
 软件锁
 如忘记密码可通过验证关联QQ号%1$s进行重置"</string>
     <string name="str_qq_error_not_connet_net">网络连接出错</string>
     <string name="str_qq_error_net_setting">网络错误，请检查网络设置</string>
     <string name="str_qq_net_work_setting">网络设置</string>
-    <string name="connect_qq_success">QQ账号关联成功</string>
+    <string name="connect_qq_success">qq帐号关联成功</string>
     <string name="login">登录</string>
     <string name="change_psw_success">修改密码成功</string>
     <string name="init_psw_success">设置密码成功</string>
@@ -3052,13 +3207,13 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="click_to_reset_psw">忘记密码？</string>
     <string name="input_privacy_password">输入隐私保护密码</string>
     <string name="privacy_psw">隐私保护密码</string>
-    <string name="secure_psw">私密空间密码</string>
+    <string name="secure_psw">隐私信箱独立密码</string>
     <string name="use_privacy_psw">使用隐私保护密码</string>
-    <string name="use_secure_sep_psw">使用私密空间独立密码</string>
-    <string name="change_secure_sep_psw">修改私密空间独立密码</string>
-    <string name="privacy_unite_psw">隐私保护统一密码</string>
-    <string name="secure_sep_psw">私密空间独立密码</string>
-    <string name="set_secure_psw">设置私密空间密码</string>
+    <string name="use_secure_sep_psw">使用隐私信箱独立密码</string>
+    <string name="change_secure_sep_psw">修改隐私信箱独立密码</string>
+    <string name="privacy_unite_psw">隐私保护密码</string>
+    <string name="secure_sep_psw">隐私信箱独立密码</string>
+    <string name="set_secure_psw">设置隐私信箱独立密码</string>
     <string name="qq_login_fail_msg">用户名或密码错误，请重新输入</string>
     <string name="phone_move">手机可移动</string>
     <string name="sdcard_move">SD卡可移动</string>
@@ -3069,18 +3224,95 @@ QQ同步助手在服务器中的用户数据，无论是用户个人资料，还
     <string name="installed_software">已安装软件</string>
     <string name="deal_btn">一键清理</string>
     <string name="hint_sdcard_not_mount">请插入SD卡</string>
-    <string name="qqsecure_warm_tips">QQ手机管家提醒您</string>
-    <string name="uninstall_msg">请在卸载之前恢复私密短信和隐私文件夹资料，以免卸载后无法找回。</string>
+    <string name="qqsecure_warm_tips">QQ手机管家提醒你</string>
+    <string name="uninstall_msg">请在卸载之前恢复隐私短信和隐私文件夹资料，以免卸载后无法找回。</string>
     <string name="enter_qqsecure">进入管家</string>
-    <string name="input_secure_psw_title">请输入私密空间密码</string>
+    <string name="input_secure_psw_title">请输入隐私信箱独立密码</string>
     <string name="have_a_try">试试看</string>
-    <string name="face_verify_beta">人脸识BETA</string>
-    <string name="face_verify_introduce_msg1">使用前置摄像头拍摄人脸信息，识别成功即可进入私密空间</string>
-    <string name="face_verify_introduce_msg2">"说明:
-.需要手机具有前置摄像头
-.系统要求:Android2.3及以上
-.信息保存在网上，识别过程需要联网
-.尽量在明亮的环境下进行识别"</string>
+    <string name="face_verify_beta">人脸识别</string>
+    <string name="face_switch_summary">切换至隐私信箱独立密码即可开启</string>
+    <string name="face_verify_change">修改人脸识别信息</string>
+    <string name="face_verify_set">设置人脸识别信息</string>
+    <string name="set_psw_to_use_face_verify">识别失败时可辅助解锁</string>
+    <string name="face_verify_introduce_msg1">看着你的手机即可进入隐私信箱</string>
+    <string name="face_verify_introduce_msg2">"
+请确保光线充足
+请保持网络畅通"</string>
     <string name="face_verify_close_msg">关闭后人脸识别资料将失效，开启后需重新设置</string>
     <string name="install_now">立即安装</string>
+    <string name="privacy_psw_unified">隐私保护统一密码</string>
+    <string name="secure_space_private_psw">隐私信箱独立密码</string>
+    <string name="secure_space_private_psw_psw">隐私信箱独立密码(人脸识别)</string>
+    <string name="tab_notification_note_title">手机管家广告拦截</string>
+    <string name="tab_notification_note_content">软件%s疑似推送广告消息</string>
+    <string name="tab_notificationAdblock">广告拦截</string>
+    <string name="tab_notificationAdblock_manager">拦截管理</string>
+    <string name="adlike_notification_nothandled">未处理</string>
+    <string name="notification_blocked">已拦截</string>
+    <string name="allow_notification">允许</string>
+    <string name="block_notification">禁止</string>
+    <string name="allow_notification_button">以后放行</string>
+    <string name="block_notification_button">以后拦截</string>
+    <string name="none_block_notification_record">没有拦截记录</string>
+    <string name="none_block_notification_app">没有监控记录</string>
+    <string name="block_notication_note">“%s”发出的所有通知栏消息将被拦截，你可在当前面页面查看拦截记录。</string>
+    <string name="report_notication_app">举报广告应用</string>
+    <string name="notication_block_open_dialog">广告拦截未开启，开启后能杜绝通知栏广告骚扰。</string>
+    <string name="report_note">感谢你的支持，你的举报将帮助上千万用户免受骚扰。</string>
+    <string name="tips_open_notication_monitor">广告拦截未开启，点击直接开启</string>
+    <string name="website_tips_title">腾讯手机管家恶意网址提醒</string>
+    <string name="website_tips_content">"你正访问%1$s网址
+建议你停止访问并马上进行查杀"</string>
+    <string name="website_tips_content1">你正访问%1$s网址</string>
+    <string name="website_tips_belong">属于</string>
+    <string name="website_tips_risk">风险</string>
+    <string name="website_tips_content2">建议你停止访问并马上进行查杀</string>
+    <string name="website_do_not_remind">该网站不再提示</string>
+    <string name="high_level">高</string>
+    <string name="middle_level">中</string>
+    <string name="low_level">低</string>
+    <string name="cock_horse_type">挂马</string>
+    <string name="default_cheat_type">无分类欺诈</string>
+    <string name="games_hang_type">外挂</string>
+    <string name="make_money_type">网赚</string>
+    <string name="money_cheat_type">汇款诈骗</string>
+    <string name="msg_reactionary_type">信息安全恶意</string>
+    <string name="private_server_type">私服</string>
+    <string name="sex_type">色情</string>
+    <string name="sp_service_type">SP增值服务</string>
+    <string name="steal_account_type">盗号</string>
+    <string name="tips_cheat_type">欺骗tips</string>
+    <string name="tips_default_type">恶意tips</string>
+    <string name="is_protecting_your_broswer">腾讯手机管家恶意网址检测已开启</string>
+    <string name="website_check_service_option_title">恶意网址检测服务</string>
+    <string name="keep_open">保持开启</string>
+    <string name="sure_to_close">关闭服务</string>
+    <string name="keep_visit">继续访问</string>
+    <string name="block_visit">停止访问</string>
+    <string name="get_prize_remind">获奖提示</string>
+    <string name="kill_info">"本次加速燃烧了%1$d个进程，释放%2$s内存
+"</string>
+    <string name="kill_info2">发射燃烧了%1$d个进程，释放%2$s内存</string>
+    <string name="one_key_faster_tips_clear2">你的手机状态达到最佳</string>
+    <string name="and_get_color_egg">发射火箭加速获得</string>
+    <string name="get_prize">领取奖品</string>
+    <string name="have_get_prize">已成功领奖</string>
+    <string name="no_thanks">不了，谢谢</string>
+    <string name="tell_me_prize_result">亲，请告诉我你是否成功领取奖品</string>
+    <string name="try_again_get_prize">再试一次</string>
+    <string name="mindly_remind">温馨提示</string>
+    <string name="click_wrong">我点错了</string>
+    <string name="confirm_abandon_prize">"亲，你真的要放弃领取奖品么？
+请再次确认"</string>
+    <string name="confirm_abandon">确认放弃</string>
+    <string name="activity_introdution">活动介绍</string>
+    <string name="konw_more_about_activity">了解更多</string>
+    <string name="share_with_friend">分享好友</string>
+    <string name="come_and_share">亲，快来告诉你的好友，</string>
+    <string name="remind_reset_style">进入快捷助手设置页可切换浮窗的主题风格</string>
+    <string name="enter_and_set">进入设置</string>
+    <string name="remind_later">以后再说</string>
+    <string name="ussd_dialog_title">腾讯手机管家漏洞防御</string>
+    <string name="ussd_blocked_title">手机管家为你拦截一个恶意入侵</string>
+    <string name="ussd_blocked_summary">该危险操作利用拨号程序的指令漏洞，企图清空你手机上的所有数据，包括联系人及已安装软件等</string>
 </resources>

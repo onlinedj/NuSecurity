@@ -146,7 +146,11 @@
         <item>从手机联系人添加</item>
         <item>从电话卡联系人添加</item>
         <item>从通话记录添加</item>
-        <item>从短信列表添加</item>
+        <item>从信息列表添加</item>
+        <item>手动添加拦截号码</item>
+        <item>手动添加拦截号码段</item>
+        <item>手动添加白名单号码</item>
+        <item>手动添加白名单号码段</item>
     </string-array>
     <string-array name="del_contact">
         <item>删除所有黑名单联系人</item>
@@ -222,6 +226,11 @@
     <string-array name="filter_mode_entries_4">
         <item>拦截</item>
         <item>忽略</item>
+    </string-array>
+    <string-array name="filter_mode_entries_5">
+        <item>接受</item>
+        <item>拦截</item>
+        <item>智能拦截</item>
     </string-array>
     <string-array name="secure_call_mode">
         <item>正常接听</item>
@@ -330,8 +339,12 @@
         <item>1</item>
     </string-array>
     <string-array name="entries_secure_psw_style">
-        <item>隐私保护统一密码</item>
-        <item>私密空间独立密码</item>
+        <item>隐私保护密码</item>
+        <item>隐私信箱独立密码</item>
+    </string-array>
+    <string-array name="entries_secure_psw_face_verifystyle">
+        <item>隐私保护密码</item>
+        <item>隐私信箱独立密码(人脸识别)</item>
     </string-array>
     <string-array name="entryvalues_secure_psw_style">
         <item>0</item>

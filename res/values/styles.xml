@@ -126,6 +126,10 @@
         <item name="android:textSize">13.0sp</item>
         <item name="android:textColor">@color/list_item_title_text_color</item>
     </style>
+    <style name="text_min_small_blue">
+        <item name="android:textSize">11.0sp</item>
+        <item name="android:textColor">@color/list_item_right_text_color</item>
+    </style>
     <style name="text_small_focus">
         <item name="android:textSize">13.0sp</item>
         <item name="android:textColor">@color/list_item_right_text_color</item>
@@ -141,6 +145,10 @@
     <style name="text_middle_default_white">
         <item name="android:textSize">15.0sp</item>
         <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="text_middle_default_gray">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">#ff888888</item>
     </style>
     <style name="text_middle_default_white_with_shadow">
         <item name="android:textSize">15.0sp</item>

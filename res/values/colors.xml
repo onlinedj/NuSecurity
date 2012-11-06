@@ -35,6 +35,8 @@
     <color name="item_location_shower_above">#b3ffffff</color>
     <color name="item_location_shower_below">#b3000000</color>
     <color name="exlist_child_bg">#ffffffff</color>
+    <color name="down_refresh">#ff333333</color>
+    <color name="last_refresh">#ff999999</color>
     <color name="list_item_shortcut_btn_bg_color">#ffeeeeee</color>
     <color name="list_item_shortcut_btn_bg_focus">#ffffe9a1</color>
     <color name="scan_progress_bg_color">#ffc6c6ff</color>
@@ -70,7 +72,10 @@
     <color name="main_title">#ff16366f</color>
     <color name="main_title_selected">#ffffffff</color>
     <color name="qqwebsite_help_bg">#ff288ece</color>
+    <color name="newuser_help_bg_for_moon">#ff114068</color>
     <color name="newuser_help_bg">#ff2d7ec2</color>
+    <color name="recommend_pop_up_line">#ff6498ed</color>
+    <color name="recommend_pop_up_block">#ff0070c0</color>
     <color name="mobile_title_text">#fffefefe</color>
     <color name="mobile_middle_btn_link_text">#ff20376d</color>
     <color name="mobile_bottom_btn_link_text">#ffba5a2f</color>
@@ -144,6 +149,7 @@
     <color name="color_888888">#ff888888</color>
     <color name="color_80000000">#80000000</color>
     <color name="software_verification">#ff3aad00</color>
+    <color name="software_offical_verification">#ffff3722</color>
     <color name="battery_screen_text">#ff019cfe</color>
     <color name="battery_white">#ff3aad00</color>
     <color name="balck_alpha75">#755c7588</color>
