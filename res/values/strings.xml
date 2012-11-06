@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">手机管家</string>
-    <string name="main_title">手机管家</string>
+    <string name="app_name">杰克管家</string>
+    <string name="main_title">杰克管家</string>
     <string name="permission_des_location">显示来去电归属地</string>
     <string name="widget_task_manager">任务管理 1x4</string>
     <string name="widget_task_manager_mini">任务管理 1x2</string>
