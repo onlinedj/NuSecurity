@@ -43,6 +43,18 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="4dip"
             android:background="@drawable/scroll_ad_dot_white" />
+        <ImageView
+            android:id="@+id/scroll_dot5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dip"
+            android:background="@drawable/scroll_ad_dot_white" />
+        <ImageView
+            android:id="@+id/scroll_dot6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dip"
+            android:background="@drawable/scroll_ad_dot_white" />
     </LinearLayout>
 
     <ImageView

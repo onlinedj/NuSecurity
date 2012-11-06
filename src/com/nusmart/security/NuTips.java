@@ -47,6 +47,10 @@ public class NuTips extends NuActivity {
 		mDots.add(iv3);
 		ImageView iv4 = (ImageView) findViewById(R.id.scroll_dot4);
 		mDots.add(iv4);
+		ImageView iv5 = (ImageView) findViewById(R.id.scroll_dot5);
+		mDots.add(iv5);
+		ImageView iv6 = (ImageView) findViewById(R.id.scroll_dot6);
+		mDots.add(iv6);
 		mNextButton = (ImageView) findViewById(R.id.next_page);
 		View.OnClickListener clickListener = new View.OnClickListener() {
 
@@ -74,9 +78,15 @@ public class NuTips extends NuActivity {
 
 		View tips4 = inflater.inflate(R.layout.layout_tips_four, null);
 		mPages.add(tips4);
-		ImageView hyperLinkImg = (ImageView) tips4
+		
+		View tips5 = inflater.inflate(R.layout.layout_tips_five, null);
+		mPages.add(tips5);
+		
+		View tips6 = inflater.inflate(R.layout.layout_tips_six, null);
+		mPages.add(tips6);
+		ImageView hyperLinkImg = (ImageView) tips6
 				.findViewById(R.id.hyper_link_img);
-		Button agreeButton = (Button) tips4.findViewById(R.id.agree_button);
+		Button agreeButton = (Button) tips6.findViewById(R.id.agree_button);
 		View.OnClickListener clickListener = new View.OnClickListener() {
 
 			@Override

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/newuser_help_bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/hyper_link_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/newuser_help_five" />
+
+    <Button
+        android:id="@+id/agree_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_special_default"
+        android:text="@string/agree_and_use"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="30.0dip"
+        android:layout_marginRight="30.0dip" />
+
+</LinearLayout>

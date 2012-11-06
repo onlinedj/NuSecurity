@@ -11,6 +11,6 @@
         android:layout_gravity="center"
         android:layout_marginBottom="20dip"
         android:layout_weight="1.0"
-        android:src="@drawable/newuser_help_two" />
+        android:src="@drawable/newuser_final_help_two" />
 
 </LinearLayout>
