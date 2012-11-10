@@ -294,6 +294,11 @@ public class ViewPager extends ViewGroup {
 		mMaximumVelocity = configuration.getScaledMaximumFlingVelocity();
 
 		final float density = context.getResources().getDisplayMetrics().density;
+		if(DEBUG) {
+			String msg = String.format("mTouchSlop=%s,mMinimumVelocity=%s,mMaximumVelocity=%s,density=%s", 
+					mTouchSlop,mMinimumVelocity,mMaximumVelocity,density);
+			Log.d(TAG, msg);
+		}
 		mFlingDistance = (int) (MIN_DISTANCE_FOR_FLING * density);
 	}
 
@@ -1192,6 +1197,10 @@ public class ViewPager extends ViewGroup {
 	 */
 	protected void onPageScrolled(int position, float offset, int offsetPixels) {
 		// Offset any decor views if needed - keep them on-screen at all times.
+		if(DEBUG) {
+			String msg = String.format("position=%s,offset=%s,offsetPixels=%s", position,offset,offsetPixels);
+			Log.i(TAG, msg);
+		}
 		if (mDecorChildCount > 0) {
 			final int scrollX = getScrollX();
 			int paddingLeft = getPaddingLeft();
@@ -1346,6 +1355,9 @@ public class ViewPager extends ViewGroup {
 			if (canScroll(this, false, (int) dx, (int) x, (int) y)) {
 				// Nested view has scrollable area under this point. Let it be
 				// handled there.
+				if(DEBUG) {
+					Log.d(TAG, "nested view has scrollable area under this point");
+				}
 				mInitialMotionX = mLastMotionX = x;
 				mLastMotionY = y;
 				return false;
@@ -1499,20 +1511,39 @@ public class ViewPager extends ViewGroup {
 						* widthWithMargin;
 				if (scrollX < leftBound) {
 					if (leftBound == 0) {
-						float over = -scrollX;
+						//float over = -scrollX;
 						//needsInvalidate = mLeftEdge.onPull(over / width);
 					}
 					//scrollX = leftBound;
 				} else if (scrollX > rightBound) {
 					if (rightBound == lastItemIndex * widthWithMargin) {
-						float over = scrollX - rightBound;
+						//float over = scrollX - rightBound;
 						//needsInvalidate = mRightEdge.onPull(over / width);
 					}
 					//scrollX = rightBound;
 				}
+				if(DEBUG) {
+					String msg = String.format("left=%s,right=%s,scrollX=%s", leftBound,rightBound,scrollX/5*4);
+					Log.e(TAG, msg);
+				}
 				// Don't lose the rounded component
 				mLastMotionX += scrollX - (int) scrollX;
-				scrollTo((int) scrollX, getScrollY());
+				if((scrollX < leftBound && leftBound == 0)) {
+					if(DEBUG) {
+						Log.i(TAG, "scrollbyLeft");
+					}
+					scrollBy((int)deltaX/3, 0);
+				} else if(scrollX > rightBound && rightBound == lastItemIndex * widthWithMargin) {
+					if(DEBUG) {
+						Log.i(TAG, "scrollbyRight");
+					}
+					scrollBy((int)deltaX/3, 0);
+				} else {
+					if(DEBUG) {
+						Log.i(TAG, "scrollto");
+					}
+					scrollTo((int) scrollX, getScrollY());
+				}
 				pageScrolled((int) scrollX);
 			}
 			break;
@@ -1786,6 +1817,9 @@ public class ViewPager extends ViewGroup {
 	 * @return true if child views of v can be scrolled by delta of dx.
 	 */
 	protected boolean canScroll(View v, boolean checkV, int dx, int x, int y) {
+		//disable the function for we just wanna scroll the parent.
+		return false;
+		/*
 		if (v instanceof ViewGroup) {
 			final ViewGroup group = (ViewGroup) v;
 			final int scrollX = v.getScrollX();
@@ -1809,7 +1843,7 @@ public class ViewPager extends ViewGroup {
 			}
 		}
 
-		return checkV;
+		return checkV; */
 	}
 
 	public boolean arrowScroll(int direction) {

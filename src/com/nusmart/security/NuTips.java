@@ -23,7 +23,7 @@ public class NuTips extends NuActivity {
 
 	private static final String AGREEMENT_URL = "http://yangxinle.com";
 	private ViewPager mPager;
-	private List<View> mPages = new ArrayList<View>(4);
+	private int mPageCount;
 	private List<ImageView> mDots = new ArrayList<ImageView>(4);
 	private ImageView mNextButton;
 
@@ -56,7 +56,7 @@ public class NuTips extends NuActivity {
 
 			@Override
 			public void onClick(View v) {
-				if (mPager.getCurrentItem() < mPages.size() - 1) {
+				if (mPager.getCurrentItem() < mPageCount - 1) {
 					mPager.setCurrentItem(mPager.getCurrentItem() + 1, true);
 				}
 			}
@@ -67,23 +67,27 @@ public class NuTips extends NuActivity {
 	private void initViewPager() {
 		LayoutInflater inflater = getLayoutInflater();
 		mPager = (ViewPager) findViewById(R.id.pager);
+		List<View> pages = new ArrayList<View>(4);
 		View tips1 = inflater.inflate(R.layout.layout_tips_one, null);
-		mPages.add(tips1);
+		pages.add(tips1);
 
 		View tips2 = inflater.inflate(R.layout.layout_tips_two, null);
-		mPages.add(tips2);
+		pages.add(tips2);
 
 		View tips3 = inflater.inflate(R.layout.layout_tips_three, null);
-		mPages.add(tips3);
+		pages.add(tips3);
 
 		View tips4 = inflater.inflate(R.layout.layout_tips_four, null);
-		mPages.add(tips4);
+		pages.add(tips4);
 		
 		View tips5 = inflater.inflate(R.layout.layout_tips_five, null);
-		mPages.add(tips5);
+		pages.add(tips5);
 		
 		View tips6 = inflater.inflate(R.layout.layout_tips_six, null);
-		mPages.add(tips6);
+		pages.add(tips6);
+		
+		mPageCount = 6;
+		
 		ImageView hyperLinkImg = (ImageView) tips6
 				.findViewById(R.id.hyper_link_img);
 		Button agreeButton = (Button) tips6.findViewById(R.id.agree_button);
@@ -110,7 +114,7 @@ public class NuTips extends NuActivity {
 		hyperLinkImg.setOnClickListener(clickListener);
 		agreeButton.setOnClickListener(clickListener);
 
-		MyPagerAdapter adapter = new MyPagerAdapter();
+		MyPagerAdapter adapter = new MyPagerAdapter(pages);
 		mPager.setAdapter(adapter);
 		OnPageChangeListener pageChangeListener = new OnPageChangeListener() {
 
@@ -149,21 +153,26 @@ public class NuTips extends NuActivity {
 
 	class MyPagerAdapter extends PagerAdapter {
 
+		private List<View> pages;
+		public MyPagerAdapter(List<View> pages) {
+			this.pages = pages;
+		}
+		
 		@Override
 		public void destroyItem(View container, int position, Object object) {
-			((ViewPager) container).removeView(mPages.get(position));
+			((ViewPager) container).removeView(pages.get(position));
 		}
 
 		@Override
 		public Object instantiateItem(View container, int position) {
-			View obj = mPages.get(position);
+			View obj = pages.get(position);
 			((ViewPager) container).addView(obj);
 			return obj;
 		}
 
 		@Override
 		public int getCount() {
-			return mPages.size();
+			return pages.size();
 		}
 
 		@Override
