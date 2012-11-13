@@ -82,7 +82,7 @@ public class ViewPager extends ViewGroup {
 	private static final boolean USE_CACHE = false;
 
 	private static final int DEFAULT_OFFSCREEN_PAGES = 1;
-	private static final int MAX_SETTLE_DURATION = 600; // ms
+	private static final int MAX_SETTLE_DURATION = 1000; // ms
 	private static final int MIN_DISTANCE_FOR_FLING = 25; // dips
 
 	private static final int[] LAYOUT_ATTRS = new int[] { android.R.attr.layout_gravity };
@@ -163,6 +163,8 @@ public class ViewPager extends ViewGroup {
 	private boolean mFirstLayout = true;
 	private boolean mCalledSuper;
 	private int mDecorChildCount;
+	
+	private boolean mUserTouchInScroll = false;
 
 	private OnPageChangeListener mOnPageChangeListener;
 	private OnPageChangeListener mInternalPageChangeListener;
@@ -231,6 +233,8 @@ public class ViewPager extends ViewGroup {
 		 * @see ViewPager#SCROLL_STATE_SETTLING
 		 */
 		public void onPageScrollStateChanged(int state);
+		
+		public void onPageScrollDone(int pageNum);
 	}
 
 	/**
@@ -253,6 +257,11 @@ public class ViewPager extends ViewGroup {
 
 		@Override
 		public void onPageScrollStateChanged(int state) {
+			// This space for rent
+		}
+
+		@Override
+		public void onPageScrollDone(int pageNum) {
 			// This space for rent
 		}
 	}
@@ -447,6 +456,7 @@ public class ViewPager extends ViewGroup {
 				mInternalPageChangeListener.onPageSelected(item);
 			}
 		} else {
+			Log.i(TAG, "directscroll");
 			if (dispatchSelected && mOnPageChangeListener != null) {
 				mOnPageChangeListener.onPageSelected(item);
 			}
@@ -662,10 +672,14 @@ public class ViewPager extends ViewGroup {
 		velocity = Math.abs(velocity);
 		if (velocity > 0) {
 			duration = 4 * Math.round(1000 * Math.abs(distance / velocity));
+			if(DEBUG)
+				Log.i(TAG, "velocity>0;duration="+duration);
 		} else {
 			final float pageDelta = (float) Math.abs(dx)
 					/ (width + mPageMargin);
-			duration = (int) ((pageDelta + 1) * 100);
+			duration = (int) ((pageDelta + 1) * 1000);
+			if(DEBUG)
+				Log.i(TAG, "velocity==0;duration="+duration);
 		}
 		duration = Math.min(duration, MAX_SETTLE_DURATION);
 
@@ -1139,7 +1153,7 @@ public class ViewPager extends ViewGroup {
 
 	@Override
 	public void computeScroll() {
-		if (DEBUG)
+		if (DEBUG);
 			Log.i(TAG, "computeScroll: finished=" + mScroller.isFinished());
 		if (!mScroller.isFinished()) {
 			if (mScroller.computeScrollOffset()) {
@@ -1163,6 +1177,7 @@ public class ViewPager extends ViewGroup {
 
 		// Done with scroll, clean up state.
 		completeScroll();
+		mOnPageChangeListener.onPageScrollDone(mCurItem);
 	}
 
 	private void pageScrolled(int xpos) {
@@ -1264,7 +1279,11 @@ public class ViewPager extends ViewGroup {
 			int x = mScroller.getCurrX();
 			int y = mScroller.getCurrY();
 			if (oldX != x || oldY != y) {
-				scrollTo(x, y);
+				if(!mUserTouchInScroll) {
+					scrollTo(x, y);
+				} else {
+					mUserTouchInScroll = false;
+				}
 			}
 			setScrollState(SCROLL_STATE_IDLE);
 		}
@@ -1393,11 +1412,13 @@ public class ViewPager extends ViewGroup {
 			mActivePointerId = ev.getPointerId(0);
 
 			if (mScrollState == SCROLL_STATE_SETTLING) {
+				if(DEBUG) Log.i(TAG, "being settling");
 				// Let the user 'catch' the pager as it animates.
 				mIsBeingDragged = true;
 				mIsUnableToDrag = false;
 				setScrollState(SCROLL_STATE_DRAGGING);
 			} else {
+				if(DEBUG) Log.i(TAG, "being complete");
 				completeScroll();
 				mIsBeingDragged = false;
 				mIsUnableToDrag = false;
@@ -1444,6 +1465,7 @@ public class ViewPager extends ViewGroup {
 			// Don't handle edge touches immediately -- they may actually belong
 			// to one of our
 			// descendants.
+			Log.d(TAG, "onTouchEvent:action down with edge");
 			return false;
 		}
 
@@ -1466,7 +1488,8 @@ public class ViewPager extends ViewGroup {
 			 * If being flinged and user touches, stop the fling. isFinished
 			 * will be false if being flinged.
 			 */
-			completeScroll();
+			mUserTouchInScroll = true;
+			mScroller.forceFinished(true);
 
 			// Remember where the motion event started
 			mLastMotionX = mInitialMotionX = ev.getX();

@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,17 @@ public class NuTips extends NuActivity {
 	private int mPageCount;
 	private List<ImageView> mDots = new ArrayList<ImageView>(4);
 	private ImageView mNextButton;
+	
+	private Handler mHandler = new Handler();
+	private int mNextPage = -1;
+	private boolean mReady = true;
+	private Runnable mRunnable = new Runnable() {
+		
+		@Override
+		public void run() {
+			mPager.setCurrentItem(mPager.getCurrentItem() + 1, true);
+		}
+	};
 
 	private void goToMainActivity() {
 		startActivity(new Intent(this, NuMain.class));
@@ -56,8 +68,9 @@ public class NuTips extends NuActivity {
 
 			@Override
 			public void onClick(View v) {
-				if (mPager.getCurrentItem() < mPageCount - 1) {
-					mPager.setCurrentItem(mPager.getCurrentItem() + 1, true);
+				if (mPager.getCurrentItem() < mPageCount - 1 && mReady) {
+						mPager.setCurrentItem(mPager.getCurrentItem() + 1, true);
+						mReady = false;
 				}
 			}
 		};
@@ -120,13 +133,28 @@ public class NuTips extends NuActivity {
 
 			@Override
 			public void onPageSelected(int arg0) {
-				if (arg0 == mDots.size() - 1) {
+				
+			}
+
+			@Override
+			public void onPageScrolled(int arg0, float arg1, int arg2) {
+				
+			}
+
+			@Override
+			public void onPageScrollStateChanged(int arg0) {
+				
+			}
+
+			@Override
+			public void onPageScrollDone(int pageNum) {
+				if (pageNum == mDots.size() - 1) {
 					mNextButton.setVisibility(View.INVISIBLE);
 				} else if (mNextButton.getVisibility() != View.VISIBLE) {
 					mNextButton.setVisibility(View.VISIBLE);
 				}
 				for (int i = 0; i < mDots.size(); i++) {
-					if (i == arg0) {
+					if (i == pageNum) {
 						mDots.get(i).setBackgroundResource(
 								R.drawable.scroll_ad_dot_black);
 					} else {
@@ -134,18 +162,8 @@ public class NuTips extends NuActivity {
 								R.drawable.scroll_ad_dot_white);
 					}
 				}
-			}
-
-			@Override
-			public void onPageScrolled(int arg0, float arg1, int arg2) {
-				// Nothing to do
-
-			}
-
-			@Override
-			public void onPageScrollStateChanged(int arg0) {
-				// Nothing to do
-
+				mReady = true;
+				
 			}
 		};
 		mPager.setOnPageChangeListener(pageChangeListener);
