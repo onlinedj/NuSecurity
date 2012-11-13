@@ -275,11 +275,14 @@ public class SlidingDrawer extends ViewGroup {
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+		NuApp.logd("widthms="+widthMeasureSpec+" heightms="+heightMeasureSpec);
 		int widthSpecMode = MeasureSpec.getMode(widthMeasureSpec);
 		int widthSpecSize = MeasureSpec.getSize(widthMeasureSpec);
+		NuApp.logd("widthsm="+widthSpecMode+" widthss="+widthSpecSize);
 
 		int heightSpecMode = MeasureSpec.getMode(heightMeasureSpec);
 		int heightSpecSize = MeasureSpec.getSize(heightMeasureSpec);
+		NuApp.logd("heightsm="+heightSpecMode+" heightss="+heightSpecSize);
 		if (widthSpecMode == MeasureSpec.UNSPECIFIED
 				|| heightSpecMode == MeasureSpec.UNSPECIFIED) {
 			throw new RuntimeException(

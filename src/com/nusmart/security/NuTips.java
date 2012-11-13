@@ -28,16 +28,7 @@ public class NuTips extends NuActivity {
 	private List<ImageView> mDots = new ArrayList<ImageView>(4);
 	private ImageView mNextButton;
 	
-	private Handler mHandler = new Handler();
-	private int mNextPage = -1;
 	private boolean mReady = true;
-	private Runnable mRunnable = new Runnable() {
-		
-		@Override
-		public void run() {
-			mPager.setCurrentItem(mPager.getCurrentItem() + 1, true);
-		}
-	};
 
 	private void goToMainActivity() {
 		startActivity(new Intent(this, NuMain.class));
