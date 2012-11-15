@@ -337,12 +337,14 @@ public class SlidingDrawer extends ViewGroup {
 		if (mTracking || mAnimating) {
 			final Bitmap cache = mContent.getDrawingCache();
 			if (cache != null) {
+				//NuApp.logd("dispatchDraw:with cache");
 				if (isVertical) {
 					canvas.drawBitmap(cache, 0, handle.getBottom(), null);
 				} else {
 					canvas.drawBitmap(cache, handle.getRight(), 0, null);
 				}
 			} else {
+				//NuApp.logd("dispatchDraw:no cache");
 				canvas.save();
 				canvas.translate(
 						isVertical ? 0 : handle.getLeft() - mTopOffset,
@@ -416,16 +418,14 @@ public class SlidingDrawer extends ViewGroup {
 
 		final Rect frame = mFrame;
 		final View handle = mHandle;
-		final View content = mContent;
-		final Rect frameContent = new Rect();
-		content.getHitRect(frameContent);
 
 		handle.getHitRect(frame);
-		if (!mTracking && (!frame.contains((int) x, (int) y) && !frameContent.contains((int) x, (int) y))) {
+		//just for workaround TODO
+		//we cannot use content for it's not moved , it's just a trick to do invalidate and redraw bitmap from cache
+		if (!mTracking && (y < frame.top)) {
 			NuApp.logd("ignore this touch! mTracking="+mTracking);
 			return false;
 		}
-		NuApp.logd("start tracking!!! mTracking="+mTracking);
 
 		if (action == MotionEvent.ACTION_DOWN) {
 			mTracking = true;
