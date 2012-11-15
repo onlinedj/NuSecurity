@@ -26,7 +26,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.nusmart.security.uilib.SlidingDrawer;
 import com.nusmart.security.uilib.utils.TipsManager;
@@ -195,7 +194,7 @@ public class NuMain extends NuActivity {
 			super.onBackPressed();
 		}
 	}
-
+	
 	private List<GridInfo>[] loadCustomGrids() {
 		return null;
 	}

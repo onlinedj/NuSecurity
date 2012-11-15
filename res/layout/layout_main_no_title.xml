@@ -98,7 +98,8 @@
         nusec:allowSingleTap="true"
         nusec:orientation="1"
         nusec:panelContent="@+id/panelContent"
-        nusec:panelHandle="@+id/panelHandle" >
+        nusec:panelHandle="@+id/panelHandle" 
+        nusec:offsetBondary="@+id/grid_bar">
 
         <FrameLayout
             android:id="@id/panelHandle"
@@ -173,7 +174,7 @@
                 android:orientation="vertical" >
 
                 <GridView
-                    android:id="@+id/grid_bar"
+                    android:id="@id/grid_bar"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:cacheColorHint="#00000000"

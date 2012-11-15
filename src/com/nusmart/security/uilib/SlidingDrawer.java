@@ -100,9 +100,11 @@ public class SlidingDrawer extends ViewGroup {
 
 	private final int mHandleId;
 	private final int mContentId;
+	private int mBottomOffsetBondaryId;
 
 	private View mHandle;
 	private View mContent;
+	private View mBottomOffsetBondary;
 
 	private final Rect mFrame = new Rect();
 	private final Rect mInvalidate = new Rect();
@@ -237,9 +239,13 @@ public class SlidingDrawer extends ViewGroup {
 					"The content and handle attributes must refer "
 							+ "to different children.");
 		}
+		
+		int offsetBondary = a
+		.getResourceId(R.styleable.SlidingDrawer_offsetBondary, 0);
 
 		mHandleId = handleId;
 		mContentId = contentId;
+		mBottomOffsetBondaryId = offsetBondary;
 
 		final float density = getResources().getDisplayMetrics().density;
 		mTapThreshold = (int) (TAP_THRESHOLD * density + 0.5f);
@@ -257,6 +263,7 @@ public class SlidingDrawer extends ViewGroup {
 	@Override
 	protected void onFinishInflate() {
 		mHandle = findViewById(mHandleId);
+		mBottomOffsetBondary = findViewById(mBottomOffsetBondaryId);
 		if (mHandle == null) {
 			throw new IllegalArgumentException(
 					"The handle attribute is must refer to an"
@@ -290,15 +297,18 @@ public class SlidingDrawer extends ViewGroup {
 		}
 
 		final View handle = mHandle;
+		final View content = mContent;
 		measureChild(handle, widthMeasureSpec, heightMeasureSpec);
-		int handleHeight = handle.getHeight();
-		int contentHeight = mContent.getMeasuredHeight();
-		mTopOffset = heightSpecSize - (contentHeight + handleHeight);
-		mBottomOffset = -((int) (contentHeight / 2 + 0.5f));
-		NuApp.logd("totalHeight=" + heightSpecSize + "\ncontentHeight="
-				+ mContent.getMeasuredHeight() + "\nhandleHeight="
-				+ handle.getMeasuredHeight() + "\ntopoffset=" + mTopOffset
-				+ "\nbottomoffset=" + mBottomOffset + "\ndensity="
+		measureChild(content, widthMeasureSpec, heightMeasureSpec);
+		int handleHeight = handle.getMeasuredHeight();
+		int contentHeight = content.getMeasuredHeight();
+		if(mBottomOffsetBondaryId != 0) {
+			mBottomOffset = -mBottomOffsetBondary.getHeight();
+		}
+		NuApp.logd("totalHeight=" + heightSpecSize + " contentMHeight="
+				+ content.getMeasuredHeight() + "contentHeight="+content.getHeight()
+				+" handleMHeight="+ handle.getMeasuredHeight() + " handleHeight=" + handle.getHeight() +" topoffset=" + mTopOffset
+				+ " bottomoffset=" + mBottomOffset + " bondaryheight=" + mBottomOffsetBondary.getHeight() +" density="
 				+ getResources().getDisplayMetrics().density);
 		if (mVertical) {
 			int height = heightSpecSize - handle.getMeasuredHeight()
@@ -313,7 +323,7 @@ public class SlidingDrawer extends ViewGroup {
 					heightSpecSize, MeasureSpec.EXACTLY));
 		}
 
-		setMeasuredDimension(widthSpecSize, heightSpecSize);
+		setMeasuredDimension(widthSpecSize, handleHeight+contentHeight);
 	}
 
 	@Override
@@ -369,7 +379,7 @@ public class SlidingDrawer extends ViewGroup {
 		int childTop;
 
 		final View content = mContent;
-
+		NuApp.logd("onlayout: width="+width+" height="+height+" childw="+childWidth+" childh="+childHeight);
 		if (mVertical) {
 			childLeft = (width - childWidth) / 2;
 			childTop = mExpanded ? mTopOffset : height - childHeight
@@ -415,6 +425,7 @@ public class SlidingDrawer extends ViewGroup {
 			NuApp.logd("ignore this touch! mTracking="+mTracking);
 			return false;
 		}
+		NuApp.logd("start tracking!!! mTracking="+mTracking);
 
 		if (action == MotionEvent.ACTION_DOWN) {
 			mTracking = true;

@@ -13,6 +13,7 @@
         <attr name="bottomOffset" format="dimension" />
         <!-- Extra offset for the handle at the top of the SlidingDrawer. -->
         <attr name="topOffset" format="dimension" />
+        <attr name="offsetBondary" format="reference" />
         <!--
              Indicates whether the drawer can be opened/closed by a single tap
              on the handle.  (If false, the user must drag or fling, or click

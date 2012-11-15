@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:background="@android:color/background_light"
     android:gravity="center"
-    android:paddingTop="20dip"
-    android:paddingBottom="20dip"
+    android:paddingTop="25dip"
+    android:paddingBottom="25dip"
     android:orientation="vertical" >
 
     <ImageView
